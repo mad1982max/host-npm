@@ -1,0 +1,72 @@
+.mainApp {
+  max-width: 800px;
+}
+
+.module {
+  margin: auto;
+}
+
+#inputColor {
+  width: 40px;
+  height: 40px;
+  padding: 6px;
+}
+
+#highLight {
+  width: 40px;
+  height: 40px;
+  padding: 6px;
+}
+
+#highLight img {
+  width: 100%;
+}
+
+.nav {
+  height: 3.5em;
+  line-height: 3.5em;
+  border-bottom: 1px solid #f0e9e7;
+}
+
+.navParams div {
+  padding: 0 5px;
+}
+
+.sidebar a {
+  padding: 12px 8px;
+  text-decoration: none;
+  font-size: 1.1em;
+  display: block;
+  color: #8a8a5c;
+}
+
+.navFloor {
+  height: 2.2em;
+  line-height: 2.2em;
+  font-size: 20px;
+  border-bottom: 1px solid #f0e9e7;
+}
+
+.navFloor ul {
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+.navFloor li {
+  cursor: pointer;
+}
+
+.navFloor a {
+  text-decoration: none;
+  color: #8a8a5c;
+}
+
+.activeFloor {
+  border-bottom: 5px solid #39ac73;
+  font-weight: bold;
+}
+
+.activeParam {
+  font-weight: bold;
+  border-left-color: #39ac73 !important;
+}
