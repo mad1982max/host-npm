@@ -15,7 +15,7 @@
 <g id = 'wrapper' transform = 'rotate(28), scale(1, -1)'> 
 <title>4</title>
   <g id="out_area" data-name="out area">
-    <path d="M35.739,43.785l17.6-3.9a4.365,4.365,0,0,1-.126.691,12.273,12.273,0,0,1-.813,1.687L43.813,58.006,38.67,61.293l.8,1.53c.052.073.623-.436,1.011-.561a1.807,1.807,0,0,1,.977.1l-4.52,8.326-.253-.14.948-1.725-1.493-.611-.888,1.521-.47-.271L30.512,50.3s-.2-.761-.035-1.049a3.48,3.48,0,0,1,.687-.7L35.351,45.1a1.735,1.735,0,0,0,.436-.535A1.922,1.922,0,0,0,35.739,43.785Z" style="fill: #f8cdc3"/>
+    <path d="M35.739,43.785l17.6-3.9a4.365,4.365,0,0,1-.126.691,12.273,12.273,0,0,1-.813,1.687L43.813,58.006,38.67,61.293l.8,1.53c.052.073.623-.436,1.011-.561a1.807,1.807,0,0,1,.977.1l-4.52,8.326-.253-.14.948-1.725-1.493-.611-.888,1.521-.47-.271L30.512,50.3s-.2-.761-.035-1.049a3.48,3.48,0,0,1,.687-.7L35.351,45.1a1.735,1.735,0,0,0,.436-.535A1.922,1.922,0,0,0,35.739,43.785Z" style="fill: #aa897e"/>
   </g>
   <g id="New_Inner" data-name="New Inner">
     <polyline points="32.152 65.076 31.291 61.187 26.133 62.328 27.262 67.424 30.945 66.609 30.984 66.785 32.458 66.458 32.357 66.002" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.079999998211861px"/>
@@ -86,33 +86,33 @@
   </g>
   <g id="stairs">
     <g>
-      <path d="M43.93,57.819,35,63.565a2.385,2.385,0,0,0-.8.689,1.506,1.506,0,0,0-.177.875l.969,4.444L36.8,70.594l-.766-4.531a1.421,1.421,0,0,1,.061-.6,1.525,1.525,0,0,1,.527-.631l3.431-2.363a1.694,1.694,0,0,1,.833-.245,1.276,1.276,0,0,1,.572.138Z" style="fill: #fff;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.079999998211861px"/>
-      <line x1="35.396" y1="63.36" x2="36.376" y2="64.961" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.079999998211861px"/>
-      <line x1="35.887" y1="63.051" x2="36.868" y2="64.652" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.079999998211861px"/>
-      <line x1="36.379" y1="62.742" x2="37.336" y2="64.306" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.079999998211861px"/>
-      <line x1="36.87" y1="62.434" x2="37.851" y2="64.034" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.079999998211861px"/>
-      <line x1="37.362" y1="62.125" x2="38.342" y2="63.725" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.079999998211861px"/>
-      <line x1="37.816" y1="61.756" x2="38.799" y2="63.36" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.079999998211861px"/>
-      <line x1="38.308" y1="61.447" x2="39.262" y2="63.005" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.079999998211861px"/>
-      <line x1="38.799" y1="61.138" x2="39.744" y2="62.68" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.079999998211861px"/>
-      <line x1="39.287" y1="60.825" x2="40.222" y2="62.348" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.079999998211861px"/>
-      <line x1="39.785" y1="60.513" x2="40.827" y2="62.213" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.079999998211861px"/>
-      <line x1="40.273" y1="60.21" x2="41.494" y2="62.203" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.079999998211861px"/>
-      <line x1="40.744" y1="59.868" x2="41.816" y2="61.617" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.079999998211861px"/>
-      <line x1="41.235" y1="59.557" x2="42.14" y2="61.035" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.079999998211861px"/>
-      <line x1="41.723" y1="59.243" x2="42.464" y2="60.453" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.079999998211861px"/>
-      <line x1="42.209" y1="58.925" x2="42.803" y2="59.894" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.079999998211861px"/>
-      <line x1="42.697" y1="58.611" x2="43.106" y2="59.277" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.079999998211861px"/>
-      <line x1="34.365" y1="66.711" x2="36.08" y2="66.438" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.079999998211861px"/>
-      <line x1="34.278" y1="66.12" x2="35.993" y2="65.847" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.079999998211861px"/>
-      <line x1="34.024" y1="64.961" x2="36.098" y2="65.467" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.079999998211861px"/>
-      <line x1="34.488" y1="63.919" x2="36.248" y2="65.184" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.079999998211861px"/>
-      <line x1="34.488" y1="67.233" x2="36.159" y2="66.967" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.079999998211861px"/>
-      <line x1="34.61" y1="67.755" x2="36.259" y2="67.492" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.079999998211861px"/>
-      <line x1="34.733" y1="68.277" x2="36.376" y2="68.015" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.079999998211861px"/>
-      <line x1="34.856" y1="68.799" x2="36.45" y2="68.545" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.079999998211861px"/>
-      <line x1="34.979" y1="69.321" x2="36.518" y2="69.076" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.079999998211861px"/>
-      <line x1="35.347" y1="69.804" x2="36.617" y2="69.602" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.079999998211861px"/>
+      <path d="M43.926,57.854,34.993,63.6a2.376,2.376,0,0,0-.8.689,1.5,1.5,0,0,0-.178.875l.969,4.444L36.8,70.629,36.033,66.1a1.421,1.421,0,0,1,.061-.6,1.533,1.533,0,0,1,.527-.631l3.432-2.363a1.7,1.7,0,0,1,.832-.246,1.291,1.291,0,0,1,.573.139Z" style="fill: #fff;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.08px"/>
+      <line x1="35.392" y1="63.395" x2="36.373" y2="64.996" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.08px"/>
+      <line x1="35.884" y1="63.086" x2="36.864" y2="64.687" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.08px"/>
+      <line x1="36.375" y1="62.777" x2="37.333" y2="64.341" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.08px"/>
+      <line x1="36.867" y1="62.468" x2="37.819" y2="64.024" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.08px"/>
+      <line x1="37.358" y1="62.16" x2="38.308" y2="63.71" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.08px"/>
+      <line x1="37.813" y1="61.791" x2="38.782" y2="63.372" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.08px"/>
+      <line x1="38.304" y1="61.482" x2="39.259" y2="63.04" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.08px"/>
+      <line x1="38.796" y1="61.173" x2="39.74" y2="62.715" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.08px"/>
+      <line x1="39.283" y1="60.86" x2="40.218" y2="62.383" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.08px"/>
+      <line x1="39.782" y1="60.548" x2="40.823" y2="62.248" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.08px"/>
+      <line x1="40.27" y1="60.245" x2="41.491" y2="62.238" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.08px"/>
+      <line x1="40.741" y1="59.903" x2="41.812" y2="61.652" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.08px"/>
+      <line x1="41.231" y1="59.592" x2="42.137" y2="61.07" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.08px"/>
+      <line x1="41.719" y1="59.278" x2="42.46" y2="60.488" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.08px"/>
+      <line x1="42.206" y1="58.96" x2="42.799" y2="59.929" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.08px"/>
+      <line x1="42.694" y1="58.646" x2="43.102" y2="59.312" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.08px"/>
+      <line x1="34.361" y1="66.746" x2="36.077" y2="66.473" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.08px"/>
+      <line x1="34.274" y1="66.155" x2="35.99" y2="65.882" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.08px"/>
+      <line x1="34.02" y1="64.996" x2="36.094" y2="65.502" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.08px"/>
+      <line x1="34.484" y1="63.954" x2="36.245" y2="65.219" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.08px"/>
+      <line x1="34.484" y1="67.268" x2="36.155" y2="67.002" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.08px"/>
+      <line x1="34.607" y1="67.79" x2="36.255" y2="67.527" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.08px"/>
+      <line x1="34.73" y1="68.312" x2="36.373" y2="68.05" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.08px"/>
+      <line x1="34.853" y1="68.834" x2="36.447" y2="68.58" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.08px"/>
+      <line x1="34.976" y1="69.356" x2="36.515" y2="69.111" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.08px"/>
+      <line x1="35.343" y1="69.839" x2="36.613" y2="69.637" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.08px"/>
     </g>
     <path d="M32.252,57.962l6.659,5.232s.65.531.744.88a1.013,1.013,0,0,1-.06.894c-.183.406-2.87,5.584-2.87,5.584L35.347,69.8l2.3-4.049a3.047,3.047,0,0,0,.229-.8.862.862,0,0,0-.4-.665c-.226-.178-2.284-1.87-2.872-2.289a1.642,1.642,0,0,0-.946-.352,1.293,1.293,0,0,0-.572.138Z" style="fill: #fff;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.079999998211861px"/>
     <line x1="38.604" y1="62.953" x2="37.585" y2="64.343" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.079999998211861px"/>
@@ -198,8 +198,7 @@
   </g>
   <g id="Anchor">
     <line x2="7.5" style="fill: none"/>
-  </g>
-<g class = "rooms">
+  </g> <g class = "rooms">
 <g id="storey-04">
         <g id="product-04-X11-H">
             <path style="stroke:none; fill:none;" pointer-events="visible" d="M25.6035,51.2305 L25.055,48.7535 L23.3463,49.1319 L23.8949,51.6089 L25.6035,51.2305"/>
@@ -420,8 +419,7 @@
             <path style="stroke:none; fill:none;" pointer-events="visible" d="M28.2949,73.0958 L32.7648,93.2791 L37.7876,84.033 L34.382,82.183 L35.8599,79.4625 L33.5087,78.1852 L32.1905,72.2331 L28.2949,73.0958"/>
         </g>
     </g>
-    </g>
-<g class = "zones">
+    </g> <g class = "zones">
 <g id="storey-04">
         <g id="product-04-X01-B">
             <path style="stroke:none; fill:none;" pointer-events="visible" d="M30.8675,105.526 L30.2839,102.891 L27.2358,103.566 L27.8194,106.201 L30.8675,105.526"/>

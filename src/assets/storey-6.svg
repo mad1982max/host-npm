@@ -144,7 +144,7 @@
       <circle cx="27.05" cy="54.534" r="1.243" style="fill: #f8cdc3"/>
       <g id="toilet">
         <rect x="26.441" y="54.318" width="0.45" height="0.078" transform="translate(-33.804 51.327) rotate(-61)" style="fill: #b4897d"/>
-        <rect x="26.467" y="54.224" width="0.818" height="0.078" transform="matrix(0.485, -0.875, 0.875, 0.485, -33.613, 51.462)" style="fill: #b4897d"/>
+        <rect x="26.467" y="54.224" width="0.818" height="0.078" transform="translate(-33.613 51.462) rotate(-61)" style="fill: #b4897d"/>
         <rect x="26.682" y="54.452" width="0.45" height="0.078" transform="translate(-33.796 51.607) rotate(-61)" style="fill: #b4897d"/>
         <path d="M26.53,54.887a.108.108,0,1,1,.147-.042.108.108,0,0,1-.147.042m.067-.121a.029.029,0,0,0-.04.012.029.029,0,0,0,.011.04.03.03,0,0,0,.041-.011.031.031,0,0,0-.012-.041" style="fill: #b4897d"/>
         <path d="M27.166,54.992a.108.108,0,1,1-.147.042.108.108,0,0,1,.147-.042m-.067.121a.031.031,0,0,0,.041-.012.03.03,0,0,0-.012-.04.029.029,0,0,0-.04.011.03.03,0,0,0,.011.041" style="fill: #b4897d"/>
@@ -187,8 +187,7 @@
   </g>
   <g id="Anchor">
     <line x2="7.5" style="fill: none"/>
-  </g>
-<g class = "rooms">
+  </g> <g class = "rooms">
 <g id="storey-06">
         <g id="product-06-X10-I">
             <path style="stroke:none; fill:none;" pointer-events="visible" d="M27.6217,53.0225 L26.083,53.3633 L26.6722,56.0239 L28.2109,55.6831 L27.6217,53.0225"/>
@@ -352,8 +351,7 @@
             <path style="stroke:none; fill:none;" pointer-events="visible" d="M25.8876,95.5247 L27.0645,100.839 L31.6106,101.479 L32.6535,94.0698 L31.0792,94.4184 L31.07,94.3769 L28.527,94.9401 L25.8876,95.5247"/>
         </g>
     </g>
-    </g>
-<g class = "zones">
+    </g> <g class = "zones">
 <g id="storey-04">
         <g id="product-04-X14-B">
             <path style="stroke:none; fill:none;" pointer-events="visible" d="M14.2797,37.299 L15.629,37.0002 L14.2005,36.5099 L14.2797,37.299"/>

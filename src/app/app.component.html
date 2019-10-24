@@ -58,6 +58,7 @@
 
     <div class="module col-12 mt-4 mt-sm-1">
       <lib-vcog2d 
+        [position] = "position"
         [floor]="floor" 
         [objectToHighlight] = "objectToHighlight" 
         (onChanged) = 'getCurrentCell($event)'>
