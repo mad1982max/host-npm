@@ -6,11 +6,11 @@
 <g id = 'wrapper' transform = 'rotate(28), scale(1, -1)'> 
 <title>7</title>
   <g id="Stairs_Outline" data-name="Stairs Outline">
-    <polyline points="43.081 62.581 30.785 58.401 33.203 69.251 35.037 68.798 38.64 70.73 43.081 62.581" style="fill: #889196;stroke: #b4897d;stroke-miterlimit: 10;stroke-width: 0.08px"/>
+    <polyline points="43.06 62.6 30.764 58.419 33.182 69.269 35.016 68.816 38.619 70.748 43.06 62.6" style="fill: #889196;stroke: #b4897d;stroke-miterlimit: 10;stroke-width: 0.08px"/>
   </g>
   <g id="Stairs">
     <g>
-      <path d="M35.037,68.8a5.258,5.258,0,0,1-.121-1.415,1.533,1.533,0,0,1,.527-.631l3.432-2.363a1.693,1.693,0,0,1,.832-.245,1.284,1.284,0,0,1,.573.138l1.215-2.24-1.527-.519-6.153,3.958a2.385,2.385,0,0,0-.8.689,1.506,1.506,0,0,0-.177.875l.467,2.14" style="fill: #fff;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.08px"/>
+      <path d="M35.037,68.8a5.258,5.258,0,0,1-.121-1.415,1.533,1.533,0,0,1,.527-.631l3.432-2.363a1.693,1.693,0,0,1,.832-.245,1.284,1.284,0,0,1,.573.138l1.215-2.24-1.527-.519-6.153,3.958a2.385,2.385,0,0,0-.8.689,1.506,1.506,0,0,0-.177.875l.474,2.172" style="fill: #fff;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.08px"/>
       <line x1="34.214" y1="65.276" x2="35.195" y2="66.877" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.08px"/>
       <line x1="34.705" y1="64.967" x2="35.686" y2="66.568" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.08px"/>
       <line x1="35.197" y1="64.658" x2="36.155" y2="66.222" style="fill: none;stroke: #b4897d;stroke-linecap: square;stroke-width: 0.08px"/>
@@ -58,7 +58,7 @@
     <polyline points="28.839 75.556 28.905 75.855 32.779 74.984 32.095 71.802" style="fill: none;stroke: #b4897d;stroke-width: 0.08px"/>
     <line x1="27.629" y1="70.089" x2="28.676" y2="74.724" style="fill: none;stroke: #b4897d;stroke-width: 0.08px"/>
     <polyline points="27.726 70.55 31.62 69.665 30.945 66.61 27.049 67.473 27.087 67.648 26.478 67.783" style="fill: none;stroke: #b4897d;stroke-width: 0.08px"/>
-    <line x1="32.063" y1="69.517" x2="31.611" y2="69.6" style="fill: none;stroke: #b4897d;stroke-width: 0.08px"/>
+    <line x1="32.063" y1="69.517" x2="31.62" y2="69.616" style="fill: none;stroke: #b4897d;stroke-width: 0.08px"/>
     <line x1="28.298" y1="73.091" x2="32.19" y2="72.246" style="fill: none;stroke: #b4897d;stroke-width: 0.08px"/>
     <line x1="29.229" y1="70.196" x2="29.794" y2="72.764" style="fill: none;stroke: #b4897d;stroke-width: 0.08px"/>
     <line x1="31.62" y1="69.665" x2="31.684" y2="69.948" style="fill: none;stroke: #b4897d;stroke-width: 0.08px"/>
@@ -135,8 +135,7 @@
       <path d="M37.614,72.532l3.021,1.623-.031.059L37.583,72.59ZM40.4,74.61,37.391,73l-.031.058,3.006,1.615Zm-3.223,1.859,1.2-2.229.427.23L37.61,76.681l1.286.693.031-.058-1.188-.638.211-.392L39.1,76.9l.032-.059-1.148-.616.212-.393,1.189.638.031-.058-1.189-.639.212-.393,1.158.622.032-.059-1.158-.622.212-.393,1.2.642.032-.058-1.2-.643.213-.395,1.188.639.032-.059-2.983-1.6-.032.059,1.172.629-.21.391L36.923,73.9l-.032.059,1.168.627-.212.394-1.167-.628-.032.059,1.168.627-.212.393-1.151-.618-.031.058,1.15.619-.211.393-1.167-.627-.031.059,1.166.627-.222.411-1.181-.635-.032.059Z" style="fill: #b4897d"/>
     </g>
     <line x2="7.5" style="fill: none"/>
-  </g>
-<g class = "rooms">
+  </g> <g class = "rooms">
 <g id="storey-07L">
         <g id="product-07-X4-A">
             <path style="stroke:none; fill:none;" pointer-events="visible" d="M24.71,90.2078 L29.7598,89.0895 L28.8802,85.1179 L28.8343,85.1281 L28.6064,84.099 L28.6523,84.0888 L28.6303,83.9892 L23.5805,85.1076 L24.71,90.2078"/>
@@ -226,8 +225,7 @@
             <path style="stroke:none; fill:none;" pointer-events="visible" d="M33.0082,69.1821 L32.4486,66.6554 L32.1088,66.7306 L32.06,66.5099 L30.9762,66.75 L31.5847,69.4974 L33.0082,69.1821"/>
         </g>
     </g>
-    </g>
-<g class = "zones">
+    </g> <g class = "zones">
 <g id="storey-07L">
         <g id="product-07-Y08-E">
             <path style="stroke:none; fill:none;" pointer-events="visible" d="M48.2332,68.733 L49.5216,66.3614 L47.8749,65.4669 L46.5866,67.8385 L48.2332,68.733"/>

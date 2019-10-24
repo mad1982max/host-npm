@@ -1,5 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 -85 90 90">
-<g id = 'wrapper' transform = 'rotate(28), scale(1, -1)'>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 -85 90 90">  <defs>
+    <clipPath id="clip-path">
+      <rect x="43.559" y="59.754" width="3.91" height="3.635" transform="translate(-30.38 71.708) rotate(-61.135)" style="fill: none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect x="24.476" y="46.099" width="3.635" height="3.91" transform="matrix(0.974, -0.227, 0.227, 0.974, -10.229, 7.229)" style="fill: none"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <polygon points="38.887 77.524 35.727 75.787 37.614 72.364 40.774 74.1 38.887 77.524" style="fill: none"/>
+    </clipPath>
+  </defs>
+<g id = 'wrapper' transform = 'rotate(28), scale(1, -1)'> 
 <title>U1</title>
   <g id="NEW_Inner" data-name="NEW Inner">
     <polyline points="33.562 77.699 29.513 78.596 28.295 73.095 32.19 72.233 32.005 71.393" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
@@ -8,7 +18,7 @@
     <line x1="37.397" y1="67.608" x2="37.348" y2="67.388" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
     <polyline points="37.586 68.469 37.735 69.136 36.606 71.241" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
     <line x1="37.852" y1="69.24" x2="37.717" y2="69.169" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-    <polyline points="38.8 69.761 39.086 69.91 35.982 75.625" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
+    <polyline points="38.731 69.878 39.017 70.027 35.914 75.741" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
     <line x1="41.236" y1="73.942" x2="37.884" y2="72.122" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
     <line x1="42.056" y1="72.432" x2="38.705" y2="70.61" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
     <polyline points="39.651 68.87 40.375 67.538 43.728 69.358" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
@@ -51,168 +61,180 @@
     <polyline points="32.633 44.295 35.076 43.754 33.856 38.252 35.177 37.959 36.76 35.044 35.523 34.375" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
     <polyline points="28.743 49.184 27.886 45.348 28.028 45.325" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
     <path d="M34.995,77.432c.009-.012.4-.722.4-.722" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-    <line x1="44.775" y1="59.437" x2="44.862" y2="59.276" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
+    <line x1="44.775" y1="59.437" x2="44.996" y2="59.029" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
     <polyline points="31.608 18.449 29.219 22.847 31.278 23.967" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
     <line x1="32.119" y1="24.424" x2="34.739" y2="25.846" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
     <polyline points="38.162 22.009 35.772 26.408 35.521 26.271" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
     <line x1="33.174" y1="24.997" x2="35.565" y2="20.598" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
     <polygon points="22.623 13.226 72.405 40.271 40.543 98.924 25.923 90.981 22.128 79.808 16.025 52.378 14.023 52.821 6.067 16.893 22.623 13.226" style="fill: none;stroke: #b4897d;stroke-width: 0.16px"/>
     <line x1="39.086" y1="69.91" x2="39.182" y2="69.733" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
+    <g style="clip-path: url(#clip-path)">
+      <path d="M46.118,64l-2.972-1.646.032-.058,2.972,1.646Zm-2.729-2.1,2.957,1.638.032-.058-2.957-1.638Zm3.323-1.765h0l-.1-.053L45.39,62.291l-.42-.233.193-.346,0,0,.032-.058,0,0,.991-1.786-.046-.026v0l-1.2-.663-.033.058,1.147.635-.216.388-1.128-.625-.033.058,1.129.625-.216.389-1.169-.647-.033.058,1.17.647-.217.39-1.139-.631-.032.058,1.139.631-.216.39-1.132-.626-.032.058,1.132.626-.218.392L43.68,61.4l-.033.058L46.593,63.1l.032-.058-1.163-.646L45.676,62l1.149.636.032-.058-1.149-.636.217-.39,1.148.637.032-.058L45.957,61.5l.216-.389,1.132.627.032-.058-1.132-.627.216-.389,1.148.635.032-.058L46.454,60.6l.226-.408,1.162.644.032-.058Z" style="fill: #b4897d"/>
+    </g>
+    <line x1="47.874" y1="60.782" x2="45.899" y2="64.396" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
+  </g>
+  <g id="Stairs">
+    <g style="clip-path: url(#clip-path-2)">
+      <path d="M24.265,46.642l3.265-.754.015.065-3.265.753Zm3.386-.256-3.294.761.015.064,3.294-.761Zm-1.288,3.535h0l.107-.025L25.9,47.436l.468-.107.089.385h0l.015.065h0l.458,1.991.052-.012v0l1.333-.308-.015-.064-1.277.3-.1-.433,1.257-.29L28.17,48.9l-1.257.291-.1-.434,1.3-.3-.015-.065-1.3.3-.1-.434,1.269-.293-.015-.065-1.269.293-.1-.434,1.278-.293-.015-.065-1.277.293-.1-.436,1.3-.3-.014-.065-3.272.751.015.065,1.286-.294.1.431-1.28.3.015.065,1.28-.3.1.434-1.279.3.014.064,1.28-.3.1.434-1.261.291.015.065,1.261-.292.1.434-1.278.3.015.064,1.278-.3.105.454-1.295.3.015.065Z" style="fill: #b4897d"/>
+    </g>
+    <line x1="28.319" y1="49.452" x2="27.432" y2="45.458" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
   </g>
   <g id="NEW_Outer" data-name="NEW Outer">
     <polygon points="22.579 13.543 6.424 17.121 14.252 52.464 16.253 52.021 22.335 79.485 26.169 90.775 40.423 98.518 72 40.391 22.579 13.543" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
   </g>
   <g id="Anchor">
     <line x2="7.5" style="fill: none"/>
-  </g>
- <g class = "rooms">
-    <g id="storey-U2">
-            <g id="product-U2-X5-A">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M25.0348,53.3593 L16.9463,55.1506 L22.3354,79.4849 L22.423,79.7427 L29.1669,78.2492 L24.3434,56.4694 L25.0348,53.3593"/>
-            </g>
-            </g>
-    <g id="storey-U1">
-            <g id="product-U1-X9-O">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M43.4145,57.9826 L43.2905,57.423 L41.8082,57.9401 L41.9229,58.4583 L43.4145,57.9826"/>
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M43.1669,56.8647 L42.8981,55.651 L41.2646,56.5422 L41.3657,56.9986 L41.5801,56.9103 L41.6939,57.4241 L43.1669,56.8647"/>
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M42.7631,55.0412 L42.0645,51.8868 L30.0933,54.538 L31.4235,60.5443 L32.786,59.8009 L33.552,60.2169 L40.8027,57.2305 L40.5814,56.2315 L42.7631,55.0412"/>
-            </g>
-            <g id="product-U1-X16-T">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M33.1905,24.7664 L35.48,20.5519 L31.9202,18.6181 L29.817,22.4896 L29.9358,22.4633 L30.0656,23.0491 L30.039,23.0544 L33.1905,24.7664"/>
-            </g>
-            <g id="product-U1-X15-S">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M35.6557,20.6474 L33.3662,24.8619 L35.6878,26.123 L37.9773,21.9086 L35.6557,20.6474"/>
-            </g>
-            <g id="product-U1-X6-G">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M28.539,73.0418 L29.6461,78.0407 L32.8536,77.3303 L32.4884,75.6813 L34.2308,75.2954 L36.407,71.2894 L35.1819,70.6238 L34.7889,70.4103 L34.3774,68.5522 L31.5157,69.1859 L31.6846,69.9485 L31.3428,70.0241 L31.3018,69.8386 L29.3491,70.2711 L29.8248,72.419 L31.7775,71.9866 L31.6629,71.4691 L32.0046,71.3934 L32.1905,72.2331 L28.539,73.0418"/>
-            </g>
-            <g id="product-U1-X12-J">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M24.5758,45.8966 L27.6884,45.2072 L27.3252,43.5771 L24.2147,44.266 L24.5758,45.8966"/>
-            </g>
-            <g id="product-U1-X11-I">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M25.8964,51.1657 L28.6789,50.5494 L27.5762,45.5701 L24.7936,46.1863 L25.8964,51.1657"/>
-            </g>
-            <g id="product-U1-Y9-I">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M43.3325,62.828 L45.8369,64.1884 L48.2714,59.707 L45.767,58.3465 L43.3325,62.828"/>
-            </g>
-            <g id="product-U1-Y6-I">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M38.0339,72.5817 L35.5994,77.0631 L38.1037,78.4235 L40.5382,73.9421 L38.0339,72.5817"/>
-            </g>
-            <g id="product-U1-Y3-A">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M6.44443,17.1186 L7.48179,21.8027 L14.2712,52.4599 L16.2532,52.021 L17.263,56.5809 L23.9803,55.0936 L24.3055,56.5617 L24.3611,56.5493 L24.3434,56.4694 L25.3952,51.7381 L23.6626,43.9141 L28.7396,42.7897 L27.2801,36.1994 L30.7563,35.4296 L33.1148,34.9073 L36.9391,34.0603 L49.1283,40.682 L50.396,46.3962 L46.787,53.0398 L48.6103,54.0303 L46.4349,58.0347 L48.44,59.124 L49.0929,59.4786 L38.3498,79.2548 L34.9285,77.3962 L29.2561,78.6525 L29.9295,81.693 L23.564,83.1028 L26.1691,90.7746 L40.4174,98.528 L71.9999,40.3911 L38.1619,22.0087 L35.7721,26.4077 L29.6647,23.0901 L29.5453,22.5498 L31.7357,18.5176 L22.5607,13.5333 L10.8908,16.1294 L6.44443,17.1186"/>
-            </g>
-            <g id="product-U1-X5-A">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M23.6801,83.077 L22.5152,80.0634 L23.6342,83.0872 L23.6801,83.077"/>
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M28.6469,75.9014 L24.3611,56.5493 L24.3055,56.5617 L23.9803,55.0936 L17.2631,56.5812 L19.2417,65.5154 L25.363,64.1598 L26.1798,67.8491 L27.1713,72.3267 L28.6469,75.9014"/>
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M29.8879,81.5052 L28.9813,81.903 L29.9295,81.693 L29.8879,81.5052"/>
-            </g>
-            <g id="product-U1-Y7-J">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M41.5762,72.3456 L38.7661,70.8191 L38.0174,72.1972 L40.8276,73.7237 L41.5762,72.3456"/>
-            </g>
-            <g id="product-U1-X8-G">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M25.0382,57.234 L27.2936,67.418 L28.4076,67.1713 L26.1522,56.9873 L25.0382,57.234"/>
-            </g>
-            <g id="product-U1-X7-G">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M27.4625,67.7186 L28.0463,70.3547 L31.2585,69.6434 L30.6747,67.0072 L27.4625,67.7186"/>
-            </g>
-            <g id="product-U1-X7-H">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M29.6295,72.4623 L29.1538,70.3143 L28.0896,70.55 L28.5653,72.698 L29.6295,72.4623"/>
-            </g>
-            <g id="product-U1-X8-I">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M27.4409,62.1035 L28.556,67.1385 L30.9451,66.6094 L31.0205,66.9501 L32.1039,66.7081 L32.0245,66.3498 L32.2686,66.2958 L31.1875,61.4141 L30.9434,61.4681 L30.9138,61.3343 L27.4409,62.1035"/>
-            </g>
-            <g id="product-U1-X12-R">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M32.5822,43.8336 L34.4735,43.4147 L33.9385,40.9992 L32.0472,41.418 L32.5822,43.8336"/>
-            </g>
-            <g id="product-U1-X12-O">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M30.8624,38.4409 L28.4216,38.9814 L28.9946,41.5687 L33.8276,40.4984 L32.7249,35.5191 L30.3327,36.0488 L30.8624,38.4409"/>
-            </g>
-            <g id="product-U1-X13-R">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M32.9689,35.465 L33.4879,37.8082 L34.8382,37.5092 L36.0654,35.2504 L35.4492,34.9157 L32.9689,35.465"/>
-            </g>
-            <g id="product-U1-X12-Q">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M30.624,38.2888 L30.1375,36.0921 L27.8919,36.5894 L28.3784,38.7862 L30.624,38.2888"/>
-            </g>
-            <g id="product-U1-Y8-L">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M40.7549,67.5731 L42.7319,68.6471 L43.8395,66.6083 L41.8624,65.5343 L40.7549,67.5731"/>
-            </g>
-            <g id="product-U1-X11-N">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M45.4826,58.1583 L44.9031,55.5417 L43.8628,55.9701 L43.9915,56.5515 L43.1669,56.8647 L40.3071,43.9514 L40.4522,43.9193 L40.1202,42.4201 L42.6565,41.8584 L45.4259,54.3885 L44.9808,55.2078 L45.5692,57.8643 L45.6256,57.895 L45.4826,58.1583"/>
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M43.2905,57.423 L43.4145,57.9826 L44.2495,57.7163 L44.1849,57.4248 L44.1204,57.1336 L43.2905,57.423"/>
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M43.6949,58.498 L43.7274,58.6447 L43.6093,58.8623 L43.6543,59.0654 L43.7066,59.0938 L44.508,58.8837 L44.3787,58.2997 L43.6949,58.498"/>
-            </g>
-            <g id="product-U1-X12-T">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M33.8565,38.252 L34.9519,43.1262 L41.6097,41.6431 L41.6105,41.6436 L47.4445,40.351 L36.8628,34.6027 L36.2127,34.7466 L36.7611,35.0445 L35.1774,37.9595 L33.8565,38.252"/>
-            </g>
-            <g id="product-U1-Y7-I">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M41.6488,72.212 L43.2334,69.2951 L42.8826,69.1045 L40.6333,67.8826 L40.0481,68.9599 L39.9259,68.8936 L38.9265,70.7333 L41.6488,72.212"/>
-            </g>
-            <g id="product-U1-Y11-O">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M48.0243,40.6658 L42.6587,41.8541 L45.4247,54.369 L49.8595,46.2114 L48.719,41.0432 L48.0243,40.6658"/>
-            </g>
-            <g id="product-U1-X9-I">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M25.9768,51.486 L24.8689,56.4696 L24.9541,56.8542 L25.1494,56.811 L25.2006,57.0424 L26.2677,56.806 L27.4137,61.9804 L30.8865,61.2113 L30.8569,61.0776 L31.101,61.0235 L30.0199,56.1418 L29.7758,56.1958 L29.6893,55.8053 L29.9334,55.7512 L29.6134,54.3061 L29.2883,54.3781 L28.9237,52.732 L29.2488,52.66 L28.848,50.8501 L25.9768,51.486"/>
-            </g>
-            <g id="product-U1-X8-M">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M35.6556,60.3477 L33.2529,60.8798 L33.953,64.0412 L36.3558,63.5091 L35.6556,60.3477"/>
-            </g>
-            <g id="product-U1-X7-K">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M31.0534,67.0985 L31.4828,69.0375 L34.3446,68.4038 L34.2678,68.057 L37.2222,67.4027 L36.8667,65.7978 L32.7973,66.699 L32.6225,66.7377 L32.6254,66.7504 L31.0534,67.0985"/>
-            </g>
-            <g id="product-U1-Y10-I">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M45.9018,57.9413 L47.9208,54.2249 L46.3117,53.3508 L45.2775,55.2546 L45.285,55.2883 L45.1092,55.3272 L45.6589,57.8093 L45.9018,57.9413"/>
-            </g>
-            <g id="product-U1-X12-M">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M29.0378,41.7639 L29.2405,42.6788 L29.3406,43.1308 L29.4184,43.4823 L31.8592,42.9417 L31.4787,41.2234 L29.0378,41.7639"/>
-            </g>
-            <g id="product-U1-Y6-M">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M34.3395,75.4137 L32.6668,75.7841 L33.002,77.2975 L35.3571,76.7759 L37.8839,72.1246 L38.7051,70.613 L38.7929,70.6607 L39.1189,70.0607 L37.6739,69.2757 L36.6065,71.2407 L34.3395,75.4137"/>
-            </g>
-            <g id="product-U1-Y8-I">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M43.1655,63.1357 L42.0199,65.2444 L44.6559,66.6763 L45.8014,64.5677 L43.1655,63.1357"/>
-            </g>
-            <g id="product-U1-Y7-P">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M37.2434,67.5127 L34.7264,68.0701 L35.2626,70.4913 L36.4933,71.1598 L37.6,69.1227 L37.2434,67.5127"/>
-            </g>
-            <g id="product-U1-Y8-N">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M42.6295,58.8033 L37.6699,59.9018 L38.9402,65.6378 L39.6878,69.0136 L40.3776,67.7437 L40.2897,67.696 L44.553,59.8482 L42.6295,58.8033"/>
-            </g>
-            <g id="product-U1-Y7-O">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M37.5468,59.9289 L35.7835,60.3194 L36.96,65.6317 L36.959,65.6319 L37.3424,67.3628 L37.7351,69.1359 L39.1915,69.9271 L39.6849,69.0187 L38.9363,65.6387 L38.8172,65.6651 L37.5468,59.9289"/>
-            </g>
-            <g id="product-U1-X8-N">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M33.982,64.1721 L34.4291,66.1911 L36.8319,65.659 L36.3847,63.6399 L33.982,64.1721"/>
-            </g>
-            <g id="product-U1-X11-O">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M41.9862,51.5334 L41.8623,50.9738 L40.3799,51.4909 L40.4947,52.0091 L41.9862,51.5334"/>
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M41.7386,50.4155 L41.4699,49.2019 L39.8364,50.093 L39.9375,50.5494 L40.1518,50.4611 L40.2656,50.9749 L41.7386,50.4155"/>
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M41.3348,48.592 L40.2941,43.8928 L40.1463,43.9256 L39.8273,42.4851 L35.9627,43.341 L36.0542,43.754 L28.0954,45.5166 L29.9952,54.0951 L31.3578,53.3517 L32.1237,53.7677 L39.3744,50.7813 L39.1532,49.7823 L41.3348,48.592"/>
-            </g>
-            <g id="product-U1-X8-Ka">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M31.8114,62.2469 L33.3725,61.9011 L33.1513,60.9023 L31.5902,61.2481 L31.8114,62.2469"/>
-            </g>
-            <g id="product-U1-X8-Kb">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M33.395,62.0026 L31.8338,62.3484 L32.0514,63.3306 L33.6125,62.9849 L33.395,62.0026"/>
-            </g>
-            <g id="product-U1-X8-Kc">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M32.2903,64.4095 L33.8515,64.0637 L33.635,63.0864 L32.0739,63.4321 L32.2903,64.4095"/>
-            </g>
-            <g id="product-U1-X8-La">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M32.5314,65.4981 L34.0926,65.1523 L33.8804,64.1945 L32.3193,64.5403 L32.5314,65.4981"/>
-            </g>
-            <g id="product-U1-X8-Lb">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M32.7664,66.5594 L34.3276,66.2136 L34.115,65.2539 L32.5539,65.5996 L32.7664,66.5594"/>
-            </g>
-            <g id="product-U1-X12-L">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M27.8803,45.3245 L29.5401,44.9569 L29.1453,43.1741 L27.2901,43.5849 L27.6513,45.2155 L27.8466,45.1722 L27.8803,45.3245"/>
-            </g>
-            <g id="product-U1-X12-N">
-                <path style="stroke:none; fill:none;" pointer-events="visible" d="M32.1706,44.3478 L31.8679,42.9808 L29.427,43.5213 L29.7298,44.8883 L32.1706,44.3478"/>
-            </g>
+    <g style="clip-path: url(#clip-path-3)">
+      <path d="M37.659,72.525l2.972,1.646-.033.058-2.971-1.646Zm2.729,2.1-2.957-1.639-.033.058,2.957,1.639Zm-1.533,2.742.032-.058-1.169-.651.215-.388,1.129.625.032-.058-1.128-.625.216-.39,1.146.63.032-.058-1.146-.63.216-.389L39.569,76l.032-.058-1.139-.631.217-.39,1.124.624.032-.058-1.124-.624.217-.392,1.135.634.032-.058-2.906-1.624-.032.058,1.158.65-.215.387-1.148-.636-.033.058,1.149.636-.216.389L36.7,74.332l-.033.058,1.149.636-.216.39-1.133-.627-.032.058,1.132.627-.216.389-1.147-.635-.033.058,1.148.635-.226.408-1.163-.644-.032.058,1.163.644h0l.1.054,1.226-2.207.419.233-1.216,2.19Z" style="fill: #b4897d"/>
+    </g>
+    <line x1="38.829" y1="77.343" x2="40.839" y2="73.734" style="fill: none;stroke: #b4897d;stroke-width: 0.08px"/>
+  </g> <g class = "rooms">
+<g id="storey-U2">
+        <g id="product-U2-X5-A">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M25.0348,53.3593 L16.9463,55.1506 L22.3354,79.4849 L22.423,79.7427 L29.1669,78.2492 L24.3434,56.4694 L25.0348,53.3593"/>
         </g>
-        </g> 
-        <g class = "zones">
+        </g>
     <g id="storey-U1">
+        <g id="product-U1-X9-O">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M43.4145,57.9826 L43.2905,57.423 L41.8082,57.9401 L41.9229,58.4583 L43.4145,57.9826"/>
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M43.1669,56.8647 L42.8981,55.651 L41.2646,56.5422 L41.3657,56.9986 L41.5801,56.9103 L41.6939,57.4241 L43.1669,56.8647"/>
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M42.7631,55.0412 L42.0645,51.8868 L30.0933,54.538 L31.4235,60.5443 L32.786,59.8009 L33.552,60.2169 L40.8027,57.2305 L40.5814,56.2315 L42.7631,55.0412"/>
+        </g>
+        <g id="product-U1-X16-T">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M33.1905,24.7664 L35.48,20.5519 L31.9202,18.6181 L29.817,22.4896 L29.9358,22.4633 L30.0656,23.0491 L30.039,23.0544 L33.1905,24.7664"/>
+        </g>
+        <g id="product-U1-X15-S">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M35.6557,20.6474 L33.3662,24.8619 L35.6878,26.123 L37.9773,21.9086 L35.6557,20.6474"/>
+        </g>
+        <g id="product-U1-X6-G">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M28.539,73.0418 L29.6461,78.0407 L32.8536,77.3303 L32.4884,75.6813 L34.2308,75.2954 L36.407,71.2894 L35.1819,70.6238 L34.7889,70.4103 L34.3774,68.5522 L31.5157,69.1859 L31.6846,69.9485 L31.3428,70.0241 L31.3018,69.8386 L29.3491,70.2711 L29.8248,72.419 L31.7775,71.9866 L31.6629,71.4691 L32.0046,71.3934 L32.1905,72.2331 L28.539,73.0418"/>
+        </g>
+        <g id="product-U1-X12-J">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M24.5758,45.8966 L27.6884,45.2072 L27.3252,43.5771 L24.2147,44.266 L24.5758,45.8966"/>
+        </g>
+        <g id="product-U1-X11-I">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M25.8964,51.1657 L28.6789,50.5494 L27.5762,45.5701 L24.7936,46.1863 L25.8964,51.1657"/>
+        </g>
+        <g id="product-U1-Y9-I">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M43.3325,62.828 L45.8369,64.1884 L48.2714,59.707 L45.767,58.3465 L43.3325,62.828"/>
+        </g>
+        <g id="product-U1-Y6-I">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M38.0339,72.5817 L35.5994,77.0631 L38.1037,78.4235 L40.5382,73.9421 L38.0339,72.5817"/>
+        </g>
+        <g id="product-U1-Y3-A">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M6.44443,17.1186 L7.48179,21.8027 L14.2712,52.4599 L16.2532,52.021 L17.263,56.5809 L23.9803,55.0936 L24.3055,56.5617 L24.3611,56.5493 L24.3434,56.4694 L25.3952,51.7381 L23.6626,43.9141 L28.7396,42.7897 L27.2801,36.1994 L30.7563,35.4296 L33.1148,34.9073 L36.9391,34.0603 L49.1283,40.682 L50.396,46.3962 L46.787,53.0398 L48.6103,54.0303 L46.4349,58.0347 L48.44,59.124 L49.0929,59.4786 L38.3498,79.2548 L34.9285,77.3962 L29.2561,78.6525 L29.9295,81.693 L23.564,83.1028 L26.1691,90.7746 L40.4174,98.528 L71.9999,40.3911 L38.1619,22.0087 L35.7721,26.4077 L29.6647,23.0901 L29.5453,22.5498 L31.7357,18.5176 L22.5607,13.5333 L10.8908,16.1294 L6.44443,17.1186"/>
+        </g>
+        <g id="product-U1-X5-A">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M23.6801,83.077 L22.5152,80.0634 L23.6342,83.0872 L23.6801,83.077"/>
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M28.6469,75.9014 L24.3611,56.5493 L24.3055,56.5617 L23.9803,55.0936 L17.2631,56.5812 L19.2417,65.5154 L25.363,64.1598 L26.1798,67.8491 L27.1713,72.3267 L28.6469,75.9014"/>
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M29.8879,81.5052 L28.9813,81.903 L29.9295,81.693 L29.8879,81.5052"/>
+        </g>
+        <g id="product-U1-Y7-J">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M41.5762,72.3456 L38.7661,70.8191 L38.0174,72.1972 L40.8276,73.7237 L41.5762,72.3456"/>
+        </g>
+        <g id="product-U1-X8-G">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M25.0382,57.234 L27.2936,67.418 L28.4076,67.1713 L26.1522,56.9873 L25.0382,57.234"/>
+        </g>
+        <g id="product-U1-X7-G">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M27.4625,67.7186 L28.0463,70.3547 L31.2585,69.6434 L30.6747,67.0072 L27.4625,67.7186"/>
+        </g>
+        <g id="product-U1-X7-H">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M29.6295,72.4623 L29.1538,70.3143 L28.0896,70.55 L28.5653,72.698 L29.6295,72.4623"/>
+        </g>
+        <g id="product-U1-X8-I">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M27.4409,62.1035 L28.556,67.1385 L30.9451,66.6094 L31.0205,66.9501 L32.1039,66.7081 L32.0245,66.3498 L32.2686,66.2958 L31.1875,61.4141 L30.9434,61.4681 L30.9138,61.3343 L27.4409,62.1035"/>
+        </g>
+        <g id="product-U1-X12-R">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M32.5822,43.8336 L34.4735,43.4147 L33.9385,40.9992 L32.0472,41.418 L32.5822,43.8336"/>
+        </g>
+        <g id="product-U1-X12-O">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M30.8624,38.4409 L28.4216,38.9814 L28.9946,41.5687 L33.8276,40.4984 L32.7249,35.5191 L30.3327,36.0488 L30.8624,38.4409"/>
+        </g>
+        <g id="product-U1-X13-R">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M32.9689,35.465 L33.4879,37.8082 L34.8382,37.5092 L36.0654,35.2504 L35.4492,34.9157 L32.9689,35.465"/>
+        </g>
+        <g id="product-U1-X12-Q">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M30.624,38.2888 L30.1375,36.0921 L27.8919,36.5894 L28.3784,38.7862 L30.624,38.2888"/>
+        </g>
+        <g id="product-U1-Y8-L">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M40.7549,67.5731 L42.7319,68.6471 L43.8395,66.6083 L41.8624,65.5343 L40.7549,67.5731"/>
+        </g>
+        <g id="product-U1-X11-N">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M45.4826,58.1583 L44.9031,55.5417 L43.8628,55.9701 L43.9915,56.5515 L43.1669,56.8647 L40.3071,43.9514 L40.4522,43.9193 L40.1202,42.4201 L42.6565,41.8584 L45.4259,54.3885 L44.9808,55.2078 L45.5692,57.8643 L45.6256,57.895 L45.4826,58.1583"/>
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M43.2905,57.423 L43.4145,57.9826 L44.2495,57.7163 L44.1849,57.4248 L44.1204,57.1336 L43.2905,57.423"/>
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M43.6949,58.498 L43.7274,58.6447 L43.6093,58.8623 L43.6543,59.0654 L43.7066,59.0938 L44.508,58.8837 L44.3787,58.2997 L43.6949,58.498"/>
+        </g>
+        <g id="product-U1-X12-T">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M33.8565,38.252 L34.9519,43.1262 L41.6097,41.6431 L41.6105,41.6436 L47.4445,40.351 L36.8628,34.6027 L36.2127,34.7466 L36.7611,35.0445 L35.1774,37.9595 L33.8565,38.252"/>
+        </g>
+        <g id="product-U1-Y7-I">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M41.6488,72.212 L43.2334,69.2951 L42.8826,69.1045 L40.6333,67.8826 L40.0481,68.9599 L39.9259,68.8936 L38.9265,70.7333 L41.6488,72.212"/>
+        </g>
+        <g id="product-U1-Y11-O">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M48.0243,40.6658 L42.6587,41.8541 L45.4247,54.369 L49.8595,46.2114 L48.719,41.0432 L48.0243,40.6658"/>
+        </g>
+        <g id="product-U1-X9-I">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M25.9768,51.486 L24.8689,56.4696 L24.9541,56.8542 L25.1494,56.811 L25.2006,57.0424 L26.2677,56.806 L27.4137,61.9804 L30.8865,61.2113 L30.8569,61.0776 L31.101,61.0235 L30.0199,56.1418 L29.7758,56.1958 L29.6893,55.8053 L29.9334,55.7512 L29.6134,54.3061 L29.2883,54.3781 L28.9237,52.732 L29.2488,52.66 L28.848,50.8501 L25.9768,51.486"/>
+        </g>
+        <g id="product-U1-X8-M">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M35.6556,60.3477 L33.2529,60.8798 L33.953,64.0412 L36.3558,63.5091 L35.6556,60.3477"/>
+        </g>
+        <g id="product-U1-X7-K">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M31.0534,67.0985 L31.4828,69.0375 L34.3446,68.4038 L34.2678,68.057 L37.2222,67.4027 L36.8667,65.7978 L32.7973,66.699 L32.6225,66.7377 L32.6254,66.7504 L31.0534,67.0985"/>
+        </g>
+        <g id="product-U1-Y10-I">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M45.9018,57.9413 L47.9208,54.2249 L46.3117,53.3508 L45.2775,55.2546 L45.285,55.2883 L45.1092,55.3272 L45.6589,57.8093 L45.9018,57.9413"/>
+        </g>
+        <g id="product-U1-X12-M">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M29.0378,41.7639 L29.2405,42.6788 L29.3406,43.1308 L29.4184,43.4823 L31.8592,42.9417 L31.4787,41.2234 L29.0378,41.7639"/>
+        </g>
+        <g id="product-U1-Y6-M">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M34.3395,75.4137 L32.6668,75.7841 L33.002,77.2975 L35.3571,76.7759 L37.8839,72.1246 L38.7051,70.613 L38.7929,70.6607 L39.1189,70.0607 L37.6739,69.2757 L36.6065,71.2407 L34.3395,75.4137"/>
+        </g>
+        <g id="product-U1-Y8-I">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M43.1655,63.1357 L42.0199,65.2444 L44.6559,66.6763 L45.8014,64.5677 L43.1655,63.1357"/>
+        </g>
+        <g id="product-U1-Y7-P">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M37.2434,67.5127 L34.7264,68.0701 L35.2626,70.4913 L36.4933,71.1598 L37.6,69.1227 L37.2434,67.5127"/>
+        </g>
+        <g id="product-U1-Y8-N">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M42.6295,58.8033 L37.6699,59.9018 L38.9402,65.6378 L39.6878,69.0136 L40.3776,67.7437 L40.2897,67.696 L44.553,59.8482 L42.6295,58.8033"/>
+        </g>
+        <g id="product-U1-Y7-O">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M37.5468,59.9289 L35.7835,60.3194 L36.96,65.6317 L36.959,65.6319 L37.3424,67.3628 L37.7351,69.1359 L39.1915,69.9271 L39.6849,69.0187 L38.9363,65.6387 L38.8172,65.6651 L37.5468,59.9289"/>
+        </g>
+        <g id="product-U1-X8-N">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M33.982,64.1721 L34.4291,66.1911 L36.8319,65.659 L36.3847,63.6399 L33.982,64.1721"/>
+        </g>
+        <g id="product-U1-X11-O">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M41.9862,51.5334 L41.8623,50.9738 L40.3799,51.4909 L40.4947,52.0091 L41.9862,51.5334"/>
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M41.7386,50.4155 L41.4699,49.2019 L39.8364,50.093 L39.9375,50.5494 L40.1518,50.4611 L40.2656,50.9749 L41.7386,50.4155"/>
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M41.3348,48.592 L40.2941,43.8928 L40.1463,43.9256 L39.8273,42.4851 L35.9627,43.341 L36.0542,43.754 L28.0954,45.5166 L29.9952,54.0951 L31.3578,53.3517 L32.1237,53.7677 L39.3744,50.7813 L39.1532,49.7823 L41.3348,48.592"/>
+        </g>
+        <g id="product-U1-X8-Ka">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M31.8114,62.2469 L33.3725,61.9011 L33.1513,60.9023 L31.5902,61.2481 L31.8114,62.2469"/>
+        </g>
+        <g id="product-U1-X8-Kb">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M33.395,62.0026 L31.8338,62.3484 L32.0514,63.3306 L33.6125,62.9849 L33.395,62.0026"/>
+        </g>
+        <g id="product-U1-X8-Kc">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M32.2903,64.4095 L33.8515,64.0637 L33.635,63.0864 L32.0739,63.4321 L32.2903,64.4095"/>
+        </g>
+        <g id="product-U1-X8-La">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M32.5314,65.4981 L34.0926,65.1523 L33.8804,64.1945 L32.3193,64.5403 L32.5314,65.4981"/>
+        </g>
+        <g id="product-U1-X8-Lb">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M32.7664,66.5594 L34.3276,66.2136 L34.115,65.2539 L32.5539,65.5996 L32.7664,66.5594"/>
+        </g>
+        <g id="product-U1-X12-L">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M27.8803,45.3245 L29.5401,44.9569 L29.1453,43.1741 L27.2901,43.5849 L27.6513,45.2155 L27.8466,45.1722 L27.8803,45.3245"/>
+        </g>
+        <g id="product-U1-X12-N">
+            <path style="stroke:none; fill:none;" pointer-events="visible" d="M32.1706,44.3478 L31.8679,42.9808 L29.427,43.5213 L29.7298,44.8883 L32.1706,44.3478"/>
+        </g>
+    </g>
+    </g> <g class = "zones">
+<g id="storey-U1">
         <g id="product-U1-X12-N">
             <path style="stroke:none; fill:none;" pointer-events="visible" d="M29.7402,44.9367 L32.6329,44.2961 L32.3109,42.8422 L29.4182,43.4828 L29.7402,44.9367"/>
         </g>
