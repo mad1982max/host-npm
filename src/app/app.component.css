@@ -1,5 +1,6 @@
 .mainApp {
-  max-width: 800px;
+  max-width: 850px;
+  overflow: hidden;
 }
 
 .module {
@@ -54,6 +55,7 @@
 
 .navFloor li {
   cursor: pointer;
+  padding: 0 2px;
 }
 
 .navFloor a {

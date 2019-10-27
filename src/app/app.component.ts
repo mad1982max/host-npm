@@ -5,22 +5,23 @@ import { Component, ChangeDetectorRef } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  sideBarParams: string[] = ['MГёterom', 'Arbeidssplass', 'Klima', 'Lys', 'Kantine', 'Parkering', 'Mat', 'Tilbakemelding'];
   floors: string[] = ['1', '2', '3', '4', '5', '6', '7', 'U1', 'U2', 'U3'];
-  floor: string = '1';
+  floor = '1';
   objectToHighlight: any;
   position: any;
-  inputId: string = "01-X09-B";
-  inputColor = "#4000ff";
-  inputArea = "zones";
+  blindObj: any;
+  inputId = '01-X09-B';
+  inputColor = '#4000ff';
+  inputArea = 'zones';
+  tozoom: any;
 
   constructor(private ref: ChangeDetectorRef) {
-    let defaultFloor = '1';
-    let paramsObj = this.paramsParser(window.location.search.slice(1));
+    const defaultFloor = '1';
+    const paramsObj = this.paramsParser(window.location.search.slice(1));
     console.log('-paramsObj:', paramsObj);
 
     this.position = paramsObj.position;
-   
+    this.tozoom = paramsObj.zoom;
     if (paramsObj.floor && this.floors.indexOf(paramsObj.floor) > -1) {
         this.floor = paramsObj.floor;
     } else {
@@ -30,21 +31,24 @@ export class AppComponent {
   }
 
   paramsParser(query) {
-    let paramPairsArr = query.split('&');
-    let paramsObj: any = {};
+    const paramPairsArr = query.split('&');
+    const paramsObj: any = {};
 
     paramPairsArr.forEach(pair => {
-    let splitedPair = pair.split('=');
+    const splitedPair = pair.split('=');
     let value: any = {};
-    if (splitedPair[0] === 'position') {
-      let valArr = splitedPair[1].split(',');
-      value.top = valArr[0]/100;
-      value.left = valArr[1]/100;
-    } else {
-      value = splitedPair[1]
+    switch (splitedPair[0]) {
+      case 'position':
+      case 'zoom':
+        const valArr = splitedPair[1].split(',');
+        value.top = valArr[0] / 100;
+        value.left = valArr[1] / 100;
+        break;
+      default:
+        value = splitedPair[1];
     }
     paramsObj[splitedPair[0]] = value;
-    })
+    });
     return paramsObj;
   }
 
@@ -53,7 +57,7 @@ export class AppComponent {
       id: this.inputId,
       area: this.inputArea,
       color: this.inputColor
-    }
+    };
   }
 
   changeFloor(floor: string): void {
@@ -65,5 +69,10 @@ export class AppComponent {
   getCurrentCell(cell: string): void {
     this.inputId = cell;
     this.ref.detectChanges();
+  }
+
+  getBlindInfo(blindsObj: any): void {
+    this.blindObj = blindsObj;
+    console.log('catch in host', this.blindObj);
   }
 }

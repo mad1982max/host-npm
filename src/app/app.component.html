@@ -1,8 +1,10 @@
 <div class="mainApp container-fluid">
-
   <div class="row nav">    
+    <div class="nameOfBuilding d-none d-lg-block col-lg-auto">
+      FINANSPARKEN
+    </div>
     
-    <div class="navParams col-12 d-flex align-items-center mt-1 px-1">
+    <div class="navParams col-12 col-lg-auto d-flex align-items-center mt-1 px-1">
         <div class="col-auto color">
           <input 
             type="color" 
@@ -42,27 +44,26 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="navFloor col-12">
+    <ul class="row mb-1">
+      <li 
+        (click)="changeFloor(floorIn)" 
+        class="col-auto mx-1 text-center"
+        [ngClass]="floorIn === floor? 'activeFloor': ''" 
+        *ngFor='let floorIn of floors; let i = index'>
+        {{floorIn}}
+      </li>
+    </ul>
+  </div>
 
-    <div class="navFloor col-12">
-      <ul class="row mb-1">
-        <li 
-          (click)="changeFloor(floorIn)" 
-          class="col-auto mx-1 px-1 text-center"
-          [ngClass]="floorIn === floor? 'activeFloor': ''" 
-          *ngFor='let floorIn of floors; let i = index'>
-          {{floorIn}}
-        </li>
-      </ul>
-    </div>
-
-    <div class="module col-12 mt-4 mt-sm-1">
-      <lib-vcog2d 
-        [position] = "position"
-        [floor]="floor" 
-        [objectToHighlight] = "objectToHighlight" 
-        (onChanged) = 'getCurrentCell($event)'>
-      </lib-vcog2d>
-    </div>
+  <div class="module">
+    <lib-vcog2d
+      [tozoom] = "tozoom" 
+      [floor]="floor" 
+      [objectToHighlight] = "objectToHighlight" 
+      [position] = "position"
+      (onChangedBlinds) = 'getBlindInfo($event)'      
+      (onChanged) = 'getCurrentCell($event)'>
+    </lib-vcog2d>
   </div>
 </div>
