@@ -87,7 +87,7 @@ export class AppComponent {
 
   getCurrentCell(cell: string): void {
     this.inputId = cell;
-    console.log('catch in host cell', this.blindObj);
+    console.log('catch in host cell', this.inputId);
     this.ref.detectChanges();
   }
 
