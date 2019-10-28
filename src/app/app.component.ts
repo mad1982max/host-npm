@@ -1,4 +1,22 @@
 import { Component, ChangeDetectorRef } from '@angular/core';
+
+interface Coord {
+  left: string;
+  top: string
+}
+
+interface HighLightObj {
+  id: string;
+  area: string;
+  color: string;
+}
+
+interface BlindsObj {
+  [key: string]: string[] | string;
+  x: string;
+  y: string;
+  
+}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,22 +25,21 @@ import { Component, ChangeDetectorRef } from '@angular/core';
 export class AppComponent {
   floors: string[] = ['1', '2', '3', '4', '5', '6', '7', 'U1', 'U2', 'U3'];
   floor = '1';
-  objectToHighlight: any;
-  position: any;
-  blindObj: any;
+  objectToHighlight: HighLightObj | undefined ;
+  position: Coord;
+  blindObj: BlindsObj;
   inputId = '01-X09-B';
   inputColor = '#4000ff';
   inputArea = 'zones';
-  tozoom: any;
+  tozoom: Coord;
 
   constructor(private ref: ChangeDetectorRef) {
     const defaultFloor = '1';
     const paramsObj = this.paramsParser(window.location.search.slice(1));
-    console.log('-paramsObj:', paramsObj);
+    console.log('-urlParamsObj:', paramsObj);
 
     this.position = paramsObj.position;
     this.tozoom = paramsObj.zoom;
-    console.log('paramsObj', paramsObj);
     
     if (paramsObj.floor && this.floors.indexOf(paramsObj.floor) > -1) {
         this.floor = paramsObj.floor;
@@ -70,11 +87,12 @@ export class AppComponent {
 
   getCurrentCell(cell: string): void {
     this.inputId = cell;
+    console.log('catch in host cell', this.blindObj);
     this.ref.detectChanges();
   }
 
   getBlindInfo(blindsObj: any): void {
     this.blindObj = blindsObj;
-    console.log('catch in host', this.blindObj);
+    console.log('catch in host blinds', this.blindObj);
   }
 }
