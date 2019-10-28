@@ -22,6 +22,8 @@ export class AppComponent {
 
     this.position = paramsObj.position;
     this.tozoom = paramsObj.zoom;
+    console.log('paramsObj', paramsObj);
+    
     if (paramsObj.floor && this.floors.indexOf(paramsObj.floor) > -1) {
         this.floor = paramsObj.floor;
     } else {
@@ -41,8 +43,8 @@ export class AppComponent {
       case 'position':
       case 'zoom':
         const valArr = splitedPair[1].split(',');
-        value.top = valArr[0] / 100;
-        value.left = valArr[1] / 100;
+        value.top = valArr[1] / 100;
+        value.left = valArr[0] / 100;
         break;
       default:
         value = splitedPair[1];
