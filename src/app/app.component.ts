@@ -1,8 +1,8 @@
 import { Component, ChangeDetectorRef } from '@angular/core';
 
 interface Coord {
-  left: string;
-  top: string
+  left: number;
+  top: number
 }
 
 interface HighLightObj {
@@ -14,8 +14,7 @@ interface HighLightObj {
 interface BlindsObj {
   [key: string]: string[] | string;
   x: string;
-  y: string;
-  
+  y: string;  
 }
 @Component({
   selector: 'app-root',
@@ -32,14 +31,17 @@ export class AppComponent {
   inputColor = '#4000ff';
   inputArea = 'zones';
   tozoom: Coord;
+  inputPosition: string;
+  apiKey: string;
 
   constructor(private ref: ChangeDetectorRef) {
     const defaultFloor = '1';
     const paramsObj = this.paramsParser(window.location.search.slice(1));
-    console.log('-urlParamsObj:', paramsObj);
+    console.log('--urlParamsObj:', paramsObj);
 
     this.position = paramsObj.position;
     this.tozoom = paramsObj.zoom;
+    this.apiKey = paramsObj.key;
     
     if (paramsObj.floor && this.floors.indexOf(paramsObj.floor) > -1) {
         this.floor = paramsObj.floor;
@@ -87,12 +89,17 @@ export class AppComponent {
 
   getCurrentCell(cell: string): void {
     this.inputId = cell;
-    console.log('catch in host cell', this.inputId);
+    console.log('-catch in host cell', this.inputId);
     this.ref.detectChanges();
   }
 
   getBlindInfo(blindsObj: any): void {
     this.blindObj = blindsObj;
-    console.log('catch in host blinds', this.blindObj);
+    console.log('-catch in host blinds', this.blindObj);
+  }
+
+  showPosition(): void {
+    let posArr = this.inputPosition.split(',');
+    this.position = {top: +posArr[1]/100, left: +posArr[0]/100}
   }
 }

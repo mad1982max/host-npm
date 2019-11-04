@@ -22,9 +22,9 @@
           </select>
         </div>
 
-        <div class="inputTest col-4 col-sm-auto ">
+        <div class="inputTest col-auto">
           <input 
-            type="email" 
+            type="text" 
             class="form-control" 
             id="inputTestId" 
             placeholder="inputRoom" 
@@ -44,6 +44,28 @@
     </div>
   </div>
 
+  <div class="navParams col-lg-auto d-flex align-items-center mt-1 px-1">
+    <div class="position col-sm-auto ">
+      <input 
+        type="text" 
+        class="form-control" 
+        id="position" 
+        placeholder="position" 
+        [(ngModel)] = "inputPosition" 
+        [ngModelOptions]="{standalone: true}">
+    </div>
+  
+    <div class="col col-sm-auto sendRoomTest d-flex">
+      <button 
+        id = "showPosition" 
+        type="button" 
+        class="btn btn-primary form-control" 
+        (click) = "showPosition()">
+          Show position
+      </button>
+    </div>
+  </div>  
+
   <div class="navFloor col-12">
     <ul class="row mb-1">
       <li 
@@ -54,10 +76,11 @@
         {{floorIn}}
       </li>
     </ul>
-  </div>
+  </div>  
 
   <div class="module">
     <lib-vcog2d
+      [apiKey] = "apiKey"
       [tozoom] = "tozoom" 
       [floor]="floor" 
       [objectToHighlight] = "objectToHighlight" 
