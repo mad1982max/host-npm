@@ -1,5 +1,5 @@
 .mainApp {
-  max-width: 800px;
+  max-width: 760px;
   overflow: hidden;
 }
 
@@ -97,7 +97,7 @@ img {
   border-left-color: #39ac73 !important;
 }
 
-@media only screen and (min-width: 650px) {
+@media only screen and (min-width: 640px) {
   .module {
     width: 100%;
     transform: none;
