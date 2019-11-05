@@ -22,7 +22,7 @@
           </select>
         </div>
 
-        <div class="inputTest col-auto">
+        <div class="inputTest col-4 col-sm-auto">
           <input 
             type="text" 
             class="form-control" 
@@ -32,7 +32,7 @@
             [ngModelOptions]="{standalone: true}">
         </div>
           
-        <div class="col col-sm-auto sendRoomTest d-flex">
+        <div class="col-sm-auto sendRoomTest d-flex">
           <button 
             id = "highLight" 
             type="button" 
@@ -78,15 +78,18 @@
     </ul>
   </div>  
 
-  <div class="module">
-    <lib-vcog2d
-      [apiKey] = "apiKey"
-      [tozoom] = "tozoom" 
-      [floor]="floor" 
-      [objectToHighlight] = "objectToHighlight" 
-      [position] = "position"
-      (onChangedBlinds) = 'getBlindInfo($event)'      
-      (onChanged) = 'getCurrentCell($event)'>
-    </lib-vcog2d>
+  <div class="wrapper">
+    <div class="module">
+      <lib-vcog2d
+        [apiKey] = "apiKey"
+        [tozoom] = "tozoom" 
+        [floor]="floor" 
+        [objectToHighlight] = "objectToHighlight" 
+        [position] = "position"
+        (onChangedBlinds) = 'getBlindInfo($event)'      
+        (onChanged) = 'getCurrentCell($event)'>
+      </lib-vcog2d>
+    </div>
   </div>
+  
 </div>
