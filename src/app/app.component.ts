@@ -33,6 +33,7 @@ export class AppComponent {
   tozoom: Coord;
   inputPosition: string;
   apiKey: string;
+  tempFlag = false;
 
   constructor(private ref: ChangeDetectorRef) {
     const defaultFloor = '1';
@@ -84,6 +85,7 @@ export class AppComponent {
   changeFloor(floor: string): void {
     this.objectToHighlight = undefined;
     this.floor = floor;
+    this.tempFlag = false;
     console.log('NEW FLOOR: ', this.floor);
   }
 
@@ -101,5 +103,9 @@ export class AppComponent {
   showPosition(): void {
     let posArr = this.inputPosition.split(',');
     this.position = {top: +posArr[1]/100, left: +posArr[0]/100}
+  }
+
+  showTemp(): void {
+    this.tempFlag = !this.tempFlag
   }
 }

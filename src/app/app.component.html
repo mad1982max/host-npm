@@ -61,7 +61,17 @@
         type="button" 
         class="btn btn-primary form-control" 
         (click) = "showPosition()">
-          Show position
+        <img src = "assets/ico/icon_location.svg">
+      </button>
+    </div>
+
+    <div class="col col-sm-auto sendRoomTest d-flex">
+      <button 
+        id = "showTemp" 
+        type="button" 
+        class="btn btn-primary form-control" 
+        (click) = "showTemp()">
+        <img src = "assets/ico/temp.jpg">
       </button>
     </div>
   </div>  
@@ -81,6 +91,7 @@
   <div class="wrapper">
     <div class="module">
       <lib-vcog2d
+        [tempFlag] = "tempFlag"
         [apiKey] = "apiKey"
         [tozoom] = "tozoom" 
         [floor]="floor" 
