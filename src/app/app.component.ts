@@ -14,7 +14,7 @@ interface HighLightObj {
 interface BlindsObj {
   [key: string]: string[] | string;
   x: string;
-  y: string;  
+  y: string;
 }
 @Component({
   selector: 'app-root',
@@ -32,8 +32,13 @@ export class AppComponent {
   inputArea = 'zones';
   tozoom: Coord;
   inputPosition: string;
-  apiKey: string;
+  apiKey: string = 'a5b8eb729a95493c98085ae141f23a41';
   tempFlag = false;
+  //modeObj;
+
+  mode = 'application';
+  hostRooms: string;
+  hostBlinds: string;
 
   constructor(private ref: ChangeDetectorRef) {
     const defaultFloor = '1';
@@ -42,13 +47,13 @@ export class AppComponent {
 
     this.position = paramsObj.position;
     this.tozoom = paramsObj.zoom;
-    this.apiKey = paramsObj.key;
-    
+    if (paramsObj.key) { this.apiKey = paramsObj.key; }
+
     if (paramsObj.floor && this.floors.indexOf(paramsObj.floor) > -1) {
         this.floor = paramsObj.floor;
     } else {
       this.floor = defaultFloor;
-      console.log(`--Bad params. Default floor: ${defaultFloor} was loaded`);      
+      console.log(`--Bad params. Default floor: ${defaultFloor} was loaded`);
     }
   }
 
@@ -102,7 +107,7 @@ export class AppComponent {
 
   showPosition(): void {
     let posArr = this.inputPosition.split(',');
-    this.position = {top: +posArr[1]/100, left: +posArr[0]/100}
+    this.position = {top: +posArr[1] / 100, left: +posArr[0] / 100}
   }
 
   showTemp(): void {
