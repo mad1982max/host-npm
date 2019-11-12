@@ -69,9 +69,32 @@
       <button 
         id = "showTemp" 
         type="button" 
+        [ngClass] = "{checked: paramToShow === 'temperature'}"
         class="btn btn-primary form-control" 
-        (click) = "showTemp()">
+        (click) = "switcher('temperature')">
         <img src = "assets/ico/temp.jpg">
+      </button>
+    </div>
+
+    <div class="col col-sm-auto sendRoomTest d-flex">
+      <button 
+        id = "showFeedback" 
+        type="button" 
+        [ngClass] = "{checked: paramToShow === 'negativeFB'}"
+        class="btn btn-primary form-control" 
+        (click) = "switcher('negativeFB')">
+        <img src = "assets/ico/wrench.png">
+      </button>
+    </div>
+
+    <div class="col col-sm-auto sendRoomTest d-flex">
+      <button 
+        id = "showNumbers" 
+        type="button" 
+        [ngClass] = "{checked: paramToShow === 'roomNumber'}"
+        class="btn btn-primary form-control" 
+        (click) = "switcher('roomNumber')">
+        <img src = "assets/ico/numbers.png">
       </button>
     </div>
   </div>  
@@ -91,7 +114,11 @@
   <div class="wrapper">
     <div class="module">
       <lib-vcog2d
-        [tempFlag] = "tempFlag"
+        [hostRoomsWithNegativeFB] = "hostRoomsWithNegativeFB"
+        [paramToShow] = "paramToShow"
+        [hostRooms] = "hostRooms"
+        [hostBlinds] = "hostBlinds"
+        [mode] = "mode"
         [apiKey] = "apiKey"
         [tozoom] = "tozoom" 
         [floor]="floor" 

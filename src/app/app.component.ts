@@ -2,7 +2,7 @@ import { Component, ChangeDetectorRef } from '@angular/core';
 
 interface Coord {
   left: number;
-  top: number
+  top: number;
 }
 
 interface HighLightObj {
@@ -11,10 +11,16 @@ interface HighLightObj {
   color: string;
 }
 
+interface ParamsObj {
+  floor?: string;
+  zoom?: Coord;
+  position?: Coord;
+  key?: string;
+}
 interface BlindsObj {
   [key: string]: string[] | string;
   x: string;
-  y: string;  
+  y: string;
 }
 @Component({
   selector: 'app-root',
@@ -27,32 +33,144 @@ export class AppComponent {
   objectToHighlight: HighLightObj | undefined ;
   position: Coord;
   blindObj: BlindsObj;
-  inputId = '01-X09-B';
-  inputColor = '#4000ff';
-  inputArea = 'zones';
   tozoom: Coord;
   inputPosition: string;
-  apiKey: string;
-  tempFlag = false;
+
+  inputId = '01-X09-B';
+  inputColor = '#4000ff';
+  inputArea = 'rooms';
+  apiKey = 'a5b8eb729a95493c98085ae141f23a41';
+  paramToShow = 'roomNumber';
+
+  //mode = 'mobile';
+  mode = 'application';
+
+  hostRoomsWithNegativeFB: [];
+
+  hostRooms = [
+    {
+        bimRoomId: '04_X12_G',
+        logicalRoomId: 409,
+        description: 'Møterom',
+        capacity: 10,
+        light: 6,
+        reserved: false,
+        reservedBy: null,
+        temperature: 11.6,
+        category: 'meeting_room',
+        floor: 4,
+        occupied: false,
+        reservedUntilDateTime: null
+    },
+    {
+        bimRoomId: '04_X09_C',
+        light: 80,
+        logicalRoomId: 421,
+        temperature: 23.1,
+        description: 'Arbeidsrom',
+        category: 'work_room',
+        floor: 4,
+        occupied: false,
+        capacity: null
+    },
+    {
+        bimRoomId: '04_X13_H',
+        logicalRoomId: 417,
+        description: 'Møterom',
+        capacity: 3,
+        light: 7,
+        reserved: false,
+        reservedBy: null,
+        temperature: 23.4,
+        category: 'meeting_room',
+        floor: 4,
+        occupied: false,
+        reservedUntilDateTime: null
+    },
+    {
+        bimRoomId: '04_X13_I',
+        light: 58,
+        logicalRoomId: 413,
+        temperature: 23.4,
+        description: 'Møterom',
+        category: 'meeting_room',
+        floor: 4,
+        occupied: true,
+        capacity: 3
+    }
+];
+  hostBlinds = [
+    {
+      state: 'closed',
+      objectName: '.x237_03_Y13_A_XM601_STA',
+      bimBlindId: '237.03-Y13-A-XM601_'
+    },
+    {
+      state: 'closed',
+      objectName: '.x237_03_Y06_B_XM601_STA',
+      bimBlindId: '237.03-Y06-B-XM601_'
+    },
+    {
+      state: 'closed',
+      objectName: '.x237_03_Y06_A_XM601_STA',
+      bimBlindId: '237.03-Y06-A-XM601_'
+    },
+    {
+      state: 'closed',
+      objectName: '.x237_03_Y02_A_XM601_STA',
+      bimBlindId: '237.03-Y02-A-XM601_'
+    },
+    {
+      state: 'closed',
+      objectName: '.x237_03_X12_P_XM601_2_STA',
+      bimBlindId: '237.03-X12-P-XM601_2'
+    },
+    {
+      state: 'closed',
+      objectName: '.x237_04_Y01_B_XM601_STA',
+      bimBlindId: '237.04-Y01-B-XM601_'
+    },
+    {
+      state: 'closed',
+      objectName: '.x237_04_X13_O_XM601_STA',
+      bimBlindId: '237.04-X13-O-XM601_'
+    },
+    {
+      state: 'closed',
+      objectName: '.x237_04_X12_P_XM601_1_STA',
+      bimBlindId: '237.04-X12-P-XM601_1'
+    },
+    {
+      state: 'closed',
+      objectName: '.x237_04_X13_P_XM601_1_STA',
+      bimBlindId: '237.04-X13-P-XM601_1'
+    },
+    {
+      state: 'closed',
+      objectName: '.x237_04_X16_N_XM601_3_STA',
+      bimBlindId: '237.04-X16-N-XM601_3'
+    }
+  ];
 
   constructor(private ref: ChangeDetectorRef) {
     const defaultFloor = '1';
-    const paramsObj = this.paramsParser(window.location.search.slice(1));
-    console.log('--urlParamsObj:', paramsObj);
+    const paramsObj: ParamsObj = this.paramsParser(window.location.search.slice(1));
+    console.log('--[url params:]', paramsObj);
 
     this.position = paramsObj.position;
     this.tozoom = paramsObj.zoom;
-    this.apiKey = paramsObj.key;
-    
+    if (paramsObj.key) { this.apiKey = paramsObj.key; }
+
     if (paramsObj.floor && this.floors.indexOf(paramsObj.floor) > -1) {
         this.floor = paramsObj.floor;
     } else {
       this.floor = defaultFloor;
-      console.log(`--Bad params. Default floor: ${defaultFloor} was loaded`);      
+      console.log(`--Bad params. Default floor: ${defaultFloor} was loaded`);
     }
   }
 
-  paramsParser(query) {
+  paramsParser(query: string): ParamsObj {
+    console.log(query);
     const paramPairsArr = query.split('&');
     const paramsObj: any = {};
 
@@ -63,8 +181,8 @@ export class AppComponent {
       case 'position':
       case 'zoom':
         const valArr = splitedPair[1].split(',');
-        value.top = valArr[1] / 100;
-        value.left = valArr[0] / 100;
+        value.top = +valArr[1] / 100;
+        value.left = +valArr[0] / 100;
         break;
       default:
         value = splitedPair[1];
@@ -83,15 +201,16 @@ export class AppComponent {
   }
 
   changeFloor(floor: string): void {
-    this.objectToHighlight = undefined;
+    // this.objectToHighlight = undefined;
     this.floor = floor;
-    this.tempFlag = false;
+    // this.tempFlag = false;
+    this.paramToShow = 'roomNumber';
     console.log('NEW FLOOR: ', this.floor);
   }
 
   getCurrentCell(cell: string): void {
     this.inputId = cell;
-    console.log('-catch in host cell', this.inputId);
+    console.log('-catch in host room', this.inputId);
     this.ref.detectChanges();
   }
 
@@ -101,11 +220,11 @@ export class AppComponent {
   }
 
   showPosition(): void {
-    let posArr = this.inputPosition.split(',');
-    this.position = {top: +posArr[1]/100, left: +posArr[0]/100}
+    const posArr = this.inputPosition.split(',');
+    this.position = {top: +posArr[1] / 100, left: +posArr[0] / 100};
   }
 
-  showTemp(): void {
-    this.tempFlag = !this.tempFlag
+  switcher(paramToShow: string): void {
+    this.paramToShow = paramToShow;
   }
 }

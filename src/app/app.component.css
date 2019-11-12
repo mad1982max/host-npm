@@ -14,7 +14,11 @@ width: 100%;
   transform: translate(-13%);
 }
 
-#showPosition {
+.checked {
+  background-color: pink !important;
+}
+
+#showPosition, #showTemp, #showFeedback, #showNumbers, #inputColor {
   width: 40px;
   height: 40px;
   padding: 6px;
@@ -26,19 +30,13 @@ img {
   width: 100%;
 }
 
-#showTemp {
-  width: 40px;
-  height: 40px;
-  padding: 6px;
-  background: white;
-  border: 1px solid grey;
-}
 
-#inputColor {
+
+/* #inputColor {
   width: 40px;
   height: 40px;
   padding: 6px;
-}
+} */
 
 #highLight {
   width: 40px;
