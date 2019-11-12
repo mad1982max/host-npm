@@ -90,7 +90,7 @@
     </g>
     <line x1="38.829" y1="77.343" x2="40.839" y2="73.734" style="fill: none;stroke: #b4897d;stroke-width: 0.08px"/>
   </g>
-  </g>
+ 
   <g class="rooms">
 <g id="storey-U2">
         <g id="product-U2-Y06-M">
@@ -1149,4 +1149,5 @@
         </g>
     </g>
 </g>
+ </g>
 </svg>
