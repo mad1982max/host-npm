@@ -35,7 +35,6 @@ export class AppComponent {
   blindObj: BlindsObj;
   tozoom: Coord;
   inputPosition: string;
-<<<<<<< HEAD
 
   inputId = '01-X09-B';
   inputColor = '#4000ff';
@@ -152,15 +151,6 @@ export class AppComponent {
       bimBlindId: '237.04-X16-N-XM601_3'
     }
   ];
-=======
-  apiKey: string = 'a5b8eb729a95493c98085ae141f23a41';
-  tempFlag = false;
-  //modeObj;
-
-  mode = 'application';
-  hostRooms: string;
-  hostBlinds: string;
->>>>>>> 8c9cc52d5fe79a8b2230455355a0d0374feea792
 
   constructor(private ref: ChangeDetectorRef) {
     const defaultFloor = '1';
@@ -230,13 +220,8 @@ export class AppComponent {
   }
 
   showPosition(): void {
-<<<<<<< HEAD
     const posArr = this.inputPosition.split(',');
     this.position = {top: +posArr[1] / 100, left: +posArr[0] / 100};
-=======
-    let posArr = this.inputPosition.split(',');
-    this.position = {top: +posArr[1] / 100, left: +posArr[0] / 100}
->>>>>>> 8c9cc52d5fe79a8b2230455355a0d0374feea792
   }
 
   switcher(paramToShow: string): void {
