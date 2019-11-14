@@ -2,7 +2,7 @@
  
 <defs>
 <style>
-.cls-1,.cls-10,.cls-11,.cls-6,.cls-7,.cls-8,.cls-9{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:#b4897d;}.cls-4{clip-path:url(#clip-path-2);}.cls-5{clip-path:url(#clip-path-3);}.cls-10,.cls-11,.cls-6,.cls-7,.cls-8,.cls-9{stroke:#b4897d;}.cls-6{stroke-miterlimit:10;}.cls-11,.cls-6,.cls-7,.cls-8,.cls-9{stroke-width:0.08px;}.cls-10,.cls-8{stroke-linecap:square;}.cls-11,.cls-9{stroke-linecap:round;}.cls-9{stroke-miterlimit:3;}.cls-10{stroke-width:0.16px;}.cls-11{stroke-linejoin:round;}</style>
+.cls-1,.cls-10,.cls-11,.cls-6,.cls-7,.cls-8,.cls-9{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:white;}.cls-4{clip-path:url(#clip-path-2);}.cls-5{clip-path:url(#clip-path-3);}.cls-10,.cls-11,.cls-6,.cls-7,.cls-8,.cls-9{stroke:white;}.cls-6{stroke-miterlimit:10;}.cls-11,.cls-6,.cls-7,.cls-8,.cls-9{stroke-width:0.08px;}.cls-10,.cls-8{stroke-linecap:square;}.cls-11,.cls-9{stroke-linecap:round;}.cls-9{stroke-miterlimit:3;}.cls-10{stroke-width:0.16px;}.cls-11{stroke-linejoin:round;}</style>
 <clipPath id="clip-path">
 <rect class="cls-1" x="36.3177" y="73.0491" width="3.9196" height="3.6694" transform="matrix(0.4715, -0.8819, 0.8819, 0.4715, -45.8078, 73.3303)"/>
 </clipPath>

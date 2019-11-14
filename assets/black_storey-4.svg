@@ -2,7 +2,7 @@
  
 <defs>
 <style>
-.cls-1,.cls-3,.cls-4,.cls-6{fill:none;}.cls-2{fill:#aa897e;}.cls-3,.cls-4,.cls-5,.cls-6,.cls-7{stroke:#b4897d;stroke-linecap:square;}.cls-3,.cls-7{stroke-width:0.08px;}.cls-4{stroke-width:0.16px;}.cls-5,.cls-7{fill:#fff;}.cls-5,.cls-6{stroke-width:0.08px;}.cls-8{clip-path:url(#clip-path);}.cls-9{fill:#b4897d;}.cls-10{clip-path:url(#clip-path-2);}.cls-11{clip-path:url(#clip-path-3);}</style>
+.cls-1,.cls-3,.cls-4,.cls-6{fill:none;}.cls-2{fill:black}.cls-3,.cls-4,.cls-5,.cls-6,.cls-7{stroke:white;stroke-linecap:square;}.cls-3,.cls-7{stroke-width:0.08px;}.cls-4{stroke-width:0.16px;}.cls-5,.cls-7{fill:#fff;}.cls-5,.cls-6{stroke-width:0.08px;}.cls-8{clip-path:url(#clip-path);}.cls-9{fill:white;}.cls-10{clip-path:url(#clip-path-2);}.cls-11{clip-path:url(#clip-path-3);}</style>
 <clipPath id="clip-path">
 <rect class="cls-1" x="44.0484" y="58.8683" width="3.9196" height="3.6694" transform="translate(-29.2168 72.6535) rotate(-61.8673)"/>
 </clipPath>
