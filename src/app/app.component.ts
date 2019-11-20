@@ -13,9 +13,12 @@ interface HighLightObj {
 
 interface ParamsObj {
   floor?: string;
-  zoom?: Coord;
+  center?: Coord;
   position?: Coord;
   key?: string;
+  version?: string;
+  zoom?: string;
+  v?: string;
 }
 interface BlindsObj {
   [key: string]: string[] | string;
@@ -33,124 +36,124 @@ export class AppComponent {
   objectToHighlight: HighLightObj | undefined ;
   position: Coord;
   blindObj: BlindsObj;
-  tozoom: Coord;
+  zoom;
   inputPosition: string;
+  zoomLevel;
+  objectToZoom;
+  apiKey: string;
+  center: Coord;
+  v: string;
+  
 
-  inputId = '01-X09-B';
+  inputId = '04-X09-H';
   inputColor = '#4000ff';
-  inputArea = 'rooms';
-  apiKey = 'a5b8eb729a95493c98085ae141f23a41';
+  inputArea = 'zones';
   paramToShow = 'roomNumber';
+  version = 'white';
+  inputCoordParam = 'IFC'
 
   //mode = 'mobile';
   mode = 'application';
 
-  hostRoomsWithNegativeFB: [];
+  hostRoomsWithNegativeFB = [
+    {
+        "appVersion": "0.0.1",
+        "name": "Rune Melberg",
+        "source": "Mobile App",
+        "floor": 4,
+        "message": "werwer",
+        "type": "negative",
+        "uuid": "34e083df6108b6f35b7ad827b13ef6b7",
+        "email": "rune.melberg@gmail.com",
+        "platform": "iOS",
+        "roomId": 429,
+        "status": "NOT_RESOLVED",
+        "timestamp": "2019-11-11T21:30:08.407Z",
+        "bimRoomId": "04_X09_D"
+    },
+    {
+        "appVersion": "0.0.1",
+        "name": "Dusan Jovanovski",
+        "source": "Mobile App",
+        "floor": 4,
+        "message": "Moterom 405 on Floor 4",
+        "type": "negative",
+        "uuid": "cbe4bf1beb16c022b9181d8753a2e0e9",
+        "email": "dusan@smartplants.io",
+        "platform": "iOS",
+        "roomId": 405,
+        "status": "NOT_RESOLVED",
+        "timestamp": "2019-11-06T12:39:55.071Z",
+        "bimRoomId": "04_X09_H"
+    },
+    {
+        "appVersion": "0.0.1",
+        "name": "Dusan Jovanovski",
+        "source": "Mobile App",
+        "floor": 4,
+        "message": "dadada",
+        "type": "negative",
+        "uuid": "38bdda17f39b99fd65e217191810086b",
+        "email": "dusan@smartplants.io",
+        "platform": "iOS",
+        "roomId": 405,
+        "status": "NOT_RESOLVED",
+        "timestamp": "2019-11-06T09:37:20.121Z",
+        "bimRoomId": "04_X09_H"
+    }
+];
 
-  hostRooms = [
+  hostRooms = [    
     {
-        bimRoomId: '04_X12_G',
-        logicalRoomId: 409,
-        description: 'Møterom',
-        capacity: 10,
-        light: 6,
-        reserved: false,
-        reservedBy: null,
-        temperature: 11.6,
-        category: 'meeting_room',
-        floor: 4,
-        occupied: false,
-        reservedUntilDateTime: null
-    },
-    {
-        bimRoomId: '04_X09_C',
-        light: 80,
-        logicalRoomId: 421,
-        temperature: 23.1,
-        description: 'Arbeidsrom',
-        category: 'work_room',
-        floor: 4,
-        occupied: false,
-        capacity: null
-    },
-    {
-        bimRoomId: '04_X13_H',
-        logicalRoomId: 417,
-        description: 'Møterom',
-        capacity: 3,
-        light: 7,
-        reserved: false,
-        reservedBy: null,
-        temperature: 23.4,
-        category: 'meeting_room',
-        floor: 4,
-        occupied: false,
-        reservedUntilDateTime: null
-    },
-    {
-        bimRoomId: '04_X13_I',
-        light: 58,
-        logicalRoomId: 413,
-        temperature: 23.4,
-        description: 'Møterom',
-        category: 'meeting_room',
-        floor: 4,
-        occupied: true,
-        capacity: 3
+        "bimRoomId": "04_X06_C",
+        "light": 62,
+        "logicalRoomId": 427,
+        "temperature": 23.4,
+        "description": "Arbeidsrom",
+        "category": "work_room",
+        "floor": 4,
+        "occupied": true,
+        "capacity": 3,
+        "available": false
     }
 ];
   hostBlinds = [
     {
-      state: 'closed',
-      objectName: '.x237_03_Y13_A_XM601_STA',
-      bimBlindId: '237.03-Y13-A-XM601_'
+        "state": "closed",
+        "objectName": ".x237_04_Y01_B_XM601_STA",
+        "bimBlindId": "237.04-Y01-B-XM601_"
     },
     {
-      state: 'closed',
-      objectName: '.x237_03_Y06_B_XM601_STA',
-      bimBlindId: '237.03-Y06-B-XM601_'
+        "state": "closed",
+        "objectName": ".x237_04_X13_O_XM601_STA",
+        "bimBlindId": "237.04-X13-O-XM601_"
     },
     {
-      state: 'closed',
-      objectName: '.x237_03_Y06_A_XM601_STA',
-      bimBlindId: '237.03-Y06-A-XM601_'
+        "state": "closed",
+        "objectName": ".x237_04_Y06_A_XM601_STA",
+        "bimBlindId": "237.04-Y06-A-XM601_"
     },
     {
-      state: 'closed',
-      objectName: '.x237_03_Y02_A_XM601_STA',
-      bimBlindId: '237.03-Y02-A-XM601_'
+        "state": "closed",
+        "objectName": ".x237_04_Y03_B_XM601_STA",
+        "bimBlindId": "237.04-Y03-B-XM601_"
     },
     {
-      state: 'closed',
-      objectName: '.x237_03_X12_P_XM601_2_STA',
-      bimBlindId: '237.03-X12-P-XM601_2'
+        "state": "closed",
+        "objectName": ".x237_04_Y08_A_XM601_STA",
+        "bimBlindId": "237.04-Y08-A-XM601_"
     },
     {
-      state: 'closed',
-      objectName: '.x237_04_Y01_B_XM601_STA',
-      bimBlindId: '237.04-Y01-B-XM601_'
+        "state": "closed",
+        "objectName": ".x237_04_Y01_A_XM601_STA",
+        "bimBlindId": "237.04-Y01-A-XM601_"
     },
     {
-      state: 'closed',
-      objectName: '.x237_04_X13_O_XM601_STA',
-      bimBlindId: '237.04-X13-O-XM601_'
-    },
-    {
-      state: 'closed',
-      objectName: '.x237_04_X12_P_XM601_1_STA',
-      bimBlindId: '237.04-X12-P-XM601_1'
-    },
-    {
-      state: 'closed',
-      objectName: '.x237_04_X13_P_XM601_1_STA',
-      bimBlindId: '237.04-X13-P-XM601_1'
-    },
-    {
-      state: 'closed',
-      objectName: '.x237_04_X16_N_XM601_3_STA',
-      bimBlindId: '237.04-X16-N-XM601_3'
+        "state": "closed",
+        "objectName": ".x237_04_X16_K_XM601_4_STA",
+        "bimBlindId": "237.04-X16-K-XM601_4"
     }
-  ];
+];
 
   constructor(private ref: ChangeDetectorRef) {
     const defaultFloor = '1';
@@ -158,8 +161,13 @@ export class AppComponent {
     console.log('--[url params:]', paramsObj);
 
     this.position = paramsObj.position;
-    this.tozoom = paramsObj.zoom;
+    this.center = paramsObj.center;
+    this.zoom = paramsObj.zoom;
     if (paramsObj.key) { this.apiKey = paramsObj.key; }
+    if (paramsObj.version) {
+        this.version = paramsObj.version
+    }
+    if (paramsObj.v) { this.v = paramsObj.v }
 
     if (paramsObj.floor && this.floors.indexOf(paramsObj.floor) > -1) {
         this.floor = paramsObj.floor;
@@ -170,7 +178,6 @@ export class AppComponent {
   }
 
   paramsParser(query: string): ParamsObj {
-    console.log(query);
     const paramPairsArr = query.split('&');
     const paramsObj: any = {};
 
@@ -179,7 +186,7 @@ export class AppComponent {
     let value: any = {};
     switch (splitedPair[0]) {
       case 'position':
-      case 'zoom':
+      case 'center':
         const valArr = splitedPair[1].split(',');
         value.top = +valArr[1] / 100;
         value.left = +valArr[0] / 100;
@@ -200,12 +207,20 @@ export class AppComponent {
     };
   }
 
-  changeFloor(floor: string): void {
-    // this.objectToHighlight = undefined;
+  zoomInOut(): void {
+    this.objectToZoom = {
+      id: this.inputId,
+      area: this.inputArea,
+      zoom: this.zoom
+    };
+    console.log('this.objectToZoom', this.objectToZoom);    
+  }
+
+  changeFloor(floor: string, v?: string): void {
+    this.v = v;
     this.floor = floor;
-    // this.tempFlag = false;
     this.paramToShow = 'roomNumber';
-    console.log('NEW FLOOR: ', this.floor);
+    console.log('NEW FLOOR: ', this.floor, this.v);
   }
 
   getCurrentCell(cell: string): void {
@@ -220,8 +235,12 @@ export class AppComponent {
   }
 
   showPosition(): void {
-    const posArr = this.inputPosition.split(',');
-    this.position = {top: +posArr[1] / 100, left: +posArr[0] / 100};
+    if (this.inputPosition) {
+      const posArr = this.inputPosition.split(',');
+      this.position = {top: +posArr[1] / 100, left: +posArr[0] / 100};
+    } else {
+      console.log('PLEASE, CHECK POSITION FIELD');      
+    }    
   }
 
   switcher(paramToShow: string): void {

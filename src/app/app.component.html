@@ -1,71 +1,62 @@
 <div class="mainApp container-fluid">
-  <div class="row nav">    
-    <div class="nameOfBuilding d-none d-lg-block col-lg-auto">
-      FINANSPARKEN
+  <div class="row row1 mt-1 align-items-center">
+    <div class="col-auto color">
+      <input 
+        type="color" 
+        class="form-control" 
+        value = "#ffcc00" 
+        id="inputColor" 
+        [(ngModel)] = "inputColor" 
+        [ngModelOptions]="{standalone: true}">
     </div>
-    
-    <div class="navParams col-12 col-lg-auto d-flex align-items-center mt-1 px-1">
-        <div class="col-auto color">
-          <input 
-            type="color" 
-            class="form-control" 
-            value = "#ffcc00" 
-            id="inputColor" 
-            [(ngModel)] = "inputColor" 
-            [ngModelOptions]="{standalone: true}">
-        </div>
 
-        <div class="inputArea col-auto">
-          <select class="form-control" id="area" [(ngModel)] = "inputArea">
-            <option>rooms</option>
-            <option>zones</option>
-          </select>
-        </div>
-
-        <div class="inputTest col-4 col-sm-auto">
-          <input 
-            type="text" 
-            class="form-control" 
-            id="inputTestId" 
-            placeholder="inputRoom" 
-            [(ngModel)] = "inputId" 
-            [ngModelOptions]="{standalone: true}">
-        </div>
-          
-        <div class="col-sm-auto sendRoomTest d-flex">
-          <button 
-            id = "highLight" 
-            type="button" 
-            class="btn btn-primary form-control" 
-            (click) = "highLight()">
-              <img src = "assets/ico/idea.svg">
-          </button>
-        </div>
+    <div class="inputArea col-auto">
+      <select class="form-control" id="area" [(ngModel)] = "inputArea">
+        <option>rooms</option>
+        <option>zones</option>
+      </select>
     </div>
-  </div>
 
-  <div class="navParams col-lg-auto d-flex align-items-center mt-1 px-1">
-    <div class="position col-sm-auto ">
+    <div class="inputTest col-6 col-sm-auto">
       <input 
         type="text" 
         class="form-control" 
-        id="position" 
-        placeholder="position" 
-        [(ngModel)] = "inputPosition" 
+        id="inputTestId" 
+        placeholder="inputRoom" 
+        [(ngModel)] = "inputId" 
+        [ngModelOptions]="{standalone: true}">
+    </div>    
+  </div> 
+
+  <div class="row row1 mt-1 align-items-center">
+    <div class="inputNumber col-3">
+      <input 
+        type="number" 
+        class="form-control" 
+        id="zoom" 
+        placeholder="zoom" 
+        [(ngModel)] = "zoom" 
         [ngModelOptions]="{standalone: true}">
     </div>
-  
-    <div class="col col-sm-auto sendRoomTest d-flex">
+
+    <div class="btn-group sendRoomTest d-flex" role="group" aria-label="Basic example">
       <button 
-        id = "showPosition" 
+        id = "highLight" 
         type="button" 
         class="btn btn-primary form-control" 
-        (click) = "showPosition()">
-        <img src = "assets/ico/icon_location.svg">
+        (click) = "highLight()">
+          <img src = "assets/ico/idea.svg">
+      </button>
+      <button 
+        id = "zoomInOut" 
+        type="button" 
+        class="btn btn-primary form-control" 
+        (click) = "zoomInOut()">
+          <img src = "assets/ico/zoom-in.png">
       </button>
     </div>
 
-    <div class="col col-sm-auto sendRoomTest d-flex">
+    <div class="btn-group sendRoomTest d-flex" role="group" aria-label="Basic example">
       <button 
         id = "showTemp" 
         type="button" 
@@ -74,9 +65,6 @@
         (click) = "switcher('temperature')">
         <img src = "assets/ico/temp.jpg">
       </button>
-    </div>
-
-    <div class="col col-sm-auto sendRoomTest d-flex">
       <button 
         id = "showFeedback" 
         type="button" 
@@ -84,10 +72,7 @@
         class="btn btn-primary form-control" 
         (click) = "switcher('negativeFB')">
         <img src = "assets/ico/wrench.png">
-      </button>
-    </div>
-
-    <div class="col col-sm-auto sendRoomTest d-flex">
+      </button>  
       <button 
         id = "showNumbers" 
         type="button" 
@@ -95,39 +80,77 @@
         class="btn btn-primary form-control" 
         (click) = "switcher('roomNumber')">
         <img src = "assets/ico/numbers.png">
-      </button>
-    </div>
-  </div>  
-
-  <div class="navFloor col-12">
-    <ul class="row mb-1">
-      <li 
-        (click)="changeFloor(floorIn)" 
-        class="col-auto mx-1 text-center"
-        [ngClass]="floorIn === floor? 'activeFloor': ''" 
-        *ngFor='let floorIn of floors; let i = index'>
-        {{floorIn}}
-      </li>
-    </ul>
-  </div>  
-
-  <div class="wrapper">
-    <div class="module">
-      <lib-vcog2d
-        [hostRoomsWithNegativeFB] = "hostRoomsWithNegativeFB"
-        [paramToShow] = "paramToShow"
-        [hostRooms] = "hostRooms"
-        [hostBlinds] = "hostBlinds"
-        [mode] = "mode"
-        [apiKey] = "apiKey"
-        [tozoom] = "tozoom" 
-        [floor]="floor" 
-        [objectToHighlight] = "objectToHighlight" 
-        [position] = "position"
-        (onChangedBlinds) = 'getBlindInfo($event)'      
-        (onChanged) = 'getCurrentCell($event)'>
-      </lib-vcog2d>
+      </button>  
     </div>
   </div>
-  
-</div>
+
+  <div class="row row1 mt-1 align-items-center">
+    <div class="position col-6">
+      <input 
+        type="text" 
+        class="form-control" 
+        id="position" 
+        placeholder="position" 
+        [(ngModel)] = "inputPosition" 
+        [ngModelOptions]="{standalone: true}">
+    </div>
+
+    <div class="inputArea col-auto">
+      <select class="form-control" id="area" [(ngModel)] = "inputCoordParam">
+        <option>IFC</option>
+        <option disabled>CMX</option>
+      </select>
+    </div>
+
+    <div class="col-auto sendRoomTest d-flex">
+      <button 
+        id = "showPosition" 
+        type="button" 
+        class="btn btn-primary form-control" 
+        (click) = "showPosition()">
+        <img src = "assets/ico/icon_location.svg">
+      </button>
+    </div>
+  </div>
+
+  <div class="row row1 mt-0 align-items-center">
+    <div class="navFloor col-12">
+      <ul class="row mx-0 mb-1">
+        <li 
+          (click)="changeFloor(floorIn)" 
+          class="col-auto mx-1 text-center"
+          [ngClass]="floorIn === floor? 'activeFloor': ''" 
+          *ngFor='let floorIn of floors; let i = index'>
+          {{floorIn}}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row row1 mt-1 align-items-center">
+      <div class="wrapper">
+        <div class="module">
+          <lib-vcog2d
+            [v] = "v"
+            [zoomLevel] = "zoom"
+            [objectToZoom] = "objectToZoom"
+            [version] = "version"
+            [hostRoomsWithNegativeFB] = "hostRoomsWithNegativeFB"
+            [paramToShow] = "paramToShow"
+            [hostRooms] = "hostRooms"
+            [hostBlinds] = "hostBlinds"
+            [mode] = "mode"
+            [apiKey] = "apiKey"
+            [tozoom] = "center" 
+            [floor]="floor" 
+            [objectToHighlight] = "objectToHighlight" 
+            [position] = "position"
+            (onChangedBlinds) = 'getBlindInfo($event)'      
+            (onChanged) = 'getCurrentCell($event)'>
+          </lib-vcog2d>
+        </div>
+      </div>
+  </div>
+
+</div>    
+

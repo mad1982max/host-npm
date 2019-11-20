@@ -20,9 +20,9 @@
       "dom"
     ],
     "paths": {
-      // "vcog2d": [
-      //     "./node_modules/vcog2d"
-      // ]
+      "vcog2d": [
+          "./node_modules/vcog2d"
+      ]
     }
   }
 }
