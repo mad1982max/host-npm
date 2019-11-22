@@ -20,6 +20,11 @@ interface ParamsObj {
   zoom?: string;
   v?: string;
 }
+
+interface ClickedArea {
+  zone: string;
+  room: string;
+}
 interface BlindsObj {
   [key: string]: string[] | string;
   x: string;
@@ -44,8 +49,8 @@ export class AppComponent {
   center: Coord;
   v: string;
   
-
-  inputId = '04-X09-H';
+  inputIdRoom = '04-X09-H';
+  inputIdZone = '04-X09-H';
   inputColor = '#4000ff';
   inputArea = 'zones';
   paramToShow = 'roomNumber';
@@ -114,7 +119,8 @@ export class AppComponent {
         "floor": 4,
         "occupied": true,
         "capacity": 3,
-        "available": false
+        "available": false,
+        "roomStatus": "something elese"
     }
 ];
   hostBlinds = [
@@ -200,16 +206,18 @@ export class AppComponent {
   }
 
   highLight(): void {
+    let id = this.inputArea === 'zones' ? this.inputIdZone : this.inputIdRoom;
     this.objectToHighlight = {
-      id: this.inputId,
+      id: id,
       area: this.inputArea,
       color: this.inputColor
     };
   }
 
   zoomInOut(): void {
+    let id = this.inputArea === 'zones' ? this.inputIdZone : this.inputIdRoom;
     this.objectToZoom = {
-      id: this.inputId,
+      id: id,
       area: this.inputArea,
       zoom: this.zoom
     };
@@ -217,15 +225,18 @@ export class AppComponent {
   }
 
   changeFloor(floor: string, v?: string): void {
+    this.inputIdZone = '';
+    this.inputIdRoom = '';
     this.v = v;
     this.floor = floor;
     this.paramToShow = 'roomNumber';
     console.log('NEW FLOOR: ', this.floor, this.v);
   }
 
-  getCurrentCell(cell: string): void {
-    this.inputId = cell;
-    console.log('-catch in host room', this.inputId);
+  getCurrentCell(obj: ClickedArea): void {
+    this.inputIdZone = obj.zone;
+    this.inputIdRoom = obj.room;
+    console.log('-catch in host', obj);
     this.ref.detectChanges();
   }
 

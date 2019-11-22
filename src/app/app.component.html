@@ -1,5 +1,6 @@
 <div class="mainApp container-fluid">
   <div class="row row1 mt-1 align-items-center">
+
     <div class="col-auto color">
       <input 
         type="color" 
@@ -10,22 +11,34 @@
         [ngModelOptions]="{standalone: true}">
     </div>
 
-    <div class="inputArea col-auto">
-      <select class="form-control" id="area" [(ngModel)] = "inputArea">
+    <div class="inputArea col-2">
+      <select class="form-control checkedArea" id="area" [(ngModel)] = "inputArea">
         <option>rooms</option>
         <option>zones</option>
       </select>
     </div>
 
-    <div class="inputTest col-6 col-sm-auto">
+    <div class="inputTest col-4 col-sm-auto">
       <input 
         type="text" 
-        class="form-control" 
+        class="form-control px-1" 
         id="inputTestId" 
-        placeholder="inputRoom" 
-        [(ngModel)] = "inputId" 
+        placeholder="room"
+        [ngClass] = "{checkedArea: inputArea === 'rooms'}" 
+        [(ngModel)] = "inputIdRoom" 
         [ngModelOptions]="{standalone: true}">
-    </div>    
+    </div> 
+
+    <div class="inputTest col-4 col-sm-auto">
+      <input 
+        type="text" 
+        class="form-control px-1" 
+        id="inputTestId" 
+        placeholder="zone" 
+        [ngClass] = "{checkedArea: inputArea === 'zones'}" 
+        [(ngModel)] = "inputIdZone" 
+        [ngModelOptions]="{standalone: true}">
+    </div>   
   </div> 
 
   <div class="row row1 mt-1 align-items-center">
@@ -85,35 +98,35 @@
   </div>
 
   <div class="row row1 mt-1 align-items-center">
-    <div class="position col-6">
-      <input 
-        type="text" 
-        class="form-control" 
-        id="position" 
-        placeholder="position" 
-        [(ngModel)] = "inputPosition" 
-        [ngModelOptions]="{standalone: true}">
-    </div>
+      <div class="position col-6">
+        <input 
+          type="text" 
+          class="form-control" 
+          id="position" 
+          placeholder="position" 
+          [(ngModel)] = "inputPosition" 
+          [ngModelOptions]="{standalone: true}">
+      </div>
+  
+      <div class="inputArea col-auto">
+        <select class="form-control" id="area" [(ngModel)] = "inputCoordParam">
+          <option>IFC</option>
+          <option disabled>CMX</option>
+        </select>
+      </div>
 
-    <div class="inputArea col-auto">
-      <select class="form-control" id="area" [(ngModel)] = "inputCoordParam">
-        <option>IFC</option>
-        <option disabled>CMX</option>
-      </select>
-    </div>
-
-    <div class="col-auto sendRoomTest d-flex">
-      <button 
-        id = "showPosition" 
-        type="button" 
-        class="btn btn-primary form-control" 
-        (click) = "showPosition()">
-        <img src = "assets/ico/icon_location.svg">
-      </button>
-    </div>
+      <div class="col-auto sendRoomTest d-flex">
+          <button 
+            id = "showPosition" 
+            type="button" 
+            class="btn btn-primary form-control" 
+            (click) = "showPosition()">
+            <img src = "assets/ico/icon_location.svg">
+          </button>
+        </div>
   </div>
 
-  <div class="row row1 mt-0 align-items-center">
+  <div class="row row1 mt-1 align-items-center">
     <div class="navFloor col-12">
       <ul class="row mx-0 mb-1">
         <li 
@@ -127,10 +140,11 @@
     </div>
   </div>
 
-  <div class="row row1 mt-1 align-items-center">
+  <div class="row row1 row2 mt-1 align-items-center">
       <div class="wrapper">
         <div class="module">
           <lib-vcog2d
+            style = "height: 100%"
             [v] = "v"
             [zoomLevel] = "zoom"
             [objectToZoom] = "objectToZoom"
