@@ -1,4 +1,5 @@
-import { Component, ChangeDetectorRef } from '@angular/core';
+import { Component, ChangeDetectorRef, OnInit } from '@angular/core';
+import { DataService } from './services/data.services';
 
 interface Coord {
   left: number;
@@ -19,6 +20,7 @@ interface ParamsObj {
   version?: string;
   zoom?: string;
   v?: string;
+  mode?: string;
 }
 
 interface ClickedArea {
@@ -33,154 +35,40 @@ interface BlindsObj {
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [DataService]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   floors: string[] = ['1', '2', '3', '4', '5', '6', '7', 'U1', 'U2', 'U3'];
   floor = '1';
   objectToHighlight: HighLightObj | undefined ;
   position: Coord;
   blindObj: BlindsObj;
-  zoom;
+  zoom = 5;
   inputPosition: string;
-  zoomLevel;
   objectToZoom;
   apiKey: string;
   center: Coord;
   v: string;
-  
   inputIdRoom = '04-X09-H';
   inputIdZone = '04-X09-H';
   inputColor = '#4000ff';
   inputArea = 'zones';
   paramToShow = 'roomNumber';
   version = 'white';
-  inputCoordParam = 'IFC'
-
+  inputCoordParam = 'IFC';
+  x: string;
+  y: string;
+  hostBlinds: any;
+  hostRooms: any;
+  hostRoomsWithNegativeFB: any;
+ 
   //mode = 'mobile';
   mode = 'application';
 
-  hostRoomsWithNegativeFB = [
-    {
-        "appVersion": "0.0.1",
-        "name": "Rune Melberg",
-        "source": "Mobile App",
-        "floor": 4,
-        "message": "werwer",
-        "type": "negative",
-        "uuid": "34e083df6108b6f35b7ad827b13ef6b7",
-        "email": "rune.melberg@gmail.com",
-        "platform": "iOS",
-        "roomId": 429,
-        "status": "NOT_RESOLVED",
-        "timestamp": "2019-11-11T21:30:08.407Z",
-        "bimRoomId": "04_X09_D"
-    },
-    {
-        "appVersion": "0.0.1",
-        "name": "Dusan Jovanovski",
-        "source": "Mobile App",
-        "floor": 4,
-        "message": "Moterom 405 on Floor 4",
-        "type": "negative",
-        "uuid": "cbe4bf1beb16c022b9181d8753a2e0e9",
-        "email": "dusan@smartplants.io",
-        "platform": "iOS",
-        "roomId": 405,
-        "status": "NOT_RESOLVED",
-        "timestamp": "2019-11-06T12:39:55.071Z",
-        "bimRoomId": "04_X09_H"
-    },
-    {
-        "appVersion": "0.0.1",
-        "name": "Dusan Jovanovski",
-        "source": "Mobile App",
-        "floor": 4,
-        "message": "dadada",
-        "type": "negative",
-        "uuid": "38bdda17f39b99fd65e217191810086b",
-        "email": "dusan@smartplants.io",
-        "platform": "iOS",
-        "roomId": 405,
-        "status": "NOT_RESOLVED",
-        "timestamp": "2019-11-06T09:37:20.121Z",
-        "bimRoomId": "04_X09_H"
-    }
-];
-
-  hostRooms = [    
-    {
-        "bimRoomId": "04_X06_C",
-        "light": 62,
-        "logicalRoomId": 427,
-        "temperature": 23.4,
-        "description": "Arbeidsrom",
-        "category": "work_room",
-        "floor": 4,
-        "occupied": true,
-        "capacity": 3,
-        "available": false,
-        "roomStatus": "something elese"
-    }
-];
-  hostBlinds = [
-    {
-        "state": "closed",
-        "objectName": ".x237_04_Y01_B_XM601_STA",
-        "bimBlindId": "237.04-Y01-B-XM601_"
-    },
-    {
-        "state": "closed",
-        "objectName": ".x237_04_X13_O_XM601_STA",
-        "bimBlindId": "237.04-X13-O-XM601_"
-    },
-    {
-        "state": "closed",
-        "objectName": ".x237_04_Y06_A_XM601_STA",
-        "bimBlindId": "237.04-Y06-A-XM601_"
-    },
-    {
-        "state": "closed",
-        "objectName": ".x237_04_Y03_B_XM601_STA",
-        "bimBlindId": "237.04-Y03-B-XM601_"
-    },
-    {
-        "state": "closed",
-        "objectName": ".x237_04_Y08_A_XM601_STA",
-        "bimBlindId": "237.04-Y08-A-XM601_"
-    },
-    {
-        "state": "closed",
-        "objectName": ".x237_04_Y01_A_XM601_STA",
-        "bimBlindId": "237.04-Y01-A-XM601_"
-    },
-    {
-        "state": "closed",
-        "objectName": ".x237_04_X16_K_XM601_4_STA",
-        "bimBlindId": "237.04-X16-K-XM601_4"
-    }
-];
-
-  constructor(private ref: ChangeDetectorRef) {
-    const defaultFloor = '1';
-    const paramsObj: ParamsObj = this.paramsParser(window.location.search.slice(1));
-    console.log('--[url params:]', paramsObj);
-
-    this.position = paramsObj.position;
-    this.center = paramsObj.center;
-    this.zoom = paramsObj.zoom;
-    if (paramsObj.key) { this.apiKey = paramsObj.key; }
-    if (paramsObj.version) {
-        this.version = paramsObj.version
-    }
-    if (paramsObj.v) { this.v = paramsObj.v }
-
-    if (paramsObj.floor && this.floors.indexOf(paramsObj.floor) > -1) {
-        this.floor = paramsObj.floor;
-    } else {
-      this.floor = defaultFloor;
-      console.log(`--Bad params. Default floor: ${defaultFloor} was loaded`);
-    }
+  constructor(
+    private ref: ChangeDetectorRef,
+    private dataService: DataService) {
   }
 
   paramsParser(query: string): ParamsObj {
@@ -205,30 +93,43 @@ export class AppComponent {
     return paramsObj;
   }
 
+  counter(counter: number): void {
+    this.zoom = this.zoom + counter;
+  }
+
   highLight(): void {
-    let id = this.inputArea === 'zones' ? this.inputIdZone : this.inputIdRoom;
+    const id = this.inputArea === 'zones' ? this.inputIdZone : this.inputIdRoom;
     this.objectToHighlight = {
-      id: id,
+      id,
       area: this.inputArea,
       color: this.inputColor
     };
   }
 
   zoomInOut(): void {
-    let id = this.inputArea === 'zones' ? this.inputIdZone : this.inputIdRoom;
+    const id = this.inputArea === 'zones' ? this.inputIdZone : this.inputIdRoom;
     this.objectToZoom = {
-      id: id,
+      id,
       area: this.inputArea,
       zoom: this.zoom
     };
-    console.log('this.objectToZoom', this.objectToZoom);    
+    console.log('this.objectToZoom', this.objectToZoom);
   }
 
   changeFloor(floor: string, v?: string): void {
+    if (this.mode === 'application') {
+      this.floor = floor;
+    } else if (this.mode === 'mobile') {
+      console.log('***************************');
+      this.floor = floor;
+      this.getFloorBlindsFromServerInHost(this.floor);
+      this.getFloorRoomsFromServerInHost(this.floor);
+    } else {
+      console.log('Error: Unknown mode', this.mode);
+    }
     this.inputIdZone = '';
     this.inputIdRoom = '';
     this.v = v;
-    this.floor = floor;
     this.paramToShow = 'roomNumber';
     console.log('NEW FLOOR: ', this.floor, this.v);
   }
@@ -246,15 +147,92 @@ export class AppComponent {
   }
 
   showPosition(): void {
-    if (this.inputPosition) {
-      const posArr = this.inputPosition.split(',');
-      this.position = {top: +posArr[1] / 100, left: +posArr[0] / 100};
+    if (this.x && this.y) {
+      this.position = {top: +this.y / 100, left: +this.x / 100};
     } else {
-      console.log('PLEASE, CHECK POSITION FIELD');      
-    }    
+      console.log('PLEASE, CHECK POSITION FIELD');
+    }
   }
 
   switcher(paramToShow: string): void {
     this.paramToShow = paramToShow;
+    if (paramToShow === 'negativeFB' && this.mode === 'mobile') {
+      this.getNegativeFB();
+    }
   }
+
+  getFloorRoomsFromServerInHost(floor) {
+    this.dataService.getFloorRooms(floor)
+    .subscribe(
+      data => {
+        this.hostRooms = data;
+        console.log(`%c[--serverRoomsHost] - ${this.hostRooms.length}`, 'background: green; color: white');
+      },
+      error => {
+        console.log('ERROR in get floor rooms--', error.message);
+        this.hostRooms = [];
+        console.log(`%c[--serverRoomsHost] - ${this.hostRooms.length}`, 'background: green; color: white');
+      });
+  }
+
+  getNegativeFB() {
+    this.dataService.getFeedBack(this.floor, 'negative')
+      .subscribe(
+        data => {
+          const dataWrench = data;
+          (dataWrench as any).forEach(fbRoom => {
+            if (fbRoom.bimRoomId) { return; }
+            const roomApi = this.hostRooms.find(item => item.logicalRoomId === fbRoom.roomId);
+            if (roomApi) {
+              fbRoom.bimRoomId = roomApi.bimRoomId;
+            }
+          });
+          this.hostRoomsWithNegativeFB = dataWrench;
+          console.log(`%c[--serverNegativeFBHost] - ${this.hostRoomsWithNegativeFB.length}`, 'background: green; color: white');
+        },
+        error => console.log('ERROR', error.message)
+      );
+  }
+
+  getFloorBlindsFromServerInHost(floor) {
+    this.dataService.getFloorBlinds(floor)
+    .subscribe(
+      data => {
+        this.hostBlinds = data;
+        console.log(`%c[--serverBlindsHost] - ${this.hostBlinds.length}`, 'background: green; color: white');
+      },
+      error => console.log('ERROR', error.message)
+      );
+  }
+
+  ngOnInit() {
+    const defaultFloor = '1';
+    const paramsObj: ParamsObj = this.paramsParser(window.location.search.slice(1));
+    console.log('--[url params:]', paramsObj);
+
+    this.position = paramsObj.position;
+    this.center = paramsObj.center;
+
+    if (paramsObj.zoom) {this.zoom = +paramsObj.zoom; }
+    if (paramsObj.key) { this.apiKey = paramsObj.key; }
+    if (paramsObj.version) {
+        this.version = paramsObj.version;
+    }
+    if (paramsObj.v) { this.v = paramsObj.v; }
+
+    if (paramsObj.floor && this.floors.indexOf(paramsObj.floor) > -1) {
+        this.floor = paramsObj.floor;
+    } else {
+      this.floor = defaultFloor;
+      console.log(`--Bad params. Default floor: ${defaultFloor} was loaded`);
+    }
+    if (paramsObj.mode) { this.mode = paramsObj.mode; }
+    if (this.mode === 'mobile') {
+      this.getFloorBlindsFromServerInHost(this.floor);
+      this.getFloorRoomsFromServerInHost(this.floor);
+    }
+
 }
+
+}
+
