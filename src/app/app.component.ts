@@ -4,6 +4,7 @@ import { DataService } from './services/data.services';
 interface Coord {
   left: number;
   top: number;
+  type?: string;
 }
 
 interface HighLightObj {
@@ -50,15 +51,15 @@ export class AppComponent implements OnInit {
   apiKey: string;
   center: Coord;
   v: string;
-  inputIdRoom = '04-X09-H';
-  inputIdZone = '04-X09-H';
+  inputIdRoom = '04-X11-C';
+  inputIdZone = '04-X11-C';
   inputColor = '#4000ff';
-  inputArea = 'zones';
+  inputArea = 'rooms';
   paramToShow = 'roomNumber';
   version = 'white';
-  inputCoordParam = 'IFC';
-  x: string;
-  y: string;
+  inputCoordParam = 'CMX';
+  x = 131.54376;
+  y = 52.88082;
   hostBlinds: any;
   hostRooms: any;
   hostRoomsWithNegativeFB: any;
@@ -120,7 +121,6 @@ export class AppComponent implements OnInit {
     if (this.mode === 'application') {
       this.floor = floor;
     } else if (this.mode === 'mobile') {
-      console.log('***************************');
       this.floor = floor;
       this.getFloorBlindsFromServerInHost(this.floor);
       this.getFloorRoomsFromServerInHost(this.floor);
@@ -148,7 +148,7 @@ export class AppComponent implements OnInit {
 
   showPosition(): void {
     if (this.x && this.y) {
-      this.position = {top: +this.y / 100, left: +this.x / 100};
+      this.position = {top: +this.y / 100, left: +this.x / 100, type: this.inputCoordParam};
     } else {
       console.log('PLEASE, CHECK POSITION FIELD');
     }
@@ -231,8 +231,6 @@ export class AppComponent implements OnInit {
       this.getFloorBlindsFromServerInHost(this.floor);
       this.getFloorRoomsFromServerInHost(this.floor);
     }
-
 }
-
 }
 
