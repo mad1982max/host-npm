@@ -22,6 +22,7 @@ interface ParamsObj {
   zoom?: string;
   v?: string;
   mode?: string;
+  type?: string;
 }
 
 interface ClickedArea {
@@ -83,8 +84,8 @@ export class AppComponent implements OnInit {
       case 'position':
       case 'center':
         const valArr = splitedPair[1].split(',');
-        value.top = +valArr[1] / 100;
-        value.left = +valArr[0] / 100;
+        value.top = +valArr[1];
+        value.left = +valArr[0];
         break;
       default:
         value = splitedPair[1];
@@ -148,7 +149,7 @@ export class AppComponent implements OnInit {
 
   showPosition(): void {
     if (this.x && this.y) {
-      this.position = {top: +this.y / 100, left: +this.x / 100, type: this.inputCoordParam};
+      this.position = {top: +this.y, left: +this.x, type: this.inputCoordParam};
     } else {
       console.log('PLEASE, CHECK POSITION FIELD');
     }
@@ -210,9 +211,13 @@ export class AppComponent implements OnInit {
     const paramsObj: ParamsObj = this.paramsParser(window.location.search.slice(1));
     console.log('--[url params:]', paramsObj);
 
-    this.position = paramsObj.position;
-    this.center = paramsObj.center;
+    if(paramsObj.position) {
+      this.position = Object.assign({}, paramsObj.position, {type: paramsObj.type || 'IFC'});
+    }
 
+    if(paramsObj.center) {
+      this.center = paramsObj.center;
+    }
     if (paramsObj.zoom) {this.zoom = +paramsObj.zoom; }
     if (paramsObj.key) { this.apiKey = paramsObj.key; }
     if (paramsObj.version) {

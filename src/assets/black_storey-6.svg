@@ -135,6 +135,9 @@
 <polyline class="cls-10" points="31.38 61.591 31.29 61.186 26.034 62.353"/>
 <line class="cls-10" x1="31.2903" y1="61.1859" x2="30.3985" y2="57.246"/>
 <line class="cls-10" x1="30.2128" y1="56.3193" x2="29.9941" y2="55.448"/>
+<polyline class="cls-10" points="45.184 70.148 45.297 70.211 42.804 74.797"/>
+<polyline class="cls-10" points="40.464 67.585 40.375 67.537 38.634 70.742"/>
+<line class="cls-10" x1="37.8835" y1="72.1232" x2="38.0774" y2="71.7668"/>
 </g>
 <g id="NEW_Outer" data-name="NEW Outer">
 <polygon class="cls-11" points="32.6 109.549 28.431 108.962 15.706 51.503 14.2 36.509 61.352 52.693 56.558 65.447 32.6 109.549"/>
@@ -223,7 +226,7 @@
 
         <g id="product-06-Y06-G">
 
-            <path style="stroke-width: 0; fill:none;"  pointer-events="visible" d="M42.3396,74.9207 L40.8019,74.0853 L39.656,76.1946 L41.1937,77.03 L42.3396,74.9207"/>
+            <path style="stroke-width: 0; fill:blue;"  pointer-events="visible" d="M42.3396,74.9207 L40.8019,74.0853 L39.656,76.1946 L41.1937,77.03 L42.3396,74.9207"/>
 
         </g>
 
@@ -347,7 +350,7 @@
 
         </g>
 
-        <g id="product-06-X07-G">
+        <g id="product-06-Y07-G">
 
             <path style="stroke-width: 0; fill:none;"  pointer-events="visible" d="M42.8046,74.7979 L45.2603,70.2777 L40.7787,67.8431 L40.7242,67.9433 L40.2847,67.7046 L37.8835,72.1244 L42.8046,74.7979"/>
 
@@ -371,7 +374,7 @@
 
         </g>
 
-        <g id="product-06-Y05-D">
+        <g id="product-06-Y05-C">
 
             <path style="stroke-width: 0; fill:none;"  pointer-events="visible" d="M41.8135,80.7432 L40.5986,82.9796 L42.7555,84.1513 L43.9704,81.9149 L41.8135,80.7432"/>
 
@@ -401,7 +404,7 @@
 
         </g>
 
-        <g id="product-06-Y05-J">
+        <g id="product-06-Y05-I">
 
             <path style="stroke-width: 0; fill:none;"  pointer-events="visible" d="M36.0726,79.6918 L35.5398,80.6724 L36.5314,81.2111 L37.0641,80.2304 L36.0726,79.6918"/>
 
