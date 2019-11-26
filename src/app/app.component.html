@@ -1,11 +1,8 @@
 <div class="mainApp container-fluid">
   <div class="row row1 mt-1">
     <div class="inputArea col-auto d-flex align-items-center">
-      <label class = "mb-0 mr-2" for = "mode">MODE</label>
-      <select class="form-control" id="mode" [(ngModel)] = "mode">
-        <option>mobile</option>
-        <option>application</option>
-      </select>
+      <div class = "mb-0 mr-2" for = "mode">MODE</div>
+      <div>{{mode}}</div>
     </div>    
   </div>
 
@@ -41,8 +38,7 @@
     </div>   
   </div> 
 
-  <div class="row row1 mt-1 align-items-center">
-    
+  <div class="row row1 mt-1 align-items-center">    
     <div class = "zoomValue col-auto">
       {{zoom}}
     </div>
@@ -186,10 +182,12 @@
             [hostRooms] = "hostRooms"
             [hostBlinds] = "hostBlinds"
             [mode] = "mode"
+            [wsChanges] = "wsChanges"
             [apiKey] = "apiKey"
             [tozoom] = "center" 
             [floor]="floor" 
-            [objectToHighlight] = "objectToHighlight" 
+            [objectToHighlight] = "objectToHighlight"
+            [blindSuccessObj] = "blindSuccessObj" 
             [position] = "position"
             (onChangedBlinds) = 'getBlindInfo($event)'      
             (onChanged) = 'getCurrentCell($event)'>

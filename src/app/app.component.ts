@@ -1,5 +1,6 @@
 import { Component, ChangeDetectorRef, OnInit } from '@angular/core';
 import { DataService } from './services/data.services';
+import { urlData }from './configs/configs';
 
 interface Coord {
   left: number;
@@ -64,15 +65,16 @@ export class AppComponent implements OnInit {
   hostBlinds: any;
   hostRooms: any;
   hostRoomsWithNegativeFB: any;
- 
-  //mode = 'mobile';
+  blindSuccessObj;
+  ws;
+  wsChanges;
   mode = 'application';
 
   constructor(
     private ref: ChangeDetectorRef,
-    private dataService: DataService) {
-  }
+    private dataService: DataService) {}
 
+  // parse params from URL
   paramsParser(query: string): ParamsObj {
     const paramPairsArr = query.split('&');
     const paramsObj: any = {};
@@ -95,56 +97,64 @@ export class AppComponent implements OnInit {
     return paramsObj;
   }
 
+  //for zoom
   counter(counter: number): void {
     this.zoom = this.zoom + counter;
   }
 
+  //highLight obj 
   highLight(): void {
     const id = this.inputArea === 'zones' ? this.inputIdZone : this.inputIdRoom;
     this.objectToHighlight = {
-      id,
-      area: this.inputArea,
-      color: this.inputColor
+      id, //string
+      area: this.inputArea, //string
+      color: this.inputColor //string
     };
   }
 
+  //zoom on click
   zoomInOut(): void {
     const id = this.inputArea === 'zones' ? this.inputIdZone : this.inputIdRoom;
     this.objectToZoom = {
-      id,
-      area: this.inputArea,
-      zoom: this.zoom
+      id, //string
+      area: this.inputArea, //string
+      zoom: this.zoom // number
     };
-    console.log('this.objectToZoom', this.objectToZoom);
+    console.log(' -- objectToZoom', this.objectToZoom);
   }
 
-  changeFloor(floor: string, v?: string): void {
-    if (this.mode === 'application') {
-      this.floor = floor;
+  // change floor on click
+  changeFloor(floor: string): void {
+    this.floor = floor; //string
+    if (this.mode === 'application') { 
+      // some action     
     } else if (this.mode === 'mobile') {
-      this.floor = floor;
+      if (this.ws) this.ws.close();
+      this.wsFunc(this.floor)
       this.getFloorBlindsFromServerInHost(this.floor);
       this.getFloorRoomsFromServerInHost(this.floor);
     } else {
-      console.log('Error: Unknown mode', this.mode);
+      console.log(' -- Error: Unknown mode', this.mode);
     }
     this.inputIdZone = '';
     this.inputIdRoom = '';
-    this.v = v;
     this.paramToShow = 'roomNumber';
-    console.log('NEW FLOOR: ', this.floor, this.v);
+    console.log(' -- NEW FLOOR: ', this.floor);
   }
 
   getCurrentCell(obj: ClickedArea): void {
     this.inputIdZone = obj.zone;
     this.inputIdRoom = obj.room;
-    console.log('-catch in host', obj);
+    console.log('%c --catch in host ', 'background: #ffff4d; color: black', obj);
     this.ref.detectChanges();
   }
 
   getBlindInfo(blindsObj: any): void {
     this.blindObj = blindsObj;
-    console.log('-catch in host blinds', this.blindObj);
+    console.log('%c --catch in host blinds ', 'background: #ffff4d; color: black', this.blindObj);
+    if (this.mode === 'mobile') {
+      this.getBlindsObj(blindsObj);      
+    } 
   }
 
   showPosition(): void {
@@ -162,21 +172,21 @@ export class AppComponent implements OnInit {
     }
   }
 
-  getFloorRoomsFromServerInHost(floor) {
+  getFloorRoomsFromServerInHost(floor: string): void {
     this.dataService.getFloorRooms(floor)
     .subscribe(
       data => {
         this.hostRooms = data;
-        console.log(`%c[--serverRoomsHost] - ${this.hostRooms.length}`, 'background: green; color: white');
+        console.log(`%c[--serverRoomsHost] - ${this.hostRooms.length}`, 'background: #0000cc; color: white');
       },
       error => {
         console.log('ERROR in get floor rooms--', error.message);
         this.hostRooms = [];
-        console.log(`%c[--serverRoomsHost] - ${this.hostRooms.length}`, 'background: green; color: white');
+        console.log(`%c[--serverRoomsHost] - ${this.hostRooms.length}`, 'background: #0000cc; color: white');
       });
   }
 
-  getNegativeFB() {
+  getNegativeFB(): void {
     this.dataService.getFeedBack(this.floor, 'negative')
       .subscribe(
         data => {
@@ -189,21 +199,126 @@ export class AppComponent implements OnInit {
             }
           });
           this.hostRoomsWithNegativeFB = dataWrench;
-          console.log(`%c[--serverNegativeFBHost] - ${this.hostRoomsWithNegativeFB.length}`, 'background: green; color: white');
+          console.log(`%c[--serverNegativeFBHost] - ${this.hostRoomsWithNegativeFB.length}`, 'background: #0000cc; color: white');
         },
         error => console.log('ERROR', error.message)
       );
   }
 
-  getFloorBlindsFromServerInHost(floor) {
+  getFloorBlindsFromServerInHost(floor: string) :void{
     this.dataService.getFloorBlinds(floor)
     .subscribe(
       data => {
         this.hostBlinds = data;
-        console.log(`%c[--serverBlindsHost] - ${this.hostBlinds.length}`, 'background: green; color: white');
+        console.log(`%c[--serverBlindsHost] - ${this.hostBlinds.length}`, 'background: #0000cc; color: white');
       },
-      error => console.log('ERROR', error.message)
+      error => console.log(' -- ERROR', error.message)
       );
+  }
+
+  getBlindsObj(blindsObj: BlindsObj): void {
+    let action: string;
+    if (blindsObj.hasOwnProperty('close')) { action = 'close'; }
+    if (blindsObj.hasOwnProperty('open')) { action = 'open'; }
+    const blindsArr = (blindsObj[action] as []);
+    const answersArr = [];
+    let queryCounter = 0;
+    const qeries = blindsArr.length;
+
+    const apiAction = action === 'open' ? 'open' : 'closed';
+    blindsArr.forEach(id => {
+      console.log('*** post to serverHOST, blind:', (id as any).bimBlindId, apiAction);
+      const blindObj = {blindsArr, apiAction};
+      this.dataService.blindAction((id as any).bimBlindId, apiAction)
+      .subscribe(
+        data => {
+          console.log('[response postHOST]', data);
+          const correlationId = (data as any).correlationId;
+          let counter = 0;
+
+          const timer = setInterval(() => {
+
+            this.dataService.checkBlindStatus(correlationId)
+            .subscribe(
+              data => {
+
+                counter++;
+                // console.log('request counter - from 3', counter);
+                console.log('[response confirm get in HOST]', data);
+
+                if ((data as any).status === 'SUCCESS') {
+                  queryCounter++;
+                  clearInterval(timer);
+                  answersArr.push('success');
+                  console.log('%c BLIND_HOST - ACTION DONE', 'background: #0000cc; color: white');
+                } else if ((data as any).status === 'FAILED') {
+                  queryCounter++;
+                  clearInterval(timer);
+                  console.log('%c BLIND_HOST - ACTION FAILED', 'background: #0000cc; color: white');
+                  answersArr.push('failed');
+                } else {
+                  if (counter > 5) {
+                    queryCounter++;
+                    console.log('%c BLIND_HOST - ACTION ERROR: too much attempts', 'background: #0000cc; color: white');
+                    clearInterval(timer);
+                    answersArr.push('timeOut');
+                  }
+                }
+                if (queryCounter === qeries) {
+                  const statusFailed = answersArr.some(item => item === 'failed');
+                  if (statusFailed) {
+                    this.blindSuccessObj = Object.assign({}, blindObj, {status: false, disabled: true});
+                    console.log(this.blindSuccessObj);
+                  } else {
+                    const status = !answersArr.some(item => item === 'timeOut');
+                    this.blindSuccessObj = Object.assign({}, blindObj, {status});
+                    console.log(this.blindSuccessObj);
+                  }
+                }                                
+              },
+              error => {
+                console.log('--ERROR in blind action  confirm get', error.message);
+              }
+            );
+          }, 3000);
+        },
+        error => {
+          console.log('--ERROR in blind action post', error.message);
+          this.blindSuccessObj = Object.assign({}, blindObj, {status: false, disabled: true});
+        });
+    });
+  }
+
+  wsFunc(floor: string) {
+    const that = this;
+    const filter = encodeURIComponent(JSON.stringify({
+      floor: +floor,
+    }));
+
+    const socket = new WebSocket(`${urlData.urlWS}?access_token=${urlData.key}&filter=${filter}`);
+    this.ws = socket;
+
+    socket.onopen = function(e) {
+        console.log(`%c [ws open_HOST] - floor: ${floor} `, 'background: orange; color: black');
+        socket.send(JSON.stringify({
+            action: 'ping'
+        }));
+    };
+    socket.onmessage = function(event) {
+        console.log(`%c [ws message_HOST] : ${event.data}`, 'background: orange; color: black');
+        const WSData = JSON.parse(event.data);
+        if (that.floor == WSData.floor) {
+          that.wsChanges = WSData;
+        } else {
+          console.log('[WS]---changes are not from this level');
+        }
+    };
+    socket.onerror = function(event) {
+      console.log('%c [ws error_HOST]', 'background: orange; color: black');
+    };
+    socket.onclose = function(event) {
+      console.log(`%c [ws close_HOST] - floor: ${floor}`, 'background: orange; color: black');
+    };
   }
 
   ngOnInit() {
@@ -216,7 +331,7 @@ export class AppComponent implements OnInit {
     }
 
     if(paramsObj.center) {
-      this.center = paramsObj.center;
+      this.center = Object.assign({}, paramsObj.center, {type: paramsObj.type || 'IFC'});;
     }
     if (paramsObj.zoom) {this.zoom = +paramsObj.zoom; }
     if (paramsObj.key) { this.apiKey = paramsObj.key; }
@@ -229,13 +344,14 @@ export class AppComponent implements OnInit {
         this.floor = paramsObj.floor;
     } else {
       this.floor = defaultFloor;
-      console.log(`--Bad params. Default floor: ${defaultFloor} was loaded`);
+      console.log(`-- Bad params. Default floor: ${defaultFloor} was loaded`);
     }
     if (paramsObj.mode) { this.mode = paramsObj.mode; }
     if (this.mode === 'mobile') {
+      this.wsFunc(this.floor);
       this.getFloorBlindsFromServerInHost(this.floor);
       this.getFloorRoomsFromServerInHost(this.floor);
     }
-}
+  }  
 }
 
