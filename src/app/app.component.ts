@@ -42,7 +42,7 @@ interface BlindsObj {
   providers: [DataService]
 })
 export class AppComponent implements OnInit {
-  floors: string[] = ['1', '2', '3', '4', '5', '6', '7', 'U1', 'U2', 'U3'];
+  floors: string[] = ['1', '2', '3', '4', '5', '6', '7', '-1', '-2', '-3'];
   floor = '1';
   objectToHighlight: HighLightObj | undefined ;
   position: Coord;
@@ -60,8 +60,8 @@ export class AppComponent implements OnInit {
   paramToShow = 'roomNumber';
   version = 'white';
   inputCoordParam = 'CMX';
-  x = 131.54376;
-  y = 52.88082;
+  x = 184.41725;
+  y = 67.89225;
   hostBlinds: any;
   hostRooms: any;
   hostRoomsWithNegativeFB: any;
@@ -69,6 +69,7 @@ export class AppComponent implements OnInit {
   ws;
   wsChanges;
   mode = 'application';
+  wsAttemptsCounter = 0;
 
   constructor(
     private ref: ChangeDetectorRef,
@@ -297,6 +298,7 @@ export class AppComponent implements OnInit {
 
     const socket = new WebSocket(`${urlData.urlWS}?access_token=${urlData.key}&filter=${filter}`);
     this.ws = socket;
+    ++that.wsAttemptsCounter;
 
     socket.onopen = function(e) {
         console.log(`%c [ws open_HOST] - floor: ${floor} `, 'background: orange; color: black');
@@ -315,6 +317,13 @@ export class AppComponent implements OnInit {
     };
     socket.onerror = function(event) {
       console.log('%c [ws error_HOST]', 'background: orange; color: black');
+      if(that.wsAttemptsCounter <= 20) {   
+        console.log(`%c ++ [ws message_MODULE] : new attempt ${that.wsAttemptsCounter} after ERROR`, 'background: orange; color: black');
+        that.wsFunc(floor);     
+      } else {
+        console.error('WS connection failed after 20 attempts');
+        that.wsAttemptsCounter = 0;
+      }
     };
     socket.onclose = function(event) {
       console.log(`%c [ws close_HOST] - floor: ${floor}`, 'background: orange; color: black');
