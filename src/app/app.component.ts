@@ -229,39 +229,52 @@ export class AppComponent implements OnInit {
     const blindsArr = (blindsObj[action] as []);
     const answersArr = [];
     
-    const apiAction = action === 'open' ? 'open' : 'closed'; //fix naming  
+    const apiAction = action === 'open' ? 'open' : 'closed'; //fix naming? 
     const blindObj = {blindsArr, apiAction};
   
     let currentBlindId = ++this.idForBlindsGroup;
     this.clickedBlindsArr.push({id: currentBlindId, blindsArr, apiAction, answersArr});
-    console.log('**group of clicked blinds - ', this.clickedBlindsArr);
+    console.log('**all clicked group of blinds - ', this.clickedBlindsArr);
   
     let tick = setTimeout(() => {
       let blindGroupInd = this.clickedBlindsArr.findIndex(item => {
         return item.id === currentBlindId ;
       });
-      console.log('-- if blind in clicked group', blindGroupInd);
+      console.log('-- is found in clicked group of blinds', blindGroupInd);
       if (blindGroupInd > -1) {
         console.log('timer is finished!!! return ico and show red circle');
         this.blindSuccessObj = Object.assign({}, blindObj, {status: false, disabled: true});
         this.clickedBlindsArr.splice(blindGroupInd, 1);
       }
     }, 180000);
+
+    let blindIdArr = blindsArr.map(item => (item as any).bimBlindId);
+    console.log('clicked blinds: ', blindIdArr);
+
+    this.dataService.blindAction(blindIdArr, apiAction)
+    .subscribe(
+      data => {
+        console.log(' ++ [response post__HOST]', data);
+      },
+      error => {
+        console.log(' ++ ERROR in blind action post', error.message);
+        this.blindSuccessObj = Object.assign({}, blindObj, {status: false, disabled: true});
+      });
   
-    blindsArr.forEach(id => {
-      let currentBlind = (id as any).bimBlindId;
-      console.log('%c ++ post to server_ HOST, blind:', 'background:#b3ffe6: color: black', (id as any).bimBlindId, apiAction);  
+    // blindsArr.forEach(id => {
+    //   let currentBlind = (id as any).bimBlindId;
+    //   console.log('%c ++ post to server_ HOST, blind:', 'background:#b3ffe6: color: black', (id as any).bimBlindId, apiAction);  
   
-      this.dataService.blindAction(currentBlind, apiAction)
-      .subscribe(
-        data => {
-          console.log(' ++ [response post_HOST]', data);
-        },
-        error => {
-          console.log(' ++ ERROR in blind action post', error.message);
-          this.blindSuccessObj = Object.assign({}, blindObj, {status: false, disabled: true});
-        });
-    });  
+    //   this.dataService.blindAction(currentBlind, apiAction)
+    //   .subscribe(
+    //     data => {
+    //       console.log(' ++ [response post_HOST]', data);
+    //     },
+    //     error => {
+    //       console.log(' ++ ERROR in blind action post', error.message);
+    //       this.blindSuccessObj = Object.assign({}, blindObj, {status: false, disabled: true});
+    //     });
+    // });  
   }
 
   showChangesWs(data) {
@@ -282,7 +295,7 @@ export class AppComponent implements OnInit {
 
       if (data.changes.originReportedValue === 'inactive') {
         //this.blindSuccessObj = Object.assign({}, curBlindGroup, {apiAction: data.changes.reportedValue, status: true, disabled: true});
-        console.log('INACTIVE: not implemented yet');
+        console.log('INACTIVE: are not implemented yet');
       }
 
       if(blindGroupInd > -1) {
