@@ -19,7 +19,7 @@
       <input 
         type="text" 
         class="form-control px-1" 
-        id="inputTestId" 
+        id="room" 
         placeholder="room"
         [ngClass] = "{checkedArea: inputArea === 'rooms'}" 
         [(ngModel)] = "inputIdRoom" 
@@ -30,7 +30,7 @@
       <input 
         type="text" 
         class="form-control px-1" 
-        id="inputTestId" 
+        id="zone" 
         placeholder="zone" 
         [ngClass] = "{checkedArea: inputArea === 'zones'}" 
         [(ngModel)] = "inputIdZone" 
@@ -117,7 +117,7 @@
 
   <div class="row row1 mt-1 align-items-center">
     <div class="d-flex align-items-center col">
-      <label class = "mb-0 mr-1" for="exampleInputEmail1">X:</label>
+      <label class = "mb-0 mr-1" for="x">X:</label>
       <input 
         type="text"
         [(ngModel)] = "x" 
