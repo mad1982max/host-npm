@@ -73,6 +73,7 @@ export class AppComponent implements OnInit {
   wsAttemptsCounter = 0;
   idForBlindsGroup = 0;
   clickedBlindsArr = [];
+  timerLoader: number;
 
   constructor(
     private ref: ChangeDetectorRef,
@@ -140,6 +141,7 @@ export class AppComponent implements OnInit {
     } else {
       console.log(' -- Error: Unknown mode', this.mode);
     }
+    clearTimeout(this.timerLoader);
     this.inputIdZone = '';
     this.inputIdRoom = '';
     this.paramToShow = 'roomNumber';
@@ -255,6 +257,7 @@ export class AppComponent implements OnInit {
     .subscribe(
       data => {
         console.log(' ++ [response post__HOST]', data);
+        this.timerLoader = window.setTimeout(() => this.blindSuccessObj = Object.assign({}, blindObj, {status: true}),300);
       },
       error => {
         console.log(' ++ ERROR in blind action post', error.message);
