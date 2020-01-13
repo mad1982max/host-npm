@@ -45,7 +45,7 @@ export class DataService {
       bimBlindId: id,
       state
     };
-    return this.http.post(`${urlData.baseUrl}/ext/window-blinds/control`, body, httpOptions);
+    return this.http.post(`${urlData.baseUrl}/ext/v2/window-blinds/control`, body, httpOptions);
   }
 
   checkBlindStatus(id) {

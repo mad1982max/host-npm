@@ -42,7 +42,7 @@ interface ClickedArea {
   room: string;
 }
 interface BlindsObj {
-  [key: string]: string[] | string;
+  [key: string]: string;
   x: string;
   y: string;
 }
@@ -84,9 +84,9 @@ export class AppComponent implements OnInit {
   idForBlindsGroup = 0;
   clickedBlindsArr = [];
   timerLoader: number;
-  timerApiDataRooms: number;
-  timerApiDataBlind: number;
+  timerApiDataHost: number;
   timerPing: number;
+  wsReconnectTimer: number;
 
   constructor(
     private ref: ChangeDetectorRef,
@@ -142,26 +142,19 @@ export class AppComponent implements OnInit {
     if (this.mode === 'application') { 
       // some action     
     } else if (this.mode === 'mobile') {
+      clearInterval(this.timerApiDataHost);
       clearInterval(this.timerPing);
-      clearInterval(this.timerApiDataRooms);
-      clearInterval(this.timerApiDataBlind);
-
-      if (this.ws) this.ws.close();
+      clearTimeout(this.wsReconnectTimer);
+      this.wsAttemptsCounter = 0;
+      if (this.ws) this.ws.close(1000);
       this.wsFunc(this.floor)
       this.getFloorBlindsFromServerInHost(this.floor);
       this.getFloorRoomsFromServerInHost(this.floor);
 
-      // this.timerApiDataHost = window.setInterval(() => {
-      //   this.getFloorBlindsFromServerInHost(this.floor);
-      //   this.getFloorRoomsFromServerInHost(this.floor);
-      // }, 90000)
-
-      this.timerApiDataBlind = window.setInterval(() => {            
+      this.timerApiDataHost = window.setInterval(() => {
         this.getFloorBlindsFromServerInHost(this.floor);
-      }, 90000);
-      this.timerApiDataRooms = window.setInterval(() => {
         this.getFloorRoomsFromServerInHost(this.floor);
-      }, 300000);
+      }, 90000) //in module  - 90 and 300 sec
     } else {
       console.log(' -- Error: Unknown mode', this.mode);
     }
@@ -292,15 +285,11 @@ export class AppComponent implements OnInit {
     }));
 
     const socket = new WebSocket(`${urlData.urlWS}?access_token=${urlData.key}&filter=${filter}`);
-    this.ws = socket;
+    that.ws = socket;
     ++that.wsAttemptsCounter;
 
     socket.onopen = function(e) {
         console.log(`%c [ws open_HOST] - floor: ${floor} `, 'background: orange; color: black');
-        socket.send(JSON.stringify({
-            action: 'ping'
-        }));
-
         that.timerPing = window.setInterval(() => {
           socket.send(JSON.stringify({
             action: 'ping'
@@ -320,21 +309,30 @@ export class AppComponent implements OnInit {
     };
     socket.onerror = function(event) {
       console.log('%c [ws error_HOST]', 'background: orange; color: black');
-      if(that.wsAttemptsCounter <= 20) {   
-        console.log(`%c ++ [ws message_HOST] : new attempt ${that.wsAttemptsCounter} after ERROR`, 'background: orange; color: black');
-        that.wsFunc(floor);     
-      } else {
-        console.error('WS connection failed after 20 attempts');
-        that.wsAttemptsCounter = 0;
-      }
+      // if(that.wsAttemptsCounter <= 20) {   
+      //   console.log(`%c ++ [ws message_HOST] : new attempt ${that.wsAttemptsCounter} after ERROR`, 'background: orange; color: black');
+      //   that.wsFunc(floor);     
+      // } else {
+      //   console.error('WS connection failed after 20 attempts');
+      //   that.wsAttemptsCounter = 0;
+      // }
     };
     socket.onclose = function(event) {
+      if (!event.wasClean || event.code !== 1000) {
+        if (that.wsAttemptsCounter <= 20) {
+          console.log(`%c ++ [ws message_MODULE] : new attempt ${that.wsAttemptsCounter} after ERROR`, 'background: orange; color: black');
+          that.wsReconnectTimer = window.setTimeout(() => that.wsFunc(floor), 1000);
+        } else {
+          console.error('WS connection failed after 20 attempts');
+          that.ws = null;
+          that.wsAttemptsCounter = 0;
+        }
+      }
       console.log(`%c [ws close_HOST] - floor: ${floor}`, 'background: orange; color: black');
     };
   }
 
-  ngOnInit() {
-    
+  ngOnInit() {    
     const paramsObj: ParamsObj = this.paramsParser(window.location.search.slice(1));
     console.log('--[url params:]', paramsObj);
 
@@ -365,18 +363,10 @@ export class AppComponent implements OnInit {
       this.getFloorBlindsFromServerInHost(this.floor);
       this.getFloorRoomsFromServerInHost(this.floor);
 
-      // this.timerApiDataHost = window.setInterval(() => {
-      //   this.getFloorBlindsFromServerInHost(this.floor);
-      //   this.getFloorRoomsFromServerInHost(this.floor);
-      // }, 15000)
-
-
-      this.timerApiDataBlind = window.setInterval(() => {            
+      this.timerApiDataHost = window.setInterval(() => {
         this.getFloorBlindsFromServerInHost(this.floor);
-      }, 90000);
-      this.timerApiDataRooms = window.setInterval(() => {
         this.getFloorRoomsFromServerInHost(this.floor);
-      }, 300000);
+      }, 90000) //in module  - 90 and 300 sec
     }
   }  
 }
