@@ -14,8 +14,9 @@
 .wrapper {
 overflow: hidden;
 width: 100%;
-height: 63vh;
+height: 60vh;
 margin: auto;
+border: 1px solid red;
 }
 
 .module {
@@ -29,7 +30,7 @@ margin: auto;
 }
 
 .checked {
-  background-color: pink !important;
+  background-color: rgb(245, 71, 100) !important;
 }
 
 .checkedArea {
@@ -43,7 +44,6 @@ select {
 input {
   padding: 6;
 }
-
 
 button, #inputColor {
   width: 35px;
@@ -110,7 +110,7 @@ img {
 
 @media only screen and (min-width: 650px) {
   .wrapper {
-    height: 73vh;
+    height: 74vh;
   }
 }
 

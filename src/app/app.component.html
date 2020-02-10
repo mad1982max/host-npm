@@ -1,172 +1,175 @@
 <div class="mainApp container-fluid">
-  <div class="row row1 mt-1">
-    <div class="inputArea col-auto d-flex align-items-center">
-      <div class = "mb-0 mr-2" for = "mode">MODE</div>
-      <div>{{mode}}</div>
-    </div>    
-  </div>
-
-  <div class="row row1 mt-1 align-items-center">    
-
-    <div class="inputArea col-auto">
-      <select class="form-control checkedArea" id="area" [(ngModel)] = "inputArea">
-        <option>rooms</option>
-        <option>zones</option>
-      </select>
+  <div class="paramnav">
+    <div class="row row1 mt-1">
+      <div class="inputArea col-auto d-flex align-items-center">
+        <div class = "mb-0 mr-2" for = "mode">MODE</div>
+        <div>{{mode}}</div>
+      </div>    
     </div>
-
-    <div class="inputTest col col-sm-auto">
-      <input 
-        type="text" 
-        class="form-control px-1" 
-        id="room" 
-        placeholder="room"
-        [ngClass] = "{checkedArea: inputArea === 'rooms'}" 
-        [(ngModel)] = "inputIdRoom" 
-        [ngModelOptions]="{standalone: true}">
+  
+    <div class="row row1 mt-1 align-items-center">    
+  
+      <div class="inputArea col-auto">
+        <select class="form-control checkedArea" id="area" [(ngModel)] = "inputArea">
+          <option>rooms</option>
+          <option>zones</option>
+        </select>
+      </div>
+  
+      <div class="inputTest col col-sm-auto">
+        <input 
+          type="text" 
+          class="form-control px-1" 
+          id="inputRoomId" 
+          placeholder="room"
+          [ngClass] = "{checkedArea: inputArea === 'rooms'}" 
+          [(ngModel)] = "inputIdRoom" 
+          [ngModelOptions]="{standalone: true}">
+      </div> 
+  
+      <div class="inputTest col col-sm-auto">
+        <input 
+          type="text" 
+          class="form-control px-1" 
+          id="inputZonetId" 
+          placeholder="zone" 
+          [ngClass] = "{checkedArea: inputArea === 'zones'}" 
+          [(ngModel)] = "inputIdZone" 
+          [ngModelOptions]="{standalone: true}">
+      </div>   
     </div> 
-
-    <div class="inputTest col col-sm-auto">
-      <input 
-        type="text" 
-        class="form-control px-1" 
-        id="zone" 
-        placeholder="zone" 
-        [ngClass] = "{checkedArea: inputArea === 'zones'}" 
-        [(ngModel)] = "inputIdZone" 
-        [ngModelOptions]="{standalone: true}">
-    </div>   
-  </div> 
-
-  <div class="row row1 mt-1 align-items-center">    
-    <div class = "zoomValue col-auto">
-      {{zoom}}
+  
+    <div class="row row1 mt-1 align-items-center">    
+      <div class = "zoomValue col-auto">
+        {{zoom}}
+      </div>
+  
+      <div class="btn-group counter col-auto d-flex" role="group" aria-label="Basic example">
+        <button 
+          id = "counter" 
+          type="button" 
+          class="btn form-control" 
+          (click) = "counter(1)">
+            +
+        </button>
+        <button 
+          id = "counter" 
+          type="button" 
+          class="btn form-control" 
+          (click) = "counter(-1)">
+            -
+        </button>
+      </div>
+  
+      <div class="col-auto color">
+        <input 
+          type="color" 
+          class="form-control" 
+          value = "#ffcc00" 
+          id="inputColor" 
+          [(ngModel)] = "inputColor" 
+          [ngModelOptions]="{standalone: true}">
+      </div>
+  
+      <div class="btn-group sendRoomTest d-flex" role="group" aria-label="Basic example">
+        <button 
+          id = "highLight" 
+          type="button" 
+          class="btn btn-primary form-control" 
+          (click) = "highLight()">
+            <img src = "assets/ico/idea.svg">
+        </button>
+        <button 
+          id = "zoomInOut" 
+          type="button" 
+          class="btn btn-primary form-control" 
+          (click) = "zoomInOut()">
+            <img src = "assets/ico/zoom-in.png">
+        </button>
+      </div>
+  
+      <div class="btn-group sendRoomTest d-flex" role="group" aria-label="Basic example">
+        <button 
+          id = "showTemp" 
+          type="button" 
+          [ngClass] = "{checked: paramToShow === 'temperature'}"
+          class="btn btn-primary form-control" 
+          (click) = "switcher('temperature')">
+          <img src = "assets/ico/temp.jpg">
+        </button>
+        <button 
+          id = "showFeedback" 
+          type="button" 
+          [ngClass] = "{checked: paramToShow === 'negativeFB'}"
+          class="btn btn-primary form-control" 
+          (click) = "switcher('negativeFB')">
+          <img src = "assets/ico/wrench.png">
+        </button>  
+        <button 
+          id = "showNumbers" 
+          type="button" 
+          [ngClass] = "{checked: paramToShow === 'roomNumber'}"
+          class="btn btn-primary form-control" 
+          (click) = "switcher('roomNumber')">
+          <img src = "assets/ico/numbers.png">
+        </button>  
+      </div>
     </div>
-
-    <div class="btn-group counter col-auto d-flex" role="group" aria-label="Basic example">
-      <button 
-        id = "counter" 
-        type="button" 
-        class="btn form-control" 
-        (click) = "counter(1)">
-          +
-      </button>
-      <button 
-        id = "counter" 
-        type="button" 
-        class="btn form-control" 
-        (click) = "counter(-1)">
-          -
-      </button>
+  
+    <div class="row row1 mt-1 align-items-center">
+      <div class="d-flex align-items-center col">
+        <label class = "mb-0 mr-1" for="exampleInputEmail1">X:</label>
+        <input 
+          type="text"
+          [(ngModel)] = "x" 
+          class="form-control" 
+          id="x"  
+          placeholder="x">
+      </div>
+  
+      <div class="d-flex align-items-center col">
+        <label class = "mb-0 mr-1" for="y">Y:</label>
+        <input 
+          type="text"
+          [(ngModel)] = "y" 
+          class="form-control" 
+          id="y"  
+          placeholder="y">
+      </div>
+  
+      <div class="inputArea col-auto">
+        <select class="form-control" id="area" [(ngModel)] = "inputCoordParam">
+          <option>IFC</option>
+          <option>CMX</option>
+        </select>
+      </div>
+  
+      <div class="col-auto sendRoomTest d-flex">
+        <button 
+          id = "showPosition" 
+          type="button" 
+          class="btn btn-primary form-control" 
+          (click) = "showPosition()">
+          <img src = "assets/ico/icon_location.svg">
+        </button>
+      </div>
     </div>
-
-    <div class="col-auto color">
-      <input 
-        type="color" 
-        class="form-control" 
-        value = "#ffcc00" 
-        id="inputColor" 
-        [(ngModel)] = "inputColor" 
-        [ngModelOptions]="{standalone: true}">
-    </div>
-
-    <div class="btn-group sendRoomTest d-flex" role="group" aria-label="Basic example">
-      <button 
-        id = "highLight" 
-        type="button" 
-        class="btn btn-primary form-control" 
-        (click) = "highLight()">
-          <img src = "assets/ico/idea.svg">
-      </button>
-      <button 
-        id = "zoomInOut" 
-        type="button" 
-        class="btn btn-primary form-control" 
-        (click) = "zoomInOut()">
-          <img src = "assets/ico/zoom-in.png">
-      </button>
-    </div>
-
-    <div class="btn-group sendRoomTest d-flex" role="group" aria-label="Basic example">
-      <button 
-        id = "showTemp" 
-        type="button" 
-        [ngClass] = "{checked: paramToShow === 'temperature'}"
-        class="btn btn-primary form-control" 
-        (click) = "switcher('temperature')">
-        <img src = "assets/ico/temp.jpg">
-      </button>
-      <button 
-        id = "showFeedback" 
-        type="button" 
-        [ngClass] = "{checked: paramToShow === 'negativeFB'}"
-        class="btn btn-primary form-control" 
-        (click) = "switcher('negativeFB')">
-        <img src = "assets/ico/wrench.png">
-      </button>  
-      <button 
-        id = "showNumbers" 
-        type="button" 
-        [ngClass] = "{checked: paramToShow === 'roomNumber'}"
-        class="btn btn-primary form-control" 
-        (click) = "switcher('roomNumber')">
-        <img src = "assets/ico/numbers.png">
-      </button>  
-    </div>
-  </div>
-
-  <div class="row row1 mt-1 align-items-center">
-    <div class="d-flex align-items-center col">
-      <label class = "mb-0 mr-1" for="x">X:</label>
-      <input 
-        type="text"
-        [(ngModel)] = "x" 
-        class="form-control" 
-        id="x"  
-        placeholder="x">
-    </div>
-
-    <div class="d-flex align-items-center col">
-      <label class = "mb-0 mr-1" for="y">Y:</label>
-      <input 
-        type="text"
-        [(ngModel)] = "y" 
-        class="form-control" 
-        id="y"  
-        placeholder="y">
-    </div>
-
-    <div class="inputArea col-auto">
-      <select class="form-control" id="area" [(ngModel)] = "inputCoordParam">
-        <option>IFC</option>
-        <option>CMX</option>
-      </select>
-    </div>
-
-    <div class="col-auto sendRoomTest d-flex">
-      <button 
-        id = "showPosition" 
-        type="button" 
-        class="btn btn-primary form-control" 
-        (click) = "showPosition()">
-        <img src = "assets/ico/icon_location.svg">
-      </button>
-    </div>
-  </div>
-
-  <div class="row row1 align-items-center">
-    <div class="navFloor col-12">
-      <ul class="row mx-0 mb-1">
-        <li 
-          (click)="changeFloor(floorIn)" 
-          class="col-auto mx-1 text-center"
-          [ngClass]="floorIn === floor? 'activeFloor': ''" 
-          *ngFor='let floorIn of floors; let i = index'>
-          {{floorIn}}
-        </li>
-      </ul>
+  
+    <div class="row row1 align-items-center">
+      <div class="navFloor col-12">
+        <ul class="row mx-0 mb-1">
+          <li 
+            (click)="changeFloor(floorIn)" 
+            class="col-auto mx-1 text-center"
+            [ngClass]="floorIn === floor? 'activeFloor': ''" 
+            *ngFor='let floorIn of floors; let i = index'>
+            {{floorIn}}
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
+  
 
   <div class="row row1 row2 mt-1 align-items-center">
       <div class="wrapper">

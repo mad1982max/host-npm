@@ -1,51 +1,8 @@
 import { Component, ChangeDetectorRef, OnInit } from '@angular/core';
 import { DataService } from './services/data.services';
-import { urlData }from './configs/configs';
+import { urlData } from './configs/configs';
+import {Coord, HighLightObj, ObjectToZoom, Blind, ParamsObj, ClickedArea, BlindObj, HostRoom, BlindSuccessObj, HostRoomWithNegativeFB, WsChanges} from './app.models';
 
-interface Coord {
-  left: number;
-  top: number;
-  type?: string;
-}
-
-interface HighLightObj {
-  id: string;
-  area: string;
-  color: string;
-}
-
-interface ObjectToZoom {
- id: string;
- area: string;
- zoom: number
-}
-
-interface Blind {
-  bimBlindId: string;
-  state: string
-}
-
-interface ParamsObj {
-  floor?: string;
-  center?: Coord;
-  position?: Coord;
-  key?: string;
-  version?: string;
-  zoom?: string;
-  v?: string;
-  mode?: string;
-  type?: string;
-}
-
-interface ClickedArea {
-  zone: string;
-  room: string;
-}
-interface BlindsObj {
-  [key: string]: string;
-  x: string;
-  y: string;
-}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -57,7 +14,7 @@ export class AppComponent implements OnInit {
   floor = '1';
   objectToHighlight: HighLightObj | undefined ;
   position: Coord;
-  blindObj: BlindsObj;
+  blindObj: BlindObj;
   zoom = 5;
   inputPosition: string;
   objectToZoom: ObjectToZoom;
@@ -74,11 +31,11 @@ export class AppComponent implements OnInit {
   x = 184.41725;
   y = 67.89225;
   hostBlinds: Blind[];
-  hostRooms: any;
-  hostRoomsWithNegativeFB: any;
-  blindSuccessObj: any;
+  hostRooms: HostRoom[];
+  hostRoomsWithNegativeFB: HostRoomWithNegativeFB[];
+  blindSuccessObj: BlindSuccessObj;
   ws: WebSocket;
-  wsChanges: any;
+  wsChanges: WsChanges;
   mode = 'application';
   wsAttemptsCounter = 0;
   idForBlindsGroup = 0;
@@ -94,11 +51,11 @@ export class AppComponent implements OnInit {
 
   paramsParser(query: string): ParamsObj {
     const paramPairsArr = query.split('&');
-    const paramsObj = {};
+    const paramsObj: ParamsObj = {};
 
     paramPairsArr.forEach(pair => {
     const splitedPair = pair.split('=');
-    let value: any = {};
+    let value: {top?:number, left?: number} | string= {};
     switch (splitedPair[0]) {
       case 'position':
       case 'center':
@@ -142,12 +99,13 @@ export class AppComponent implements OnInit {
     if (this.mode === 'application') { 
       // some action     
     } else if (this.mode === 'mobile') {
+
       clearInterval(this.timerApiDataHost);
       clearInterval(this.timerPing);
       clearTimeout(this.wsReconnectTimer);
       this.wsAttemptsCounter = 0;
       if (this.ws) this.ws.close(1000);
-      this.wsFunc(this.floor)
+      this.wsFunc(this.floor);
       this.getFloorBlindsFromServerInHost(this.floor);
       this.getFloorRoomsFromServerInHost(this.floor);
 
@@ -168,13 +126,13 @@ export class AppComponent implements OnInit {
   getCurrentCell(obj: ClickedArea): void {
     this.inputIdZone = obj.zone;
     this.inputIdRoom = obj.room;
-    console.log('%c --catch in host ', 'background: #ffff4d; color: black', obj);
+    console.log('%c --clicked zone/room:', 'background: #ffff4d; color: black', obj);
     this.ref.detectChanges();
   }
 
-  getBlindInfo(blindsObj: any): void {
+  getBlindInfo(blindsObj: BlindObj): void {
     this.blindObj = blindsObj;
-    console.log('%c --catch in host blinds ', 'background: #ffff4d; color: black', this.blindObj);
+    console.log('%c --catched in host blind ', 'background: #ffff4d; color: black', this.blindObj);
     if (this.mode === 'mobile') {
       this.getClickedBlindsObj(blindsObj);      
     } 
@@ -197,24 +155,26 @@ export class AppComponent implements OnInit {
 
   getFloorRoomsFromServerInHost(floor: string): void {
     this.dataService.getFloorRooms(floor)
-    .subscribe(
-      data => {
-        this.hostRooms = data;
-        console.log(`%c[--serverRoomsHost] - ${this.hostRooms.length}`, 'background: #0000cc; color: white');
-      },
-      error => {
-        console.log('ERROR in get floor rooms--', error.message);
-        this.hostRooms = [];
-        console.log(`%c[--serverRoomsHost] - ${this.hostRooms.length}`, 'background: #0000cc; color: white');
-      });
+      .subscribe(
+        data => {
+          this.hostRooms = data as HostRoom[];
+          console.log(`%c[--serverRoomsHost] - ${this.hostRooms.length}`, 'background: #0000cc; color: white');
+        },
+        error => {
+          console.log('ERROR in get floor rooms--', error.message);
+          this.hostRooms = [];
+          console.log(`%c[--serverRoomsHost] - ${this.hostRooms.length}`, 'background: #0000cc; color: white');
+        });
   }
 
   getNegativeFB(): void {
     this.dataService.getFeedBack(this.floor, 'negative')
       .subscribe(
         data => {
-          const dataWrench = data;
-          (dataWrench as any).forEach(fbRoom => {
+          const dataWrench = data as HostRoomWithNegativeFB[];
+
+          //data sometimes without 'bimRoomId'
+          dataWrench.forEach(fbRoom => {
             if (fbRoom.bimRoomId) { return; }
             const roomApi = this.hostRooms.find(item => item.logicalRoomId === fbRoom.roomId);
             if (roomApi) {
@@ -230,16 +190,16 @@ export class AppComponent implements OnInit {
 
   getFloorBlindsFromServerInHost(floor: string) :void{
     this.dataService.getFloorBlinds2(floor)
-    .subscribe(
-      data => {        
-        this.hostBlinds = data as Blind[];
-        console.log(`%c[--serverBlindsHost] - ${this.hostBlinds.length}`, 'background: #0000cc; color: white');
-      },
-      error => console.log(' -- ERROR', error.message)
-      );
+      .subscribe(
+        data => {        
+          this.hostBlinds = data as Blind[];
+          console.log(`%c[--serverBlindsHost] - ${this.hostBlinds.length}`, 'background: #0000cc; color: white');
+        },
+        error => console.log(' -- ERROR', error.message)
+        );
   }
 
-  getClickedBlindsObj(blindsObj: BlindsObj): void {
+  getClickedBlindsObj(blindsObj: BlindObj): void {
     const {bimBlindId, state} = blindsObj;
 
     this.dataService.blindAction(bimBlindId, state)
@@ -264,7 +224,7 @@ export class AppComponent implements OnInit {
         });
   }
 
-  showChangesWs(data) {
+  showChangesWs(data: WsChanges): void {
     if (data.logicalRoomId) {
       this.wsChanges = data;
 
@@ -288,7 +248,7 @@ export class AppComponent implements OnInit {
     that.ws = socket;
     ++that.wsAttemptsCounter;
 
-    socket.onopen = function(e) {
+    socket.onopen = function(_e) {
         console.log(`%c [ws open_HOST] - floor: ${floor} `, 'background: orange; color: black');
         that.timerPing = window.setInterval(() => {
           socket.send(JSON.stringify({
@@ -302,23 +262,17 @@ export class AppComponent implements OnInit {
         const WSData = JSON.parse(event.data);
         if (that.floor == WSData.floor) {
           that.showChangesWs(WSData);
-          //that.wsChanges = WSData;
         } else {
           console.log('[WS]---changes are not from this level');
         }
     };
-    socket.onerror = function(event) {
+
+    socket.onerror = function(_e) {
       console.log('%c [ws error_HOST]', 'background: orange; color: black');
-      // if(that.wsAttemptsCounter <= 20) {   
-      //   console.log(`%c ++ [ws message_HOST] : new attempt ${that.wsAttemptsCounter} after ERROR`, 'background: orange; color: black');
-      //   that.wsFunc(floor);     
-      // } else {
-      //   console.error('WS connection failed after 20 attempts');
-      //   that.wsAttemptsCounter = 0;
-      // }
     };
-    socket.onclose = function(event) {
-      if (!event.wasClean || event.code !== 1000) {
+
+    socket.onclose = function(e) {
+      if (!e.wasClean || e.code !== 1000) {
         if (that.wsAttemptsCounter <= 20) {
           console.log(`%c ++ [ws message_MODULE] : new attempt ${that.wsAttemptsCounter} after ERROR`, 'background: orange; color: black');
           that.wsReconnectTimer = window.setTimeout(() => that.wsFunc(floor), 1000);
@@ -343,6 +297,7 @@ export class AppComponent implements OnInit {
     if(paramsObj.center) {
       this.center = Object.assign({}, paramsObj.center, {type: paramsObj.type || 'IFC'});;
     }
+
     if (paramsObj.zoom) {this.zoom = +paramsObj.zoom; }
     if (paramsObj.key) { this.apiKey = paramsObj.key; }
     if (paramsObj.version) {
@@ -353,9 +308,8 @@ export class AppComponent implements OnInit {
     if (paramsObj.floor && this.floors.indexOf(paramsObj.floor) > -1) {
         this.floor = paramsObj.floor;
     } else {
-      const defaultFloor = '1';
-      this.floor = defaultFloor;
-      console.log(`-- Bad params. Default floor: ${defaultFloor} was loaded`);
+      this.floor = '1';
+      console.log(`-- Bad params. Default floor: ${this.floor} was loaded`);
     }
     if (paramsObj.mode) { this.mode = paramsObj.mode; }
     if (this.mode === 'mobile') {
