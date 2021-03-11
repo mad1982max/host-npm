@@ -12,11 +12,11 @@
 }
 
 .wrapper {
-overflow: hidden;
-width: 100%;
-height: 60vh;
-margin: auto;
-border: 1px solid red;
+  overflow: hidden;
+  width: 100%;
+  height: 60vh;
+  margin: auto;
+  border: 1px solid red;
 }
 
 .module {
@@ -45,7 +45,8 @@ input {
   padding: 6;
 }
 
-button, #inputColor {
+button,
+#inputColor {
   width: 35px;
   height: 35px;
   padding: 2px;
@@ -98,7 +99,7 @@ img {
 }
 
 .activeFloor {
-  color:#39ac73;
+  color: #39ac73;
   font-weight: bold;
 }
 

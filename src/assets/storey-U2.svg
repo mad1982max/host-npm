@@ -1,163 +1,298 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 -85 90 90">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="6 -80 80 94">
  
-<g id = 'wrapper' transform = 'rotate(28), scale(1, -1)'>
-
-  <defs>
-
-    <clipPath id="clip-path">
-
-      <rect x="43.559" y="59.754" width="3.91" height="3.635" transform="translate(-30.38 71.708) rotate(-61.135)" style="fill: none"/>
-
-    </clipPath>
-
-    <clipPath id="clip-path-2">
-
-      <rect x="24.476" y="46.099" width="3.635" height="3.91" transform="matrix(0.974, -0.227, 0.227, 0.974, -10.229, 7.229)" style="fill: none"/>
-
-    </clipPath>
-
-    <clipPath id="clip-path-3">
-
-      <polygon points="38.887 77.524 35.727 75.787 37.614 72.364 40.774 74.1 38.887 77.524" style="fill: none"/>
-
-    </clipPath>
-
-  </defs>
-
-  <title>
-U2</title>
-
-  <g id="NEW_Inner" data-name="NEW Inner">
-
-    <polyline points="31.998 71.367 32.19 72.237 28.296 73.101 29.514 78.601 34.999 77.417 38.359 79.237 41.234 73.945 37.885 72.13 35.822 75.921" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <polyline points="28.296 73.101 27.706 70.435 31.6 69.572 31.464 68.953" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <line x1="31.6" y1="69.572" x2="31.685" y2="69.949" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <polyline points="31.144 67.508 30.945 66.615 27.05 67.476 27.706 70.435" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <polyline points="36.891 66.947 36.582 65.551 30.985 66.789" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <polyline points="37.071 67.759 37.219 68.431 34.519 69.033" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <line x1="33.675" y1="69.22" x2="31.622" y2="69.665" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <polyline points="34.485 77.528 34.078 75.706 37.841 68.775 37.219 68.431" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <line x1="34.999" y1="77.417" x2="35.368" y2="76.755" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <line x1="41.234" y1="73.945" x2="43.11" y2="70.492" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <polyline points="42.629 71.367 39.279 69.556 37.885 72.13" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <line x1="39.783" y1="68.629" x2="39.279" y2="69.556" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <line x1="39.087" y1="69.917" x2="38.6" y2="69.651" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <line x1="37.651" y1="69.134" x2="37.808" y2="69.219" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <line x1="40.242" y1="67.784" x2="40.586" y2="67.151" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <polyline points="43.592 69.604 43.726 69.362 40.377 67.535" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <polyline points="41.292 65.851 41.665 65.169 45.016 66.991 43.726 69.362" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <polyline points="45.016 66.991 46.305 64.618 42.953 62.798 41.665 65.169" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <line x1="37.984" y1="65.239" x2="36.582" y2="65.551" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <polyline points="38.834 65.051 40.001 64.792 43.521 58.307" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <line x1="44.958" y1="59.102" x2="42.953" y2="62.798" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <polyline points="46.305 64.618 48.882 59.873 45.532 58.052 45.383 58.32" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <polyline points="43.981 57.462 44.088 57.269 44.396 57.435 45.532 58.052 44.396 57.435 46.973 52.691 35.418 46.451 35.305 46.475 35.193 45.978" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <line x1="39.396" y1="64.927" x2="35.305" y2="46.475" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <polyline points="37.828 65.283 35.451 54.534 29.837 55.777 28.712 50.701 25.33 51.449 25.396 51.743 24.465 55.807 27.05 67.476" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <line x1="36.699" y1="54.257" x2="37.012" y2="54.183" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <line x1="35.88" y1="54.439" x2="35.451" y2="54.534" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <polyline points="25.33 51.449 24.162 46.177 27.886 45.352 29.053 50.625 28.712 50.701" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <polyline points="24.162 46.177 23.663 43.914 27.384 43.09 27.886 45.352 28.18 45.289" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <polyline points="27.384 43.09 28.74 42.79 27.333 36.462 32.672 35.28 32.8 35.859" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <polyline points="30.767 38.011 30.862 38.441 27.925 39.101" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <line x1="30.447" y1="36.566" x2="30.265" y2="35.812" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <line x1="32.672" y1="35.28" x2="34.34" y2="34.905" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <polyline points="35.209 34.713 35.486 34.651 36.406 35.155 35.55 36.723" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <polyline points="35.125 37.506 35.004 37.734 33.299 38.11 32.998 36.751" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <polyline points="33.299 38.11 33.872 40.698 28.542 41.879" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <polyline points="29.049 45.096 32.633 44.301 31.926 41.129" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <polyline points="32.633 44.301 34.721 43.839 34.931 44.794" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <polyline points="33.872 40.698 34.018 40.665 34.721 43.839" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <polyline points="39.306 43.661 39.962 44.002 41.053 42.016 36.028 39.304 35.757 39.771 35.845 40.164" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <polyline points="36.065 41.153 36.253 41.998 36.825 42.313" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <line x1="37.722" y1="42.785" x2="38.443" y2="43.177" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <line x1="39.15" y1="40.989" x2="38.073" y2="42.976" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <line x1="36.316" y1="42.033" x2="37.393" y2="40.027" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <polygon points="22.624 13.231 6.068 16.898 14.024 52.826 16.026 52.383 22.047 79.57 25.924 90.986 40.544 98.929 72.406 40.276 22.624 13.231" style="fill: none;stroke: #b4897d;stroke-width: 0.16px"/>
-
-    <polygon points="22.579 13.543 6.424 17.121 14.252 52.464 16.253 52.021 22.335 79.485 26.169 90.775 40.423 98.518 72 40.391 22.579 13.543" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-  </g>
-
-  <g id="Anchor">
-
-    <line x2="7.5" style="fill: none"/>
-
-  </g>
-
-  <g id="Stairs">
-
-    <g style="clip-path: url(#clip-path)">
-
-      <path d="M46.118,64l-2.972-1.646.032-.058,2.972,1.646Zm-2.729-2.1,2.957,1.638.032-.058-2.957-1.638Zm3.323-1.765h0l-.1-.053L45.39,62.291l-.42-.233.193-.346,0,0,.032-.058,0,0,.991-1.786-.046-.026v0l-1.2-.663-.033.058,1.147.635-.216.388-1.128-.625-.033.058,1.129.625-.216.389-1.169-.647-.033.058,1.17.647-.217.39-1.139-.631-.032.058,1.139.631-.216.39-1.132-.626-.032.058,1.132.626-.218.392L43.68,61.4l-.033.058L46.593,63.1l.032-.058-1.163-.646L45.676,62l1.149.636.032-.058-1.149-.636.217-.39,1.148.637.032-.058L45.957,61.5l.216-.389,1.132.627.032-.058-1.132-.627.216-.389,1.148.635.032-.058L46.454,60.6l.226-.408,1.162.644.032-.058Z" style="fill: #b4897d"/>
-
-    </g>
-
-    <line x1="47.874" y1="60.782" x2="45.899" y2="64.396" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <g style="clip-path: url(#clip-path-2)">
-
-      <path d="M24.265,46.642l3.265-.754.015.065-3.265.753Zm3.386-.256-3.294.761.015.064,3.294-.761Zm-1.288,3.535h0l.107-.025L25.9,47.436l.468-.107.089.385h0l.015.065h0l.458,1.991.052-.012v0l1.333-.308-.015-.064-1.277.3-.1-.433,1.257-.29L28.17,48.9l-1.257.291-.1-.434,1.3-.3-.015-.065-1.3.3-.1-.434,1.269-.293-.015-.065-1.269.293-.1-.434,1.278-.293-.015-.065-1.277.293-.1-.436,1.3-.3-.014-.065-3.272.751.015.065,1.286-.294.1.431-1.28.3.015.065,1.28-.3.1.434-1.279.3.014.064,1.28-.3.1.434-1.261.291.015.065,1.261-.292.1.434-1.278.3.015.064,1.278-.3.105.454-1.295.3.015.065Z" style="fill: #b4897d"/>
-
-    </g>
-
-    <line x1="28.319" y1="49.452" x2="27.432" y2="45.458" style="fill: none;stroke: #b4897d;stroke-width: 0.079999998211861px"/>
-
-    <g style="clip-path: url(#clip-path-3)">
-
-      <path d="M37.659,72.525l2.972,1.646-.033.058-2.971-1.646Zm2.729,2.1-2.957-1.639-.033.058,2.957,1.639Zm-1.533,2.742.032-.058-1.169-.651.215-.388,1.129.625.032-.058-1.128-.625.216-.39,1.146.63.032-.058-1.146-.63.216-.389L39.569,76l.032-.058-1.139-.631.217-.39,1.124.624.032-.058-1.124-.624.217-.392,1.135.634.032-.058-2.906-1.624-.032.058,1.158.65-.215.387-1.148-.636-.033.058,1.149.636-.216.389L36.7,74.332l-.033.058,1.149.636-.216.39-1.133-.627-.032.058,1.132.627-.216.389-1.147-.635-.033.058,1.148.635-.226.408-1.163-.644-.032.058,1.163.644h0l.1.054,1.226-2.207.419.233-1.216,2.19Z" style="fill: #b4897d"/>
-
-    </g>
-
-    <line x1="38.829" y1="77.343" x2="40.839" y2="73.734" style="fill: none;stroke: #b4897d;stroke-width: 0.08px"/>
-
-  </g>
-
-
+<defs>
+<style>
+.cls-1,.cls-5,.cls-6{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{opacity:0.32;}.cls-4{opacity:0.29;}.cls-5,.cls-6{stroke:#b4897d;}.cls-5{stroke-width:0.08px;}.cls-6{stroke-width:0.16px;}.cls-7{fill:#b4897d;}</style>
+<clipPath id="clip-path" transform="translate(-5.972 -13.1468)">
+<rect id="SVGID" class="cls-1" width="750" height="1334"/>
+</clipPath>
+</defs>
+
+<g id = 'wrapper' transform = 'rotate(28), scale(1, -1)'>
+<g id="Layer_1" data-name="Layer 1" transform="translate(5.972 13.1468)">
+<g class="cls-2">
+<polyline class="cls-5" points="26.026 58.22 26.218 59.091 22.323 59.954 23.543 65.454 29.027 64.27 32.387 66.091 35.262 60.798 31.913 58.984 29.85 62.774"/>
+<polyline class="cls-5" points="22.324 59.954 21.734 57.288 25.628 56.425 25.492 55.806"/>
+<line class="cls-5" x1="25.6281" y1="56.4255" x2="25.7121" y2="56.8014"/>
+<polyline class="cls-5" points="25.172 54.361 24.973 53.468 21.078 54.329 21.734 57.288"/>
+<polyline class="cls-5" points="30.919 53.8 30.61 52.404 25.013 53.642"/>
+<polyline class="cls-5" points="31.099 54.612 31.246 55.284 28.546 55.886"/>
+<line class="cls-5" x1="27.7033" y1="56.0729" x2="25.6491" y2="56.5182"/>
+<polyline class="cls-5" points="28.513 64.381 28.106 62.559 31.868 55.628 31.246 55.284"/>
+<line class="cls-5" x1="29.027" y1="64.2702" x2="29.3962" y2="63.6081"/>
+<line class="cls-5" x1="35.2624" y1="60.798" x2="37.1384" y2="57.3454"/>
+<polyline class="cls-5" points="36.657 58.22 33.307 56.409 31.912 58.984"/>
+<line class="cls-5" x1="33.8107" y1="55.4821" x2="33.3078" y2="56.4089"/>
+<line class="cls-5" x1="33.1149" y1="56.7707" x2="32.6281" y2="56.5036"/>
+<line class="cls-5" x1="31.6789" y1="55.9875" x2="31.8361" y2="56.0724"/>
+<line class="cls-5" x1="34.2702" y1="54.6369" x2="34.6144" y2="54.0041"/>
+<polyline class="cls-5" points="37.62 56.457 37.754 56.215 34.405 54.388"/>
+<polyline class="cls-5" points="35.321 52.704 35.694 52.023 39.044 53.844 37.755 56.215"/>
+<polyline class="cls-5" points="39.044 53.844 40.333 51.471 36.981 49.651 35.693 52.023"/>
+<line class="cls-5" x1="32.0124" y1="52.0925" x2="30.6105" y2="52.4045"/>
+<polyline class="cls-5" points="32.863 51.904 34.029 51.646 37.55 45.16"/>
+<line class="cls-5" x1="38.986" y1="45.9557" x2="36.9811" y2="49.6511"/>
+<polyline class="cls-5" points="40.333 51.471 42.911 46.726 39.561 44.905 39.411 45.173"/>
+<polyline class="cls-5" points="38.009 44.315 38.116 44.122 38.425 44.288 39.561 44.905 38.425 44.288 41.002 39.544 29.447 33.304 29.333 33.328 29.221 32.831"/>
+<line class="cls-5" x1="33.424" y1="51.7804" x2="29.3332" y2="33.3278"/>
+<polyline class="cls-5" points="31.856 52.136 29.479 41.386 23.864 42.63 22.74 37.554 19.358 38.302 19.424 38.595 18.492 42.659 21.078 54.33"/>
+<line class="cls-5" x1="30.7272" y1="41.1105" x2="31.0392" y2="41.0368"/>
+<line class="cls-5" x1="29.9084" y1="41.2917" x2="29.4782" y2="41.3869"/>
+<polyline class="cls-5" points="19.358 38.302 18.191 33.03 21.914 32.205 23.081 37.478 22.74 37.554"/>
+<polyline class="cls-5" points="18.191 33.03 17.691 30.767 21.413 29.943 21.915 32.205 22.209 32.142"/>
+<polyline class="cls-5" points="21.412 29.943 22.767 29.643 21.362 23.316 26.7 22.133 26.828 22.712"/>
+<polyline class="cls-5" points="24.796 24.864 24.891 25.295 21.953 25.955"/>
+<line class="cls-5" x1="24.4753" y1="23.4196" x2="24.2931" y2="22.6657"/>
+<line class="cls-5" x1="26.6999" y1="22.1335" x2="28.3678" y2="21.7585"/>
+<polyline class="cls-5" points="29.238 21.566 29.514 21.504 30.433 22.008 29.577 23.577"/>
+<polyline class="cls-5" points="29.153 24.359 29.032 24.588 27.327 24.964 27.026 23.605"/>
+<polyline class="cls-5" points="27.327 24.964 27.9 27.55 22.57 28.733"/>
+<polyline class="cls-5" points="23.077 31.949 26.661 31.154 25.954 27.982"/>
+<polyline class="cls-5" points="26.661 31.154 28.748 30.693 28.959 31.647"/>
+<polyline class="cls-5" points="27.9 27.551 28.046 27.518 28.749 30.693"/>
+<polyline class="cls-5" points="33.334 30.514 33.99 30.855 35.081 28.868 30.056 26.157 29.785 26.625 29.873 27.016"/>
+<polyline class="cls-5" points="30.093 28.006 30.281 28.852 30.853 29.167"/>
+<line class="cls-5" x1="31.7502" y1="29.6384" x2="32.4714" y2="30.0304"/>
+<line class="cls-5" x1="33.1784" y1="27.842" x2="32.1012" y2="29.8288"/>
+<line class="cls-5" x1="30.3439" y1="28.8859" x2="31.4211" y2="26.881"/>
+<polygon class="cls-6" points="16.652 0.085 0.095 3.752 8.052 39.68 10.053 39.235 16.074 66.423 19.951 77.839 34.572 85.782 66.435 27.129 16.652 0.085"/>
+<polygon class="cls-5" points="16.607 0.397 0.453 3.974 8.28 39.318 10.281 38.875 16.363 66.338 20.197 77.628 34.45 85.371 66.028 27.245 16.607 0.397"/>
+<path class="cls-7" d="M43.1455,62.3545l2.9722,1.646.0332-.0591-2.9722-1.646Zm.2432-.4512,2.958,1.6382.0322-.0581-2.957-1.6377Zm1.5239-2.6679,1.146.6352-.2148.3872-1.129-.625-.0322.0576,1.1279.625-.2158.39-1.1689-.648-.0322.0576,1.17.6485-.2168.3886-1.14-.6308-.0307.0591,1.1377.6308-.2158.3892-1.1319-.625-.0312.0571,1.1313.626-.2182.3921-1.168-.6485-.0322.0581,2.9453,1.6353.0327-.0581-1.1636-.647.2139-.3872,1.1489.6372.0332-.0591-1.1494-.6362.2163-.3887,1.1489.6358.0308-.0576L45.9565,61.5l.2164-.39,1.1318.6269.0332-.0576-1.1333-.6279.2163-.3882,1.1479.6348.0318-.0591-1.147-.6348.2271-.4072,1.1611.6445.0327-.06-1.1626-.6425.001-.001-.0972-.0542L45.39,62.2915l-.4189-.2329.1919-.3462.0029.002.0323-.0591-.003-.001.9907-1.7856-.0459-.0259.002-.002-1.1968-.6631Z" transform="translate(-5.972 -13.1468)"/>
+<line class="cls-5" x1="41.9025" y1="47.6349" x2="39.9264" y2="51.2487"/>
+<path class="cls-7" d="M24.4849,47.6387l.0151.0654,1.2847-.293.0991.4307-1.28.2949.0161.0654,1.2788-.2963.0991.434-1.2792.2959.0161.0645,1.2788-.2954.1.4341-1.2608.292.0137.0639,1.2622-.291.0991.4331-1.2783.2959.0151.065,1.2779-.2959.105.455-1.2959.2989.0161.0639,1.2939-.2988.001.002.1069-.0259-.5649-2.46.4673-.1079.0888.3857-.0039.001.0157.064.0024-.001.458,1.99.0527-.0112.001.0029,1.332-.3076-.0151-.0654-1.2768.2949-.0992-.4316,1.2574-.291-.0152-.064-1.2568.2891-.1-.4331,1.3027-.3008-.0146-.0655-1.3032.3013-.0992-.4341,1.2691-.2929-.0161-.064-1.2686.293-.1-.4351,1.2769-.293-.0142-.0649-1.2769.2939-.101-.437,1.3022-.3008-.0151-.0644Zm-.127-.4917.0142.0649L27.666,46.45l-.0151-.0645Zm-.0928-.5054.0147.0645,3.2651-.752-.0151-.0654Z" transform="translate(-5.972 -13.1468)"/>
+<line class="cls-5" x1="22.3468" y1="36.3058" x2="21.4596" y2="32.3122"/>
+<path class="cls-7" d="M37.1572,73.4844l1.1582.65-.2153.3872-1.1489-.6362-.0308.0581,1.148.6352-.2159.39-1.1494-.6358-.0317.0581,1.1479.6358-.2148.3891-1.1333-.6269-.0317.0591,1.1318.6269-.2158.3887-1.147-.6358-.0332.0586,1.1479.6353-.226.4072-1.1631-.644-.0318.0586,1.1622.6435v.001l.0966.0537,1.2251-2.207.42.2329L37.59,76.6562l1.2652.7081.0307-.0577-1.1679-.6513.2148-.3887,1.1294.625.0317-.0571-1.1289-.626.2159-.3892,1.1459.63.0323-.0576-1.145-.63.2158-.3891,1.1391.6308.0332-.0581-1.14-.6308.2158-.39,1.124.624.0332-.059-1.124-.6241.2168-.3906,1.1343.6338.0327-.0591L37.19,73.4263Zm.2412-.4429L40.3555,74.68l.0317-.0571-2.956-1.6392Zm.2281-.458,2.9726,1.645.0313-.0571-2.9722-1.646Z" transform="translate(-5.972 -13.1468)"/>
+<line class="cls-5" x1="32.8571" y1="64.196" x2="34.8669" y2="60.5871"/>
+</g>
+</g>
+<g id="Layer_2" data-name="Layer 2" transform="translate(5.972 13.1468)">
+<g id="storey-U2">
+<g id="product-S-BETONG">
+<path class="cls-5" d="M26.7236,39.87l.0865.3907-.4883.1079-.0864-.3907.4882-.1079" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-2" data-name="product-S-BETONG">
+<path class="cls-5" d="M17.001,53.0845l.0864.3906-.4883.1079-.0864-.3906.4883-.1079" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-3" data-name="product-S-BETONG">
+<path class="cls-5" d="M34.3721,32.8516l-.1909.351-.3516-.1909.1909-.3515.3516.1914" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-4" data-name="product-S-BETONG">
+<path class="cls-5" d="M22.0532,18.7808l.0864.39-.4882.1084-.0865-.3906.4883-.1079" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-5" data-name="product-S-BETONG">
+<path class="cls-5" d="M14.2588,31.5684l.0864.3906-.3906.0864-.0864-.3906.3906-.0864" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-6" data-name="product-S-BETONG">
+<path class="cls-5" d="M11.9233,21.0239l.0865.3907-.39.0864-.0864-.3906.39-.0865" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-7" data-name="product-S-BETONG">
+<path class="cls-5" d="M13.0913,26.2964l.0864.39-.3906.0869-.0864-.3906.3906-.0864" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-8" data-name="product-S-BETONG">
+<path class="cls-5" d="M22.9443,35.1758l.0865.3906-.4883.1079-.0864-.3906.4882-.1079" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-9" data-name="product-S-BETONG">
+<path class="cls-5" d="M16.5938,42.1128l.0864.3906-.39.0864-.0864-.3906.39-.0864" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-10" data-name="product-S-BETONG">
+<path class="cls-5" d="M15.4263,36.8408l.0864.3906-.3906.0865-.0865-.3907.3907-.0864" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-11" data-name="product-S-BETONG">
+<path class="cls-5" d="M17.7617,47.3853l.0864.3906-.3906.0864-.0864-.3906.3906-.0864" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-12" data-name="product-S-BETONG">
+<path class="cls-5" d="M25.5557,34.5977l.0864.39-.4878.1084-.0864-.3906.4878-.1079" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-13" data-name="product-S-BETONG">
+<path class="cls-5" d="M31.3076,30.5068l.3906-.0864.108.4883-.3907.0864-.1079-.4883" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-14" data-name="product-S-BETONG">
+<path class="cls-5" d="M21.7764,29.9033l.0864.3906-.4878.1084-.0864-.3906.4878-.1084" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-15" data-name="product-S-BETONG">
+<path class="cls-5" d="M24.3882,29.3252l.0864.3906-.4878.1079L23.9,29.4331l.4883-.1079" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-16" data-name="product-S-BETONG">
+<path class="cls-5" d="M19.4414,19.3589l.0864.3906-.4882.1079-.0865-.39.4883-.1084" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-17" data-name="product-S-BETONG">
+<path class="cls-5" d="M24.1118,40.4482l.0864.3907-.4882.1079-.0865-.3906.4883-.108" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-18" data-name="product-S-BETONG">
+<path class="cls-5" d="M21.1709,27.17l.0869.3906-.4883.108-.0864-.3907.4878-.1079" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-25" data-name="product-S-BETONG">
+<path class="cls-5" d="M20.9717,13.8989l.0864.3907-.4883.1079-.0864-.3907.4883-.1079" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-26" data-name="product-S-BETONG">
+<path class="cls-5" d="M18.3594,14.4775l.0864.3907-.4883.1084-.0864-.3907.4883-.1084" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-27" data-name="product-S-BETONG">
+<path class="cls-5" d="M8.9141,16.5693l.0864.3907-.4883.1084-.0864-.3907.4883-.1084" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-28" data-name="product-S-BETONG">
+<path class="cls-5" d="M9.9463,21.4619l.0864.3906-.39.0865-.0869-.3907.3906-.0864" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-29" data-name="product-S-BETONG">
+<path class="cls-5" d="M11.1138,26.7339l.0869.3906-.3906.0864-.0865-.3906.39-.0864" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-30" data-name="product-S-BETONG">
+<path class="cls-5" d="M12.2817,32.0063l.0865.3907-.3907.0864-.0864-.3906.3906-.0865" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-31" data-name="product-S-BETONG">
+<path class="cls-5" d="M13.4492,37.2783l.0864.3906-.3906.087-.0864-.3907.3906-.0869" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-32" data-name="product-S-BETONG">
+<path class="cls-5" d="M14.6167,42.5508l.0864.3906-.39.0864-.0869-.3906.3906-.0864" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-33" data-name="product-S-BETONG">
+<path class="cls-5" d="M15.7842,47.8232l.0869.3907-.3906.0864L15.394,47.91l.39-.0865" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-40" data-name="product-S-BETONG">
+<path class="cls-5" d="M29.5562,22.5986l.3906-.0864.1079.4883-.3906.0864-.1079-.4883" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-41" data-name="product-S-BETONG">
+<path class="cls-5" d="M22.8389,79.4458l.0864.3906-.4883.1079-.0864-.3906.4883-.1079" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-42" data-name="product-S-BETONG">
+<path class="cls-5" d="M20.5039,68.9014l.0864.3906-.4882.1079-.0865-.3906.4883-.1079" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-43" data-name="product-S-BETONG">
+<path class="cls-5" d="M18.1685,58.3569l.0864.3907-.4883.1079-.0864-.3907.4883-.1079" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-44" data-name="product-S-BETONG">
+<path class="cls-5" d="M19.3359,63.6289l.0865.3906-.4878.1079-.0869-.39.4882-.1084" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-48" data-name="product-S-BETONG">
+<path class="cls-5" d="M32.5127,66.2417l.0864.3906-.4883.1079-.0864-.3906.4883-.1079" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-49" data-name="product-S-BETONG">
+<path class="cls-5" d="M33.68,71.5142l.0864.39-.4878.1084-.0869-.3906.4883-.1079" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-50" data-name="product-S-BETONG">
+<path class="cls-5" d="M44.1885,41.5327l.0869.3906-.3906.0865-.0865-.3907.39-.0864" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-51" data-name="product-S-BETONG">
+<path class="cls-5" d="M33.7178,88.61l-.3907.0864-.13-.586.3906-.0864.13.586" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-52" data-name="product-S-BETONG">
+<path class="cls-5" d="M45.3076,46.4043l.0864.3906-.3906.0864-.0864-.39.3906-.0869" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-53" data-name="product-S-BETONG">
+<path class="cls-5" d="M47.0322,77.0713l-.1914.3516-.4829-.2627.1909-.3511.4834.2622" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-54" data-name="product-S-BETONG">
+<path class="cls-5" d="M49.61,72.3262l-.191.3515-.4834-.2622.191-.3515.4834.2622" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-55" data-name="product-S-BETONG">
+<path class="cls-5" d="M52.1875,67.5815l-.1909.3516-.4834-.2627.1909-.3516.4834.2627" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-56" data-name="product-S-BETONG">
+<path class="cls-5" d="M59.92,53.3462l-.1909.3516-.4834-.2623.1914-.3515.4829.2622" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-57" data-name="product-S-BETONG">
+<path class="cls-5" d="M54.7651,62.8364l-.1909.3516-.4834-.2627.1909-.3516.4834.2627" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-58" data-name="product-S-BETONG">
+<path class="cls-5" d="M57.3428,58.0913l-.1909.3516-.4834-.2627.1909-.3516.4834.2627" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-59" data-name="product-S-BETONG">
+<path class="cls-5" d="M62.498,48.6011l-.1909.3515-.4829-.2622.1909-.3515.4829.2622" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-60" data-name="product-S-BETONG">
+<path class="cls-5" d="M44.4541,81.8164l-.1909.3516-.4834-.2627.1914-.3511.4829.2622" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-61" data-name="product-S-BETONG">
+<path class="cls-5" d="M41.8765,86.5615l-.191.3516-.4834-.2627.191-.3516.4834.2627" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-62" data-name="product-S-BETONG">
+<path class="cls-5" d="M39.2988,91.3066l-.1909.3516-.4834-.2627.1909-.3516.4834.2627" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-63" data-name="product-S-BETONG">
+<path class="cls-5" d="M65.0757,43.8564l-.1909.3511-.4829-.2622.1909-.3516.4829.2627" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-64" data-name="product-S-BETONG">
+<path class="cls-5" d="M67.6523,39.1143l-.1914.3515-.4829-.2627.1909-.3515.4834.2627" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-65" data-name="product-S-BETONG">
+<path class="cls-5" d="M43.1006,37.5928l-.1909.3515-.3516-.1914.1909-.351.3516.1909" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-66" data-name="product-S-BETONG">
+<path class="cls-5" d="M48.6357,40.6016l-.4775.8789-.4394-.2388.4775-.8784.4394.2383" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-67" data-name="product-S-BETONG">
+<path class="cls-5" d="M53.9307,43.9473l-.191.3515-.4389-.2387.1909-.3516.439.2388" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-68" data-name="product-S-BETONG">
+<path class="cls-5" d="M38.3555,35.0151l-.1909.3516-.3516-.1914.1909-.3511.3516.1909" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-69" data-name="product-S-BETONG">
+<path class="cls-5" d="M51.1294,42.1909l-.1909.3516-.3516-.1909L50.7778,42l.3516.1909" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-70" data-name="product-S-BETONG">
+<path class="cls-5" d="M57.3779,36.6587l.3516.1909-.2388.4395-.3511-.191.2383-.4394" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-71" data-name="product-S-BETONG">
+<path class="cls-5" d="M62.4458,36.2856l-.1909.3516-.44-.2388.1909-.351.4395.2382" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-72" data-name="product-S-BETONG">
+<path class="cls-5" d="M54.4985,35.1514l.3516.1909-.1909.3511-.3516-.1905.1909-.3515" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-73" data-name="product-S-BETONG">
+<path class="cls-5" d="M26.5425,89.6543l.1387.375-.4688.1738-.1387-.3755.4688-.1733" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-74" data-name="product-S-BETONG">
+<path class="cls-5" d="M24.6123,84.584l.0864.3906-.4883.1079-.0864-.3906.4883-.1079" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-75" data-name="product-S-BETONG">
+<path class="cls-5" d="M32.9766,94.01l-.191.3515-.4394-.2387.1909-.3516.4395.2388" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-76" data-name="product-S-BETONG">
+<path class="cls-5" d="M48.8193,53.4609l-.1909.3516-.5273-.2861.1909-.3516.5273.2861" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-77" data-name="product-S-BETONG">
+<path class="cls-5" d="M51.353,48.6919l-.1909.3516-.4394-.2388.1909-.3516.4394.2388" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-78" data-name="product-S-BETONG">
+<path class="cls-5" d="M36.1489,43.313l.0869.3906-.3906.0864-.0864-.3906.39-.0864" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-79" data-name="product-S-BETONG">
+<path class="cls-5" d="M31.9668,80.7026l-.3906.0865-.13-.5855.3906-.0864.13.5854" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-87" data-name="product-S-BETONG">
+<path class="cls-5" d="M39.2983,64.7393l.0865.39-.3907.0864-.0864-.39.3906-.0864" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-88" data-name="product-S-BETONG">
+<path class="cls-5" d="M42.1733,53.0405l.0865.3907-.4883.1079-.0864-.3907.4882-.1079" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-92" data-name="product-S-BETONG">
+<path class="cls-5" d="M25.1982,56.8l.0865.3906-.4883.1084-.0864-.3906.4882-.1084" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-93" data-name="product-S-BETONG">
+<path class="cls-5" d="M26.3657,62.0723l.0864.3906-.4882.1079-.0865-.3906.4883-.1079" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-94" data-name="product-S-BETONG">
+<path class="cls-5" d="M31.3452,60.97l.0864.39-.4882.1084-.0865-.3907.4883-.1079" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-95" data-name="product-S-BETONG">
+<path class="cls-5" d="M30.1777,55.6973l.086.3906-.4878.1079-.0864-.3906.4882-.1079" transform="translate(-5.972 -13.1468)"/>
+</g>
+</g>
+<g id="storey-U3">
+<g id="product-S-BETONG-113" data-name="product-S-BETONG">
+<path class="cls-5" d="M36.7241,96.0459l-.1909.3516-.4834-.2627.1909-.3516.4834.2627" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-130" data-name="product-S-BETONG">
+<path class="cls-5" d="M43.3408,58.313l.0869.39-.4882.1084-.0865-.3906.4878-.1079" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-134" data-name="product-S-BETONG">
+<path class="cls-5" d="M38.1309,59.4668l.0864.3906-.3906.0864-.0865-.3906.3907-.0864" transform="translate(-5.972 -13.1468)"/>
+</g>
+<g id="product-S-BETONG-137" data-name="product-S-BETONG">
+<path class="cls-5" d="M40.1787,42.4209l.0864.39-.3906.0865-.0864-.39.3906-.0864" transform="translate(-5.972 -13.1468)"/>
+</g>
+</g>
+</g>
 <g class = "rooms">
 
     <g id="storey-U2">
@@ -3003,5 +3138,6 @@ U2</title>
 
     </g>
 
-    </g>
+
+</g>
 </g></svg>
